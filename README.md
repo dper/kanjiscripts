@@ -39,13 +39,13 @@ Or if you're lazy, copy and paste this.
     wget http://tatoeba.org/files/downloads/tags.csv
     wget http://tatoeba.org/files/downloads/jpn_indices.csv
 
-Beware of large files.  As of February, 2014, the file sizes are as follows.
+Beware of large files.  The file sizes are as follows.
 
 ```Shell
 $ date
 Fri Feb 14 22:04:26 JST 2014
 
-ls -lh *.csv | cut -b 18-
+$ ls -lh *.csv | cut -b 18-
  17M Feb  8 19:13 jpn_indices.csv
 284M Feb  8 19:14 sentences_detailed.csv
  11M Feb  8 19:15 tags.csv
@@ -55,9 +55,11 @@ The Tatoeba corpus is under a Creative Commons Attribution 2.0 license.
 
 Here is a cautionary disclaimer from Tatoeba (<http://en.wiki.tatoeba.org/articles/show/using-the-tatoeba-corpus>):
 
-> Due to the nature of a public collaborative project, this data will never be 100% free of errors.
-> Be aware of the following.
-> 	We allow non-native speakers to contribute in languages they are learning.
-> 	We ask our members not to change archaic language to something that currently sounds natural.
-> 	We allow our members to submit book titles and other things you might not consider sentences.
-> Translations may not always be accurate, even though the linked sentences are correct sentences.
+```
+Due to the nature of a public collaborative project, this data will never be 100% free of errors.
+Be aware of the following.
+	We allow non-native speakers to contribute in languages they are learning.
+	We ask our members not to change archaic language to something that currently sounds natural.
+	We allow our members to submit book titles and other things you might not consider sentences.
+Translations may not always be accurate, even though the linked sentences are correct sentences.
+```
