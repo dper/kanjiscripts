@@ -25,6 +25,8 @@ def verbose message
 	end
 end
 
+Script_dir = File.dirname(__FILE__)
+
 # Looks up words in Edict.
 class Edict
 	# Creates an Edict.  Parsing the edict file takes a long time,
@@ -67,23 +69,32 @@ class Edict
 		return [kana, meaning]
 	end
 
-	# Returns a list of all the onomotopoaeic words in edict.
-	def ono_words
+	# Creates a list of all the onomotopoaeic words in edict.
+	def find_ono_words
 		verbose 'Finding the onomotopaeic words in edict ...'
 
-		words = []
+		ono_words = []
 
 		@lookup_table.each do |word, definition|
 			meaning = definition.partition('/')[2]
-			if meaning.include '(on-mim)'
-				words << word
+			if meaning.include? '(on-mim)'
+				ono_words << word
 			end
 		end
 
-		return words
+		@ono_words = ono_words
+	end
+
+	# Returns a list of all the onomotopoaeic words in edict.
+	def get_ono_words
+		unless @ono_words
+			find_ono_words
+		end
+
+		return @ono_words
 	end
 end
 
 $edict = Edict.new
-words = $edict.find_ono_words
+words = $edict.get_ono_words
 verbose words
