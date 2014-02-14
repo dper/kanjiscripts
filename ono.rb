@@ -98,3 +98,5 @@ end
 $edict = Edict.new
 words = $edict.get_ono_words
 verbose words
+
+#TODO Sort the list by word frequency.
