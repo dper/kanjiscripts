@@ -95,8 +95,60 @@ class Edict
 	end
 end
 
+# Word frequency list.
+class Wordfreq
+	# Creates a Wordfreq.
+	def initialize
+		verbose 'Parsing wordfreq_ck.txt ...'
+		path = Script_dir + '/wordfreq_ck.txt'
+		wordfreq = IO.readlines path
+		wordfreq.delete_if {|line| line.start_with? '#'}
+		wordfreq.delete_if {|line| not line.include? "\t"}
+
+		@frequencies = {}
+	
+		wordfreq.each do |line|
+			word = line.split[0]
+			frequency = line.split[1]
+			@frequencies[word] = frequency.to_i
+		end
+	end
+
+	# Returns a list of lines in Wordfreq that contain the kanji.
+	# Words in this list are sorted most to least common.
+	# A higher number means a word is more frequent.
+	# If a word is not in wordfreq, it is considered the least frequent (0).
+	def get_frequency word
+		if @frequencies.key? word
+			return @frequencies[word]
+		else
+			return 0
+		end
+	end
+
+	# Takes a list of words and returns a sorted list.
+	# The new list is sorted most to least frequent.
+	# Words not contained in the wordfreq file are placed last.
+	def sort_by_frequent words
+		sorted_words = words.sort do |word1, word2|
+			(get_frequency word2) <=> (get_frequency word1)
+		end
+
+		return sorted_words
+	end
+
+	# Prints a list of words and their frequencies.
+	def show_frequencies words
+		words.each do |word|
+			verbose (get_frequency word).to_s + "\t" + word
+		end
+	end
+end
+
 $edict = Edict.new
 words = $edict.get_ono_words
-verbose words
 
-#TODO Sort the list by word frequency.
+$wordfreq = Wordfreq.new
+words = $wordfreq.sort_by_frequent words
+
+$wordfreq.show_frequencies words
