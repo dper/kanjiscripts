@@ -27,7 +27,7 @@ The word frequency list, `wordfreq_ck.txt`, is public domain and is included wit
 Example Sentences
 =================
 
-There are extensive numbers of sample sentences at Tatoeba (<http://tatoeba.org/eng/home>).  The data gets rather large in size, and I do not want to try to keep this repository updated.  This is because these files are the *entire* Tatoeba corpus, not just the Japanese and English sentences we will use in the end.  The files we need are these.  Whenever you need a new version, download it manually.
+There are extensive numbers of sample sentences at Tatoeba (<http://tatoeba.org/eng/home>).  The data gets rather large in size, and I do not want to try to keep this repository updated.  This is because these files are the *entire* Tatoeba corpus, not just the Japanese and English sentences we will use in the end.  Download the following three files, and whenever you want a new version, go ahead and grab one.
 
 * <http://tatoeba.org/files/downloads/sentences_detailed.csv>.  The sentences themselves.
 * <http://tatoeba.org/files/downloads/tags.csv>.  Tags for each sentence.
