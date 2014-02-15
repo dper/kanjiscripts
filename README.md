@@ -1,11 +1,13 @@
 onojapanese
 ===========
 
-A script for playing with Japanese words and sentences.  There are several scripts.
+Several scripts for playing with Japanese words and sentences.
 
 * `find_ono.rb`. Lists onomatopoiec words as noted in edict.
 * `list_tags.rb`. Lists tags used in the Tatoeba sentence corpus.
 * `make_cards.rb`. Makes text for Japanese/English flash cards.
+
+These scripts have many dependencies.  To avoid wasting your time with predictable errors, read this entire file before running them.
 
 
 Dictionary
@@ -85,3 +87,29 @@ Tags
 * `tags.txt` is a list of all tags used in Tatoeba.
 
 Over time, it is possible that Tatoeba will expand to use more tags.  We like to filter out sentences that have dangerous-looking tags.  The script `list_tags.rb` lists all of the tags currently used in the Corpus and can be occasionally used to update `tags.txt`.
+
+
+Kana
+====
+
+To generate phonetic (kana) readings of sentences written in standard Japanese (using kanji), we use a program called **Mecab** (<https://code.google.com/p/mecab/>).  The website there is not particularly enlightening.  Regardless, Mecab is a morphological analyzer, which means it looks at a series of symbols and tries to parse them into words that form a sentence.  There are several steps to the installation.  I'm running Debian Sid, and if you're running a similar flavor of Linux, you can follow my directions fairly closely.  If you aren't, this could be tedious.  Sorry!
+
+First, install the necessary packages.
+
+    # apt-get install ruby-ffi ruby-dev ruby-mecab
+
+Install the **natto** gem (<https://bitbucket.org/buruzaemon/natto/wiki/Installation-and-Configuration>).
+
+    # sudo gem install natto
+
+The natto gem depends on a `libmecab.so.2` library, but it doesn't look for the library intelligently.  I check the Debian Sid documentation (<https://packages.debian.org/sid/amd64/libmecab2/filelist>) and see that the library is installed in `/usr/lib/libmecab.so.2`.  To test that everything is working, I do the following.
+
+```
+$ export MECAB_PATH=/usr/lib/libmecab.so.2
+$ irb
+irb(main):001:0> require 'natto'
+=> true
+irb(main):002:0> 
+```
+   
+If you get an error instead of `=> true`, something is wrong.  Look at the error message, review the above steps and try to figure it out.
