@@ -65,8 +65,8 @@ class Corpus
 		@tags = {}
 		
 		text.each do |line|
-			sentence_id = line.split[0].to_i
-			tag = line.split[1]
+			sentence_id = line.split("\t")[0].to_i
+			tag = line.split("\t")[1]
 			
 			if @tags.key? sentence_id
 				@tags[sentence_id] << tag
@@ -74,6 +74,8 @@ class Corpus
 				@tags[sentence_id] = [tag]
 			end
 		end
+
+		verbose 'Unfiltered tags: ' + @tags.size.to_s + '.'
 	end
 	
 	# Parses the Japanese-English pair index file.
@@ -88,10 +90,12 @@ class Corpus
 		# The text is a heavily annotated Japanese sentence.
 		
 		text.each do |line|
-			sentence_id = line.split[0].to_i
-			meaning_id = line.split[1].to_i
+			sentence_id = line.split("\t")[0].to_i
+			meaning_id = line.split("\t")[1].to_i
 			@pairs << [sentence_id, meaning_id]
 		end
+
+		verbose 'Unfiltered English/Japanese pairs: ' + @pairs.size.to_s + '.'
 	end
 
 	# Parses the corpus sentence file.	
@@ -109,10 +113,10 @@ class Corpus
 		# The username is the user who has adopted the sentence.
 
 		text.each do |line|
-			id = line.split[0].to_i
-			lang = line.split[1]
-			text = line.split[2]
-			username = line.split[3]
+			id = line.split("\t")[0].to_i
+			lang = line.split("\t")[1]
+			text = line.split("\t")[2]
+			username = line.split("\t")[3]
 
 			if lang == 'eng'
 				@english[id] = text
@@ -122,11 +126,14 @@ class Corpus
 				@usernames[id] = username
 			end
 		end
+
+		verbose 'Unfiltered English sentences: ' + @english.size.to_s + '.'
+		verbose 'Unfiltered Japanese sentences: ' + @japanese.size.to_s + '.'
 	end
 
 	# Returns true iff the sentence is adopted.
 	def adopted? id
-		return @usernames.key? id
+		return @usernames[id] != '\N'
 	end
 
 	# Returns true iff the tags are all safe.
@@ -136,13 +143,16 @@ class Corpus
 			return true
 		end
 
-		#TODO Add more tags here.
-		dangerous = ['ambiguous']
+		# This list of prefixes of tags can be modified as desired.
+		dangerous = ['@Check!', '@change', '@check', '@delete', '@duplicate', '@fragment', '@need native', '@needs', '@not a sentences', '@wrong', 'ambigous', 'ambiguos', 'ambiguous', 'baby talk', 'check eng']
 
 		# Examine each tag.  If it's dangerous, return false.
 		@tags[id].each do |tag|
-			if dangerous.include? tag
-				return false
+			dangerous.each do |prefix|
+				# Checks to see if the tag starts with the prefix.
+				if tag[0, prefix.length] == prefix
+					return false
+				end
 			end
 		end
 
@@ -152,6 +162,8 @@ class Corpus
 	# Makes notes for each of the Japanese/English sentence pairs.
 	def make_notes
 		notes = []
+		not_adopted = 0
+		unsafe_tags = 0	
 
 		@pairs.each do |pair|
 			sentence_id = pair[0]
@@ -159,11 +171,13 @@ class Corpus
 
 			# Unadopted sentences aren't used.
 			unless (adopted? sentence_id) and (adopted? meaning_id)
+				not_adopted += 1
 				next
 			end
 
 			# Only sentences with safe tags are used.
 			unless (safe_tags? sentence_id) and (safe_tags? meaning_id)
+				unsafe_tags += 1
 				next
 			end
 
@@ -173,6 +187,9 @@ class Corpus
 		end
 
 		@notes = notes
+		verbose 'Not adopted pairs: ' + not_adopted.to_s + '.'
+		verbose 'Unsafe tags pairs: ' + unsafe_tags.to_s + '.'
+		verbose 'English/Japanese notes: ' + notes.size.to_s + '.'
 	end
 
 	# Creates a Corpus.
@@ -200,4 +217,4 @@ def show_notes notes
 end
 
 $corpus = Corpus.new
-show_notes $corpus.notes
+#show_notes $corpus.notes
