@@ -188,13 +188,13 @@ class Corpus
 
 			if not sentence
 				sentence_not_found += 1
-				verbose 'Warning: Sentence ' + sentence_id.to_s + 'not found.  Skipping.'
+				verbose 'Warning: Sentence ' + sentence_id.to_s + ' not found.  Skipping.'
 				next
 			end
 
 			if not meaning
 				meaning_not_found += 1
-				verbose 'Warning: Meaning ' + meaning_id.to_s + 'not found.  Skipping.'
+				verbose 'Warning: Meaning ' + meaning_id.to_s + ' not found.  Skipping.'
 				next
 			end
 
