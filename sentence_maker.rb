@@ -56,13 +56,12 @@ class Corpus
 	def parse_indices
 		path = Script_dir + '/jpn_indices.csv'
 		text = IO.readlines path
+		@translation = {}
 		
 		# The indices file is a bunch of lines like this: sentence_id [tab] meaning_id [tab] text.
 		# The sentence_id is the Japanese sentence.
 		# The meaning_id is an English translation of it.
 		# The text is a heavily annotated Japanese sentence.
-		
-		@translation = {}
 		
 		text.each do |line|
 			sentence_id = line.split[0].to_i
@@ -79,13 +78,28 @@ class Corpus
 	def parse_sentences
 		path = Script_dir + '/sentences_detailed.csv'
 		text = IO.readlines path
-		#TODO	
-		
-		# If a sentence isn't Japanese or English, ignore it.
+		@english = {}
+		@japanese = {}
+		@usernames = {}
+
+		text.each do |line|
+			id = line.split[0].to_i
+			lang = line.split[1]
+			text = line.split[2]
+			username = line.split[3]
+
+			if lang == 'eng'
+				@english[id] = text
+				@usernames[id] = username
+			elsif lang == 'jpn'
+				@japanese[id] = text
+				@usernames[id] = username
+			end
+		end
+
+		#TODO
 		# If a sentence isn't adopted, ignore it.
 		# If a sentence has a bad tag on it, ignore it.				
-		
-		# Make two maps.  One maps IDs to English.  The other maps IDs to Japanese.
 	end
 
 	# Creates a Corpus.
