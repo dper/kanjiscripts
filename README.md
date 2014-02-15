@@ -71,4 +71,12 @@ Word Frequency Files
 * `ono_words.txt` is a list of all the onomatopoeic words in edict sorted from most to least frequent.
 * `ono_freq.txt` is the same list except that the word's frequency is included along with the word.
 
-Both `ono_words.txt` and `ono_freq.txt` can be generated using `ono_finder.rb`.  This need only be done rarely, because relevant updates to edict are infrequent.
+Both `ono_words.txt` and `ono_freq.txt` can be generated using `find_ono.rb`.  This need only be done rarely, because relevant updates to edict are infrequent.
+
+
+Tags
+====
+
+* `tags.txt` is a list of all tags used in Tatoeba.
+
+Over time, it is possible that Tatoeba will expand to use more tags.  We like to filter out sentences that have dangerous-looking tags.  The script `list_tags.rb` lists all of the tags currently used in the Corpus and can be occasionally used to update `tags.txt`.

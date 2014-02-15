@@ -2,10 +2,10 @@
 # coding: utf-8
 #
 # == NAME
-# sentence_maker.rb
+# make_cards.rb
 #
 # == USAGE
-# ./sentence_maker.rb
+# ./make_cards.rb
 #
 # == DESCRIPTION
 # A script that creates a tab-separated flash card file from Tatoeba.
@@ -186,14 +186,6 @@ class Corpus
 		verbose 'Making notes for sentence pairs ...'
 		make_notes
 	end
-
-	# Writes a list of all the tags used.
-	def show_all_tags
-		tags = @tags.values
-		tags.uniq!
-		tags.sort!
-		puts tags
-	end
 end
 
 # Prints a list of notes.
@@ -208,5 +200,4 @@ def show_notes notes
 end
 
 $corpus = Corpus.new
-$corpus.show_all_tags
-#show_notes $corpus.notes
+show_notes $corpus.notes

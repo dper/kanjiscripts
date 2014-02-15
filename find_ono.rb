@@ -2,10 +2,10 @@
 # coding: utf-8
 #
 # == NAME
-# ono_finder.rb
+# find_ono.rb
 #
 # == USAGE
-# ./ono_finder.rb
+# ./find_ono.rb
 #
 # == DESCRIPTION
 # A script that finds onomatopoeic words in Japanese.
