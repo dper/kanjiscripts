@@ -94,9 +94,9 @@ Kana
 
 To generate phonetic (kana) readings of sentences written in standard Japanese (using kanji), we use a program called **Mecab** (<https://code.google.com/p/mecab/>).  The website there is not particularly enlightening.  Regardless, Mecab is a morphological analyzer, which means it looks at a series of symbols and tries to parse them into words that form a sentence.  There are several steps to the installation.  I'm running Debian Sid, and if you're running a similar flavor of Linux, you can follow my directions fairly closely.  If you aren't, this could be tedious.  Sorry!
 
-First, install the necessary packages.
+First, install the necessary packages.  Be careful not to skip any, because if you're missing some of these, the resulting error messages may not be helpful.
 
-    # apt-get install ruby-ffi ruby-dev ruby-mecab
+    # apt-get install mecab ruby-ffi ruby-dev ruby-mecab
 
 Install the **natto** gem (<https://bitbucket.org/buruzaemon/natto/wiki/Installation-and-Configuration>).
 
@@ -111,8 +111,9 @@ irb(main):001:0> require 'natto'
 => true
 irb(main):002:0> require 'nkf'
 => true
-irb(main):003:0> 
-
+irb(main):003:0> nm = Natto::MeCab.new
+=> #<Natto::MeCab:0x000000024a26b0 @tagger=#<FFI::Pointer address=0x0000000244d120>, @options={}, @dicts=[#<Natto::DictionaryInfo:0x000000024a24a8 type="0", filename="/var/lib/mecab/dic/debian/sys.dic", charset="EUC-JP">], @version="0.996">
+irb(main):004:0> 
 ```
 
 If you prefer, you can set the path within Ruby.  This is what the script does.
@@ -125,7 +126,11 @@ irb(main):002:0> require 'natto'
 => true
 irb(main):003:0> require 'nkf'
 => true
-irb(main):004:0> 
+irb(main):004:0> nm = Natto::MeCab.new
+=> #<Natto::MeCab:0x000000024a26b0 @tagger=#<FFI::Pointer address=0x0000000244d120>, @options={}, @dicts=[#<Natto::DictionaryInfo:0x000000024a24a8 type="0", filename="/var/lib/mecab/dic/debian/sys.dic", charset="EUC-JP">], @version="0.996">
+irb(main):005:0> 
 ```
    
-If you get an error instead of `=> true`, something is wrong.  Look at the error message, review the above steps and try to figure it out.
+If you get an error at any step, something is wrong.  Look at the error message, review the above steps and try to figure it out.
+
+The way in which kana is generated depends on MeCab.  If you're interested in tweaking the output, see the Japanese documentation here: <http://mecab.googlecode.com/svn/trunk/mecab/doc/index.html#parse>.
