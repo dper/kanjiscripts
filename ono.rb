@@ -198,6 +198,12 @@ class Corpus
 		path = Script_dir + '/sentences_detailed.csv'
 		text = IO.readlines path
 		#TODO	
+		
+		# If a sentence isn't Japanese or English, ignore it.
+		# If a sentence isn't adopted, ignore it.
+		# If a sentence has a bad tag on it, ignore it.				
+		
+		# Make two maps.  One maps IDs to English.  The other maps IDs to Japanese.
 	end
 
 	# Creates a Corpus.
