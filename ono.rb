@@ -152,20 +152,20 @@ class Corpus
 		path = Script_dir + '/tags.csv'
 		text = IO.readlines path
 		
-		# The tags file is a bunch of lines like this: number + tab + tag.
-		# The number is the sentence ID. Tags can be multiple words with spaces.
+		# The tags file is a bunch of lines like this: sentence_id [tab] tag_name .
+		# The sentence ID is a number of a sentence. Tags can be multiple words with spaces.
 		# If a sentence is tagged several times, each one is a separate line.
 		
 		@tags = {}
 		
 		text.each do |line|
-			number = line.split[0].to_i
+			sentence_id = line.split[0].to_i
 			tag = line.split[1]
 			
-			if @tags.key? number
-				@tags[number] << tag
+			if @tags.key? sentence_id
+				@tags[sentence_id] << tag
 			else
-				@tags[number] = [tag]
+				@tags[sentence_id] = [tag]
 			end
 		end
 	end
@@ -174,7 +174,24 @@ class Corpus
 	def parse_indices
 		path = Script_dir + '/jpn_indices.csv'
 		text = IO.readlines path
-		#TODO	
+		
+		# The indices file is a bunch of lines like this: sentence_id [tab] meaning_id [tab] text.
+		# The sentence_id is the Japanese sentence.
+		# The meaning_id is an English translation of it.
+		# The text is a heavily annotated Japanese sentence.
+		
+		@translation = {}
+		
+		text.each do |line|
+			sentence_id = line.split[0].to_i
+			meaning_id = line.split[1].to_i
+			
+			if @tags.key? sentence_id
+				@tags[sentence_id] << meaning_id
+			else
+				@tags[sentence_id] = [meaning_id]
+			end
+		end
 	end
 	
 	def parse_sentences
@@ -204,9 +221,6 @@ words = $edict.get_ono_words
 
 $wordfreq = Wordfreq.new
 words = $wordfreq.sort_by_frequent words
-
-#TODO Remove this.
-$wordfreq.show_frequencies words
 
 $corpus = Corpus.new
 #TODO Use the corpus.
