@@ -27,6 +27,26 @@ end
 
 Script_dir = File.dirname(__FILE__)
 
+# A note for a flash card containing a sentence in kanji, kana, and English.
+class Note
+	# Generates the kana.
+	def make_kana kanji
+		#TODO Write this.
+	end
+
+	# Creates a Note.
+	def initialize(kanji, english)
+		@kanji = kanji
+		@english = english
+		@kana = make_kana kanji
+	end
+
+	# Returns true if both sentences have no dangerous tags.
+	def safe_tags?
+		#TODO Write this.
+	end
+end
+
 # Sentence corpus.
 class Corpus
 	# Parses tags file.
@@ -52,7 +72,7 @@ class Corpus
 		end
 	end
 	
-	# Reads
+	# Parses the Japanese-English pair index file.
 	def parse_indices
 		path = Script_dir + '/jpn_indices.csv'
 		text = IO.readlines path
@@ -74,7 +94,8 @@ class Corpus
 			end
 		end
 	end
-	
+
+	# Parses the corpus sentence file.	
 	def parse_sentences
 		path = Script_dir + '/sentences_detailed.csv'
 		text = IO.readlines path
@@ -96,10 +117,6 @@ class Corpus
 				@usernames[id] = username
 			end
 		end
-
-		#TODO
-		# If a sentence isn't adopted, ignore it.
-		# If a sentence has a bad tag on it, ignore it.				
 	end
 
 	# Creates a Corpus.
