@@ -145,10 +145,52 @@ class Wordfreq
 	end
 end
 
+# Sentence corpus.
+class Corpus
+	# Parses tags file.
+	def parse_tags
+		path = Script_dir + '/tags.csv'
+		text = IO.readlines path
+		#TODO	
+	end
+	
+	# Reads
+	def parse_indices
+		path = Script_dir + '/jpn_indices.csv'
+		text = IO.readlines path
+		#TODO	
+	end
+	
+	def parse_sentences
+		path = Script_dir + '/sentences_detailed.csv'
+		text = IO.readlines path
+		#TODO	
+	end
+
+	# Creates a Corpus.
+	def initialize
+		verbose 'Parsing tags.csv ...'
+		parse_tags
+		verbose 'Parsing jpn_indices.csv ...'
+		parse_indices
+		verbose 'Parsing sentences_detailed.csv ...'
+		parse_sentences	
+		
+		#TODO Filter the sentences. 
+	end
+	
+	#TODO Write a function that for a word makes a list of containing sentences.
+	#TODO Probably these sentences should be sorted by length: shortest first.
+end
+
 $edict = Edict.new
 words = $edict.get_ono_words
 
 $wordfreq = Wordfreq.new
 words = $wordfreq.sort_by_frequent words
 
+#TODO Remove this.
 $wordfreq.show_frequencies words
+
+$corpus = Corpus.new
+#TODO Use the corpus.
