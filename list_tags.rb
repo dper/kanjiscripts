@@ -24,7 +24,7 @@ def read_tags
 	tags = []
 
 	text.each do |line|
-		tags << line.split[1]
+		tags << line.split("\t")[1]
 	end
 
 	tags.uniq!

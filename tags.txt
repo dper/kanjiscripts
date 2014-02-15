@@ -1,38 +1,116 @@
-"man"
-"that
-(Joseph
+  non-ASCII character in a Turkish sentence
+ French mathematicians joke
+ by Ernst Bloch
+ 證道歌
+"man" as "person"
+"man" meaning "human"
+"man" meaning "person"
+"that that"
+(Joseph Conrad)
+(Joseph Joubert)
 -as
--is
+-as -as
+-as -as -as
+-as -as -is
+-as -as -os
+-as -as -u
+-as -is
+-as -is -as
+-as -is -is
+-as -is -os
+-as -is -u
+-as -os
+-as -os -os
+-as -u
+-as -u -as
+-as -us
+-as -us -as
+-is 
+-is -as
+-is -as -as
+-is -as -is
+-is -i
+-is -is
+-is -is -as
+-is -is -is
+-is -is -os
+-is -is -u
+-is -os
+-is -os -as
+-is -os -is
+-is -os -os
+-is -u
+-is -u -is
+-is -u -u
+-is -us -is
+-is -us -us
 -nte
 -os
+-os -as
+-os -as -as
+-os -as -os
+-os -is -as
+-os -is -os
+-os -os
+-os -os -as
+-os -os -is
+-os -os -os
+-os -u -os
 -u
+-u -as
+-u -as -as
+-u -as -is
+-u -i
+-u -is
+-u -os
+-u -u
+-u -u -as
+-u -u -is
 -us
-1
-10
-11
-12
+-us -us
+1 syllable
+1 word
+10 commandements
+10 syllables
+10 words
+11 syllables
+11 to 13 words
+11 words
+12 syllables
+12 words
 127763
-13
-14
-15
-15th
-16
-17
+13 syllables
+13 words
+14 syllables
+14 to 16 words
+14 words
+15 syllables
+15 words
+15th century
+16 syllables
+16 words
+17 syllables
+17 to 20 words
+17 words
 1760254
 1762
-1794
+1794 Poem
 1798
-17th
-18
+17th century
+18 syllables
+18 words
 1830
 1832
 1848
 1849
 1862
 1890
-18th
-19
-1st
+18th century
+19 syllables
+19 words
+1st Person Plural
+1st Person Singular
+1st Person female
 1|1
 1|1|1
 1|1|2
@@ -41,95 +119,162 @@
 1|2|1|2
 1|2|2
 1|2|3
-2
-20
-2008
-21
-22
+2 sentences
+2 syllables
+2 words
+20 syllables
+20 words
+2008 spelling reform
+21 to 24 words
+21 words
+22 syllables
+22 words
 2265729
-23
-24
-25
-27
+23 words
+24 syllables
+24 words
+25 to 30 Words
+25 words
+27 words
 2799574
-28
-29
-2d
-2nd
+28 words
+29 words
+2d letter is an O
+2nd Person
+2nd Person Formal
+2nd Person Formal Plural
+2nd Person Formal Singular
+2nd Person Informal
+2nd Person Informal (Uyghur)
+2nd Person Informal Plural
+2nd Person Informal Singular
+2nd Person Plural
+2nd Person Plural (Uyghur)
+2nd Person Plural Formal
+2nd Person Plural Informal
+2nd Person Plural/Formal
+2nd Person Singular
+2nd Person Singular Formal
 2|1
 2|1|1
 2|1|2
 2|2|1
 2|3|1
 3
+3 Henry VI
+3 syllables
+3 words
 3006367
-31
-34
-36
-3rd
-4
-45
-5
-55
+31 to 40 Words
+31 words
+34 words
+36 words
+3rd Person
+4 as
+4 syllables
+4 words
+45 words
+5 syllables
+5 words
+55 words
 575
 57577
-6
+6 syllables
+6 words
 667347
-7
+7 syllables
+7 words
 766424
 7775
-8
-9
+8 syllables
+8 to 10
+8 to 10 words
+8 words
+9 syallables
+9 syllables
+9 words
 90945
-?
+? kun antaŭa spaceto
 @Check!
 @NNC
 @change
+@change audio
+@change flag
+@change grammar
+@change link
+@change or delete
+@change or unlink
+@change punctuation
+@change spelling
+@change tag
+@change to standard character
 @change?
 @check
+@check capitalisation
+@check flag
+@check link
+@check reading
 @chnage
-@complete
+@complete me
 @dated
 @delete
+@delete maybe
 @delete?
 @duplicate
-@fact
+@fact check
 @fragment
-@français
-@indirect
+@français du Canada
+@indirect link is wrong
 @link
-@native
-@need
-@needs
-@not
-@possible
+@native check
+@need native check
+@needs native
+@needs native chack
+@needs native chak
+@needs native check
+@needs native check.
+@needs native checks
+@needs native chek
+@not a sentence
+@possible copyright violation
 @proverb
-@qneeds
-@remove
-@translate
-@translation
-@wrong
-@wwwjdic
-A
+@qneeds native check
+@remove NNC tag
+@remove annotation
+@remove audio
+@remove comment
+@translate en-fr
+@translation check
+@translation check eng-jpn
+@wrong audio
+@wrong translation
+@wrong transliteration
+@wwwjdic update needed
+A Midsummer Night’s Dream
 Abbreviation
-Abraham
-Acordo
+Abraham Lincoln
+Acordo Ortográfico
 Adaptation
-Adapted
-Alexander
+Adapted from Oscar Wilde
+Alexander the Great
 Alexandriner
 Amazigh
-American
+American English
+American English Spelling
+American English Vocabulary
+American English punctuation
+American English?
+American exceptionalism
 Amharic
 Analects
-Anatole
+Anatole France
 Anatomie
-Ancien
-Ancient
-Andrew
+Ancien Français
+Ancient Greek
+Andrew Matthews
 Anglicism
-Announcement
-Antoine
+Announcement to passengers
+Antoine de Saint-Exupéry
 Aphorismes
 Arabic
 Arabicism
@@ -137,27 +282,31 @@ Aramaic
 Aramaism
 Ariosto
 Aristotle
-Arnaud
-Asking
+Arnaud Amaury
+Asking for help
 Astronomy
 Asturian
-Athanasian
+Athanasian Creed
 Audio
-Australian
-Austrian
+Australian English
+Australian English vocabulary
+Austrian German
+Austrian German vocabulary
 Awadhi
 Azeri
-Bao
-Barack
+Bao Pu zi
+Barack Obama
 Bashkir
-Basic
-Battle
-Bavarian
+Basic vocabulary
+Battle of Waterloo
+Bavarian German
 Beatles
-Beijing
+Beijing accent
 Belarus
 Belge
-Belgian
+Belgian French
+Belgian French from Liège
+Belgian German
 Belgisch-Nederlands
 Betty
 Bible
@@ -168,394 +317,509 @@ Blasphemy
 Bologna
 Bonlingvismo
 Brazil
-British
-Brussels
+British English
+British English Grammar
+British English Vocabulary
+British English spelling
+British English spelling of Mt
+British Spelling Double-Ls
+British Spelling of Dr
+British Spelling of Mrs
+British orthography
+British slang
+British spelling
+British spelling 'ou'
+British spelling 're'
+British spelling of Mr
+Brussels French
 Burschenschaft
-By
-By-Henry
+By A. D. Gordon
+By Arel Segal
+By Camille Saint-Saëns
+By César Chávez
+By Elsie Lincoln Benedict and Ralph Paine Benedict
+By Henri IV
+By Hippokrates of Cos
+By Horatio Nelson
+By Ian Kershaw
+By Kazuko Watanabe
+By Lawrence Krauss
+By Lenin
+By Li Bai
+By Marcel Reich-Ranitzki
+By Mother Teresa
+By Ogden Nash
+By Pablo Picasso
+By Shulamit Aloni
+By Thoreau
+By the Maggid of Mezeritch
+By-Henry David Thoreau
 By-Muiriel
 By-Мюриэл
-By-Пол
+By-Пол Блэй
 CYOA
+CYOA - Cave Escape
+CYOA - Выйти из пещеры
 Caesar
-Cajun
-Canadian
+Cajun French
+Canadian English
+Canadian French
 Catholic
-Central
-Charles
+Central Moroccan Berber
+Charles Monselet
+Charles de Gaulle
 Chavacano
-Chevalier
-Chief
+Chevalier de Méré
+Chief Seattle
 China
-Chinese
-Christian
+Chinese wisdom
+Christian Morgenstern
 Christianity
 Christmas
 Chukchi
-Classiac
-Classical
-Colombian
+Classiac Chinese quote
+Classical Chinese
+Classical Japanese (Bungo)
+Colombian Spanish
 Commercial
-Conte
-Counting-out
-Cícero,
-Cô
-D'après
-Dale
-Dao
-David
-Declaration
-Definition
+Conte de Perrault
+Counting-out game
+Cícero, Tusculanae 1,18,41
+Cô bé quàng khăn đỏ
+D'après Anatole France.
+D'après René Descartes
+D'après Saint-Exupéry
+Dale Carnegie
+Dao de jing
+David Ben Gurion
+Declaration of Independence
+Definition on comment
 Denglisch
 Diablo
-Die
-Dima's
-Don
-Donald
-Dong
-Dual
+Die Braut von Messina
+Die Räuber
+Dima's adventures
+Don Carlos
+Donald Rumsfeld
+Dong Zhongshu
+Dual Pronoun
 EU
-Eccl
-Ecl
-Eclo
-Eduard
+Eccl 7,5 (6)
+Ecl 1,12
+Eclo 18,25
+Eduard Mörike
 Einheitsübersetzung
-Ekkehard
-El
-Ela
-Elmer
+Ekkehard von Braunmühl
+El Chavo
+Ela é a noiva
+Elmer T. Peterson
 England
 Engleutsch
 English
-Ephesians
-Erasmus
-Erfahrung
-Ernst
+English translation of a Japanese proverb
+Ephesians 5:22-23
+Erasmus von Rotterdam
+Erfahrung bleibt des Lebens Meisterin
+Ernst Bloch
 Erzya
 Espace&amp;orientation
 Espace&orientation
 España
 Esperanto
+Esperanto rules
 Eurovision
-Excerptiones
-Fabelo
+Excerptiones de arte grammatica anglice
+Fabelo de Perrault
 Facebook
-Father
-Faust
-Fedro,
+Father = ئاتا
+Father = دادا
+Faust I
+Fedro, Fabulae 4,1,16
 Feels&amp;emotions
 Flemish
-Formal
+Formal Hebrew language
+Formal language
 France
-Frank
-Franz
-Français
-François
-Frederick
-French
+Frank Zappa
+Franz Liszt
+Français archaïque
+Français d'Algérie
+Français de France
+François de Sales
+Frederick Wilhelm Christian Gerstäcker
 Freudianism
-Friedrich
-From
-From-Белый
-From-Палата
-GDR
-Gabriel
-Galatians
+Friedrich Hebbel
+Friedrich von Bodelschwingh
+From The Chaos
+From l'Encyclopédie
+From-Белый ослик
+From-Палата №6
+GDR German
+Gabriel García Márquez
+Galatians 3:28
 Game
-Game:
-Gen
-Genealogic
+Game: 20Q
+Gen 2,18
+Genealogic tree
 Gently
-Gerald
+Gerald Hüther
 Gerlisch
 German
-Germanismo
+German German
+German orthography reform of 1996
+German song
+Germanismo tradukita
 Germany
 Globalisation
 God
 Goethe
-Gong
-Gorch
+Gong Zizhen (1792-1841)
+Gorch Fock
 Guanzi
-Guliang
+Guliang Zhuan
 Guoyu
-Gustav
+Gustav Knuth
 H.L.Mencken
-H.P.
+H.P. Lovecraft
 HSK
-Haitian
+Haitian Creole
 Halloween
 Hamlet
-Han
+Han shu
 Hanfeizi
-Hebrew
-Heinz
-Henri
-Henry
+Hebrew colloquial
+Hebrew proverb
+Hebrew slang
+Heinz Erhardt
+Henri IV
+Henry of Settimello
 Hernani
-High
-Hill
+High Hebrew
+Hill Mari
 Holland
 Holocaust
 Homophone
 Horace
 Huainanzi
-Human
-I
-Idea
-Imogen
-Imperativ
-Indian
+Human body
+I like PERSON'S NAME
+Idea from Gifford Michael Rodney
+Imogen of the Internet
+Imperativ 2. Person Pl.
+Imperativ 2. Person Sing.
+Imperativ Höflichkeitsform
+Indian English
+Indian proverb
 Internet
+Internet slang
 Internet-related
-Iphigenie
+Iphigenie auf Tauris
 Islam
-J.
-Jacqueline
+J. R. R. Tolkien
+Jacqueline de Romilly
 Japan
+Japan 2011 earthquake
 Japanese
-Japanese-English
+Japanese pop culture
+Japanese-English are not matching sentences
 Javanese
-Jean
-Johann
-John
-Joseph
-Joshua
-João
+Jean Cocteau
+Johann Wolfgang von Goethe
+John 1:17
+Joseph Addison
+Joshua 6:20-21
+João 15,12
 Judaism
-Jules
-Julien
-Jurij
-Kabale
+Jules Verne
+Julien Green
+Jurij Brězan
+Kabale und Liebe
 Kalevipoeg
-Kansai
+Kansai dialect
 Kazan
-King
+King James
 Klingon
 Krishnamurti
 Kurdish
-Kurt
+Kurt Tucholsky
 Kyrgyz
 Latin
-Latina
-Lc
+Latin American Spanish
+Latin in Hebrew
+Latina Nova
+Lc 11,9
 Lenin
-Li
+Li ji
 Lie
-Literary
+Literary Hebrew
 Lithuania
-Lk
-Louis
-Louisiana
-Luke
+Lk 2,14
+Louis Segond
+Louisiana French
+Luke 14:26
+Luke 16-17
 Lunyu
 Luxembourgish
 Lviv
-Lü
+Lü Shi Chun Qiu
 MMORPG
 Macbeth
 Macedonian
-Mahabharata
-Malcolm
-Malnova
+Mahabharata 
+Malcolm S. Forbes 
+Malnova franca lingvo
 Maltese
 Mandarin
-Mari
-Maria
-Mark
-Martin
+Mari language
+Maria Stuart
+Mark 10:25
+Mark 16:17-18
+Mark 1:16
+Martin Luther
 Masculine
-Mat
-Matsuo
-Matthäeus
-Measure
+Mat 12,34
+Mat 26,52
+Matsuo Bashō
+Matthäeus 26:52
+Measure for Measure
 Mengzi
-Merchant
-Mexican
-Milorad
+Merchant of Venice
+Mexican Spanish
+Milorad Pavić
 Minsk
 Misandry
 Mozi
-Mr.
+Mr. Smith
 Musikinstrument
-My
+My 10000th sentence.
+My name is ___.
 NNC
-Nagoya
+Nagoya dialect
 Nahuatl
-Name
-Napoleon
-Narrative
+Name Calling
+Napoleon Hill
+Narrative Style
 Nederlands-Nederlands
-New
-Nicolas
-Ningbo
-Northern
-O.
+New Testament
+Nicolas Sarkozy
+Ningbo dialect
+Northern German
+O. Henry
 OK
 OK?
 Okcitana
-Old
+Old French
+Old Testament
+Old Tupi
+Old orthography
 Opposites
 Orthodox
-Oscar
+Oscar wilde
 Ossetian
-Ottoman
+Ottoman Turkish
 Ovid
-Ovídio,
-P.
+Ovídio, Amores 1,9,46
+Ovídio, Ars amatoria 2,113
+P. T. Barnum
 PComputer
 PG
 PG-13
-Papst
+Papst Johannes XXIII.
 Paracelsus
-Paul
-Pearl
-Peruvian
+Paul Blay
+Pearl S. Buck
+Peruvian Spanish
 Piaku
 Pinocchio
 Places
 Plato
-Plauto,
-Play
+Plauto, Mostellaria 289
+Play on word
 Pokémon
 Poland
-Police
+Police maxim
 Portugal
-Portuguese
-Possessor
-Proverb
-Proverbes
-Proverbs
-Ps
-Publílio
-Puerto
+Portuguese from Brazil
+Portuguese from Portugal
+Possessor Explicit (Uyghur)
+Possessor Implicit (Uyghur)
+Proverb (Universal)
+Proverbes 31:10
+Proverbs 17,22
+Proverbs 3,27
+Proverbs 31:10
+Proverbs 31:30
+Ps 127,2
+Publílio Siro, Sententiae
+Puerto Rican Spanish
 Punjabi
 Putin
 Q20
 Quenya
 Question
+Question by Intonation
+Question on comments
 Quran
 RAE
 Racter
-Regional
-Rioplatense
-Robert
+Regional US
+Rioplatense Spanish
+Robert Kennedy
 Russia
 Russian
+Russian proverb
 Russism
 Ruĝkapuĉetulino
 SV
 SVA
 SVC
+SVC SVC
 SVO
 SVOC
 SVOO
-Safe
+Safe search
 Saluting&Farewell
-Samuel
-Sankta
+Samuel Butler
+Samuel Johnson
+Sankta Mateo 26:52
 Schneewittchen
 Schwejk
 Scold
-Scottish
+Scottish English
+Scottish Gaelic
 Seneca
-Sentences
+Sentences with other related
 Shakespeare
-Shang
-Shigeru
+Shang Shu
+Shigeru Miyamoto
 Shuoyuan
-Sima
-Simple
-Sirach
-Siraĥido
-Slavic
+Sima Qian
+Simple present tense
+Sirach 13,1
+Siraĥido 13,1
+Slavic mythology
 Slavs
 Sluts
 Socrates
-South
-Southern
-Soviet
+South American
+South German
+Southern Moroccan Berber (Tashelhit)
+Southern Morocco Berber (Tashelhit)
+Soviet Russia joke
+Soviet Union
 Spain
-Spanish
-Spoken
+Spain Spanish
+Spain topics
+Spanish from Argentina
+Spanish from Chile
+Spanish from Dominican Republic
+Spanish from Mexico
+Spanish from Peru
+Spanish from Spain
+Spanish from Uruguay
+Spanish from Venezuela
+Spoken Hebrew
 Sport
 Sprichwort
-Star
-Stefan
-Steven
+Star Wars
+Stefan George
+Steven Wright
 Suisse
 Sumerian
-Sunan
-Suzhou
+Sunan Abu Dawood
+Suzhou dialect
 Swabian
-Swiss
-Sêneca,
+Swiss French
+Swiss German
+Swiss German Vocabulary
+Swiss German spelling
+Swiss punctuation
+Swiss spelling
+Sêneca, De dementia 1,1
+Sêneca, Epistulae 9,6
 TV
-TV-series
-Taiwan
-Tanaka
+TV-series title
+Taiwan Mandarin
+Tanaka Corpus
 Tatoeba
-The
-Theodor
-Thiaoouba
-Thomas
-Three
-To
-Tom
-Torquato
+Tatoeba FAQ
+Tatoeba users
+The Battle of Life
+The Comedy of Errors
+The Morning Oregonian
+The Tempest
+Theodor Fontane
+Thiaoouba Prophecy
+Thomas d'Aquin
+Three Kingdoms (三国演义)
+To Female
+To Male
+Tom and Mary in the land of sentences
+Tom ne scias la diferencon
+Torquato Tasso
 Trang
-Translated
-Truyện
-Tumẓabt
+Translated quote by Pablo Picasso
+Truyện cổ Perault
+Truyện cổ Perrault
+Tumẓabt - Mozabite
 Turkmen
-Tục
-US
-Udmurt
-United
-Universal
+Tục ngữ
+US State
+Udmurt language
+United States of America
+Universal Declaration of Human Rights
 Urdu
 VOA
-Virgilio,
-Virgílio,
+Virgilio, Écloga 8,108
+Virgílio, Eneida.
+Virgílio, Écloga 10,69
 Virgílio.
 Vocalized
 Volksmund
 Voltaire
-Vulgata
-Vulgata,
+Vulgata - Eclo 13,19
+Vulgata, Eccl 1,2
+Vulgata, Gálatas 6,10
+Vulgata, Prov 3,27
 Wallenstein
 Wallon
 Walloon
 Welsh
 Wenzi
-Wii
-Wilhelm
-Winston
+Wii fit
+Wilhelm Meisters Lehrjahre
+Wilhelm Tell
+Winston Churchill, in 1963
 Wortspiel
 XVIII
 Xunzi
-Yi
-Yosa
-Younger
+Yi Zhou shu
+Yi jing
+Yosa Buson
+Younger Brother
 Zamenhofa
-Zen
+Zen koan
 Zhongyong
 Zhuangzi
-Zi
-Zuo
-a
+Zi Chan
+Zuo Zhuan
+a bloody lot of tags
+a pun that doesn't translate well
 ability
-about
-abridged
+about Félix Faure
+abridged conjugation
 absurd
 accident
 accidents
-accusative
-adapted
+accusative case
+adapted name
+adapted translation
+adapted version
 administrative
 admiration
 ads
-adverbial
+adverbial modifier of concession
+adverbial participle
 advertisement
 advice
 aesthetics
@@ -564,13 +828,13 @@ agressive
 agriculture
 airplane
 airport
-alcoholic
+alcoholic drinks
 alliteration
 alternative
 ambigous
 ambiguos
 ambiguous
-amusement
+amusement park
 anachronism
 anacoluto
 analogy
@@ -588,29 +852,36 @@ apple
 apples
 appreciation
 archaic
+archaic english
+archaic job titles
 archaic?
 architecture
 argot
-armenian
+armenian proverb
 art
-article
-as
-ask
-asking
+article title
+as ... as
+ask for help
+asking about language
 astonishment
 astrology
-astronomical
+astronomical object
 as|is|is
-at
+at home
+at the barber's
+at the door
+at the table
 atheism
 atheistic
-attributed
-auto
-automated
+attributed to Buddha
+auto description
+automated flag error
 autumn
-ba
-baby
-bad
+ba Thomas Morus
+baby talk
+bad behaviour
+bad french
+bad habit
 bank
 banks
 bar
@@ -624,15 +895,16 @@ bigotry
 bike
 biologie
 biology
-bière
-blog
+bière américaine
+blog title
 blue
 blurb
 body
-book
+body parts
+book title
 bookish
 books
-border
+border crossing
 borrar
 botany
 bourse
@@ -642,15 +914,2025 @@ bragging
 bus
 business
 buying
-by
-by-John
-by-Karl
-by-Martin
-by-Ralph
+by  Adam Gottlob Oehlenschläger
+by  Alfred North Whitehead
+by  Ashleigh Brilliant
+by  Carlo Bourlet
+by  Isak Dinesen
+by  Jeanette Winterson
+by  Revue encyclopédique, ou Analyse raisonnée des
+by  Robert S. Baden-Powell
+by Aaron Copland
+by Abbi Hübner 
+by Aboul-Qacem Echebbi
+by About
+by Abraham Lincoln
+by Abu al-Husayn ibn al-Rawandi
+by Achile Tournier
+by Adalbert Chamisso
+by Adalbert Stifter
+by Adalbert von Chamisso
+by Adam Mickiewicz
+by Adam Smith
+by Adelbert von Chamisso
+by Adele Sandrock
+by Adelle Davis
+by Adlai E. Stevenson
+by Adolf Anderssen
+by Adolf Hitler
+by Adolf Nowaczynski
+by Adolph Freiherr Knigge
+by Adolph Freiherr von Knigge
+by Aeneis
+by Aesop
+by Affonso Romano de Sant'Anna
+by Agatha Christie
+by Agnes Heller
+by Agnetha Faltskog
+by Ahmad Shamlou
+by Aischylos
+by Akutagawa Ryunosuke
+by Alain Madelin
+by Alain Peyrefitte
+by Alain-Rene Lesage
+by AlanF_US
+by Albert Barnes
+by Albert Camus
+by Albert Einstein
+by Albert Schweitzer
+by Albert Schweizer
+by Alberto Moravia
+by Albrecht Fürst zu Castell-Castell
+by Albrecht von Haller
+by Aldous Huxley
+by Alejandro Jodorowsky 
+by Aleksander Griboyedov
+by Aleksandr Kuprin
+by Aleksandr Pushkin
+by Alex Guiness
+by Alexander
+by Alexander Alekhin
+by Alexander Genis
+by Alexander Hamilton
+by Alexander Herzen
+by Alexander Kluge
+by Alexander Lukashenko
+by Alexander Mitscherlich
+by Alexander Pope
+by Alexander Pushkin
+by Alexander Solschenizyn
+by Alexander Suvorov
+by Alexander von Humboldt
+by Alexandre Dumas
+by Alexandre Dumas (fils)
+by Alexis de Tocqueville
+by Alf Willie
+by Alfie Moore
+by Alfonso Romano de Sant'Anna
+by Alfred Adler
+by Alfred Biolek
+by Alfred Capus
+by Alfred Döblin
+by Alfred Hitchcock
+by Alfred Polgar
+by Alfred Whitehead
+by Alfred de Musset
+by Alfred de Vigny
+by Alice Morse Earle
+by Alice Schwarzer
+by Alin Coen
+by Allen Ginsberg
+by Almeida Garrett
+by Alphonse Allais
+by Alphonse Daudet
+by Alphonse de Lamartine
+by Amastan
+by Ambrose Bierce
+by Ambrosius von Mailand
+by Amintore Fanfani 
+by Amos Bronson Alcott
+by Anatole France
+by Andre Brie
+by Andre Gide
+by Andre Kostolany
+by Andrea Bocelli
+by Andrea Eriksen Albrethson
+by Andreas Kuenzli
+by Andreas Rødøy
+by Andrew Lewis
+by Andrew Matthews
+by Andrey Maximov
+by Andrzej Niemojewski
+by András Simor
+by André Breton
+by André Goscinny
+by André Malraux
+by André Maurois
+by Andy Warhol
+by Angela Merkel
+by Angelus Silesius
+by Anjezë Gonxhe Bojaxhiu
+by Anna Löwenstein
+by Anna Magnani
+by Anne Frank
+by Anne Morrow Lindbergh
+by Annie Besant
+by Anselm Feuerbach
+by Anthony Mollica
+by Antoine Guillaume Bernard Schayes
+by Antoine de Rivarol
+by Antoine de Saint-Exupery
+by Anton Chekhov
+by Anton Oberndorfer
+by Anton P. Tschechow
+by Anton Tschechow
+by Antonio Machado
+by Antonius von Padua
+by Aoyama Tesso
+by Aragon
+by Arakida Moritake
+by Aristophanes
+by Aristoteles
+by Aristoteles Onassis
+by Aristotle
+by Arletty
+by Armand Bénet
+by Arnaud Amaury
+by Arno Pötzsch
+by Arnold Toynbee
+by Arnold Zweig
+by Arnulf Rating
+by Art van Rheyn
+by Arthur C. Clarke
+by Arthur Conan Doyle
+by Arthur Koestler
+by Arthur Miller
+by Arthur Rimbaud
+by Arthur Schnitzler
+by Arthur Schopenhauer
+by Arthur Wellesley, 1st Duke of Wellington
+by Asaka Gonsai
+by Ashot Nadanian
+by Astrid Lindgren
+by Atsushi Nakajima
+by Attila Hörbiger
+by Audrey Hepburn
+by August Everding
+by August Strindberg
+by August Wilhelm Ambros
+by August von Kotzebue
+by August von Platen
+by Auguste Comte
+by Auguste Renoir
+by Auguste Villiers de l'Isle-Adam
+by Auguste de Villiers de L'Isle-Adam
+by Augustine of Hippo
+by Augustinus
+by Augustus
+by Aurelius Augustinus
+by Axel Munthe
+by BIOPRO Baden-Württemberg
+by Baldur Ragnarsson
+by Baltasar Gracian
+by Balzac
+by Balázs Wacha
+by Banana Yoshimoto
+by Bar Kipok
+by Barack Obama
+by Barbara Streisand
+by Barbra Streisand
+by Barrès
+by Barthold Heinrich Brockes
+by Bartolomé de las Casas
+by Baruch Spinoza
+by Baruch de Spinoza
+by Bashar ibn Burd
+by Baudelaire
+by Baurzhan Tojshibekov
+by Beaumarchais
+by Beccaria
+by Becque
+by Ben Jonson
+by Ben McPherson
+by Benigno Aquino III
+by Benjamin Constant
+by Benjamin Disraeli
+by Benjamin Franklin
+by Benjamin N. Cardozo
+by Benjamin Stolberg 
+by Beppe Severgnini
+by Bergson
+by Bernard Kouchner
+by Bernard Poignant
+by Bernardin de Saint-Pierre
+by Bernhard Lichtenberg
+by Berthold Auerbach
+by Berti Vogts
+by Bertilo Wennergren
+by Bertold Brecht
+by Bertolt Brecht
+by Bertrand Russell
+by Bettina Wulf
+by Bettina von Arnim
+by Bill Gates
+by Billy Wilder
+by Blaise Pascal
+by Blanche Bloor Schleppey
+by Bob Dylan
+by Bob Hope
+by Bobby Mair
+by Boleslaw Barlog
+by Bolesław Prus
+by Boris Becker
+by Boris Jelzin
+by Boris Vian
+by Bourget
+by Brigitte Bardot
+by Bruce Lee
+by Bruno Labbadia
+by Buddha
+by Bô Yin Râ
+by C.S. Lewis
+by Cabanis
+by Caitlin Upton
+by Calderón de la Barca
+by Cao Pi
+by Carl Busse
+by Carl Friedrich Gauß
+by Carl Friedrich Weizsäcker
+by Carl Friedrich von Weizsäcker
+by Carl Fürstenberg
+by Carl Gustav Jung
+by Carl Peter Fröhling
+by Carl Sagan
+by Carl Sandburg
+by Carl Schurz
+by Carl von Clausewitz
+by Carlo Collodi
+by Carlo Goldoni
+by Carlos Drummond de Andrade
+by Carlos Fresneda
+by Carmen Sylva
+by Cassiano Ricardo
+by Catherine Zeta-Jones
+by Catullus
+by Cecil Adams
+by Cesare Pavese
+by Charivarius (Gerard Nolst Trenité)
+by Charle de Gaulle
+by Charlemagne
+by Charles Aznavour
+by Charles Baudelaire
+by Charles Baudouin
+by Charles Bukowski
+by Charles Darwin
+by Charles Dickens
+by Charles Fort
+by Charles Had­don Spur­geon
+by Charles James Napier
+by Charles Kettering
+by Charles Lamb
+by Charles Maurice de Talleyrand
+by Charles Pasqua
+by Charles Pierre Péguy
+by Charles Quint
+by Charles Sander Peirce
+by Charles Tschopp
+by Charles W. Eliot
+by Charles de Gaulle
+by Charles de Montesquieu
+by Charles-Louis de Montesquieu
+by Charles-Maurice de Talleyrand-Périgord
+by Charlie Chaplin
+by Charlie Rivel
+by Charly Chaplin
+by Che Guevara
+by Chesterton
+by Chevalier de Méré
+by Chikamatsu Monzaemon
+by Chiyo-ni
+by Chris Howland
+by Chris Marker
+by Christa Wolf
+by Christian Declerck
+by Christian Dior
+by Christian Friedrich Hebbel
+by Christian Fürchtegott Gellert
+by Christian Morgenstern
+by Christine Deviers-Joncour
+by Christine von Schweden
+by Christoph Daum
+by Christoph Kolumbus
+by Christoph Martin Wieland
+by Christopher Morley
+by Chrétien de Troyes
+by Chuck Smith
+by Cicely Saunders
+by Cicero
+by Cindy Crawford
+by Cindy Sherman
+by Ciotka
+by Cladel
+by Clara Schumann
+by Claude Adrien Helvétius
+by Claude Bernard
+by Claude Hagège
+by Claude Lévi-Strauss
+by Claude Piron
+by Claudel
+by Claudia Cardinale
+by Claus-Peter Lieckfeld
+by Clemenceau
+by Clemens Brentano
+by Coco Chanel
+by Coluche
+by Comenius
+by Comte de Lautréamont
+by Comtesse de Ségur
+by Condorcet
+by Confucius
+by Constant
+by Cora Coralina
+by Cornelius Nepos
+by Cosima Wagner
+by Coupin
+by Cristina Fernández
+by Crèvecoeur
+by Curt Goetz
+by Curzio Malaparte
+by Cyril Northcote Parkinson
+by Dalai Lama
+by Dale Carnegie
+by Dangenne
+by Daniel J. Boorstin
+by Daniel Luez
+by Daniel Salomon
+by Daniel Spitzer
+by Daniela Molinari
+by Daniil Kharms
+by Danny Kaye
+by Dante Alighieri
+by Dany Laferrière 
+by Daudet
+by David Ben Gurion
+by David DiSalvo
+by David Edgerton
+by David Foenkinos
+by David Foster Wallace
+by David Hume
+by Dazai Osamu
+by De Montalembert
+by Dejo
+by Demokrit
+by Deng Xiaoping
+by Denis Diderot
+by Descartes
+by Desiderius Erasmus
+by Detlef Guertler 
+by Diane Keaton
+by Diderot
+by Diego Armando Maradona
+by Diego Lo Destro
+by Dieter Hallervorden
+by Dieter Hildebrandt
+by Dieter Höss
+by Dietrich Bonhoeffer
+by Dilma Rousseff
+by Diogenes Laërtius
+by Dmitry Medvedev
+by Dogen
+by Dominique de Villepin
+by Doreen Hartmann
+by Doris Day
+by Dostoïevski
+by Douglas Adams
+by Douglas Gordon
+by Du Fu
+by Dudley Campbell
+by Duhamel
+by Dumas
+by Dupanloup
+by Dustin Hoffman
+by Dwight D. Eisenhower
+by Dwight Morrow
+by Dylan Thomas
+by E.T.A. Hoffmann
+by Earl of Chesterfield
+by Edgar Allan Poe
+by Edgar Degas
+by Edgar Guhde
+by Edgar Watson Howe
+by Edgard Faure
+by Edmond About
+by Edmond Privat
+by Edmond Rostand
+by Edmond de Goncourt
+by Edmund Burke
+by Edmund Kreuzner
+by Eduard von Bauernfeld
+by Eduardo Galeano
+by Edward Bulwer-Lytton
+by Edward Coke
+by Edward Gibbon
+by Edward Kennedy
+by Edward Snowden
+by Edward Teller
+by Edward Topsell
+by Edward Young
+by Edwin A. Robinson
+by Eels
+by Egon Bahr
+by Egon Friedell
+by Einar Schøning
+by Ekkehard von Braunmühl
+by Elazar Benyoetz
+by Elbert Hubbard
+by Element of Crime
+by Elena Piccinini
+by Elfriede Hablé
+by Elfriede Jelinek
+by Elias Canetti
+by Elisabeth von Österreich-Ungarn
+by Eliza Orzeszkowa
+by Elizabeth Taylor
+by Ellen G. White
+by Ellis E. Huber
+by Elsa Triolet
+by Elvis Presley
+by Elwyn Brooks White
+by Emanuel Geibel
+by Emi Oesch
+by Emil Cioran
+by Emil Zátopek
+by Emilie von Gleichen-Russwurm
+by Emilio Cid
+by Emily Dickinson
+by Emmanuel Kant
+by Emmanuel de Las Cases 
+by Emo Philips
+by Enrico Letta
+by Ephraim Kishon
+by Epictetus
+by Epikur
+by Erasmus von Rotterdam
+by Eric Maria Remarque
+by Erich Fried
+by Erich Fromm
+by Erich Honecker
+by Erich Kästner
+by Erich Maria Remarque
+by Erich Mühsam
+by Erik Balling
+by Ernest Hemingway
+by Ernest Lavisse
+by Ernest Renan
+by Ernesto Cardenal 
+by Ernesto Sábato
+by Ernst Albrecht
+by Ernst Barlach
+by Ernst Ferstl
+by Ernst Jünger
+by Ernst Moritz Arndt
+by Ernst R. Hauschka
+by Ernst Raupach
+by Ernst Reinhardt
+by Ernst Schulze
+by Ernst von Feuchtersleben
+by Erving Goffman
+by Erwin Chagraff
+by Esperantostern
+by Esther Vilar
+by Euclid
+by Eugen Lanti
+by Eugen Roth
+by Eugène Delacroix
+by Eugène Ionesco
+by Eugène Lanti
+by Eugène-Melchior de Vogüé
+by Euripides
+by Europa Press
+by European Union
+by Eva Zeller
+by Evangelist Matthäus
+by Evelyn Beatrice Hall 
+by Evgeni Georgiev
+by Evgenia Chernyshova
+by Ewald Balser
+by Ezra Pound
+by F.A. Hayek
+by Faina Ranevskaya
+by Fazil Iskander
+by Federico Fellini
+by Ferdinand Bac
+by Ferdinand Sauerbruch
+by Ferdinand von Saar
+by Fernand Vandérem
+by Fernandel
+by Fernando Pessoa
+by Feuillet
+by Fidel Castro
+by Fiévée
+by Flaubert
+by Francesco Petrarca
+by Francis Bacon
+by Francisco Solano Constancio
+by Francois Guizot
+by Francois Villon
+by Francois-Rene de Chateaubriand
+by Francoise Rosay
+by Francoise Sagan
+by Frank Thiess
+by Frank Zappa
+by Franklin D. Roosevelt
+by Franz Beckenbauer
+by Franz Blei
+by Franz Grillparzer
+by Franz Josef Strauß
+by Franz Kafka
+by Franz Werfel
+by Franz von Assisi
+by Franz von Sales
+by François Arago
+by François Baroin
+by François Coppée
+by François Goulard
+by François Mauriac
+by François Ponsard
+by François Rabelais
+by François René CHATEAUBRIAND
+by François de La Rochefoucauld
+by François-Gaston duc de Lévis
+by François-Joseph Fétis
+by François-Joseph-Victor Broussais
+by Françoise Arnoul
+by Françoise Giroud
+by Fred Astaire
+by Frederic Lee
+by Frederick Wilhelm Christian Gerstäcker
+by Frederick the Great
+by Freiherr vom Stein
+by Freud
+by Friedensreich Hundertwasser
+by Friedhelm Franken
+by Friedl Beutelrock
+by Friedrich A. Beck
+by Friedrich Arnold Brockhaus
+by Friedrich Dürrenmatt
+by Friedrich Engels
+by Friedrich Fröbel
+by Friedrich Gerstäcker
+by Friedrich Gottlieb Klopstock
+by Friedrich Hebbel
+by Friedrich Hölderlin
+by Friedrich I., Barbarossa
+by Friedrich Logau
+by Friedrich Ludwig Jahn
+by Friedrich Nietzsche
+by Friedrich Nowottny
+by Friedrich Rückert
+by Friedrich Saurer
+by Friedrich Schiller
+by Friedrich Schorlemmer
+by Friedrich Sieburg
+by Friedrich der Große, König von Preußen
+by Friedrich von Bodelschwingh
+by Friedrich von Bodenstedt
+by Friedrich von Hagedorn
+by Friedrich von Logau
+by Friedrich von Schiller
+by Friedrich von Schlegel
+by Fritz Bauer
+by Fritz Muliar
+by Fritz Walter Poppeck
+by Fuboku Kosakai
+by Fujiwara no Teika
+by Fuller
+by G. K. Chesterton
+by G. Nolst Trenité
+by Gabriel García Márquez
+by Gabriel Laub
+by Gabriel Marcel
+by Gabriele Strecker
+by Gaius Valerius Catullus
+by Galileo Galilei
+by Gandhi
+by Garbhan Macaoidh
+by Gaston Bachelard
+by Gaultier
+by Gautama Buddha
+by Gautier
+by Gennady Alexeyev
+by Georg Brandes
+by Georg Büchner
+by Georg Christoph Lichtenberg
+by Georg Moritz Ebers
+by Georg Schramm
+by Georg Simmel
+by Georg Thomalla
+by Georg Wilhelm Friedrich Hegel
+by George Berkeley
+by George Bernard Shaw
+by George Clémenceau
+by George Gissing
+by George Herbert
+by George Leigh Mallory
+by George Lord Byron
+by George Mikes
+by George Orwell
+by George Patton
+by George R. R. Martin
+by George Sand
+by George Santayana
+by George Washington
+by George de Santayana
+by Georges Bernanos
+by Georges Brassens
+by Georges Clemenceau
+by Georges Frêche
+by Georges Simenon
+by Georges d'Esparbès
+by Georges-Louis Leclerc de Buffon
+by Georgo Handzlik
+by Gerard Nolst Trenité
+by Gerd Ruge
+by Gerhard Kocher
+by Gerhard Schröder
+by Gerhard Uhlenbruck
+by Gerhart Hauptmann
+by Gerlinde Kretschmann
+by Gerolamo Cardano
+by Getúlio Vargas
+by Ghandi
+by Giacomo Casanova
+by Giacomo Leopardi
+by Giacomo Papasidero
+by Gianni Rodari
+by Gide
+by Gilbert Keith Chesterton
+by Gilles Vigneault
+by Gina Lollobrigida
+by Giordano Bruno
+by Giorgio Napolitano
+by Giovanni Boccaccio
+by Giovanni Bona
+by Giovanni Guareschi
+by Giovanni Trapattoni 
+by Gisela Uhlen
+by Gisella Langé
+by Gisèle Halimi
+by Giulio Caccini
+by Giuseppe Garibaldi
+by Giuseppe Ungaretti
+by Giuseppe Verdi
+by Glenn Close
+by Gloria Steinem
+by Goethes Mutter
+by Goncourt
+by Gorch Fock
+by Gore Vidal
+by Gottfried August Bürger
+by Gottfried Benn
+by Gottfried Keller
+by Gottfried Wilhelm von Leibniz
+by Gottfried von Straßburg
+by Gotthold Ephraim Lessing
+by Gozlan
+by Graham Greene
+by Gregoire de Tours
+by Gregor Brand
+by Gregor Gysi
+by Gregor von Nazianz
+by Gregorio De Falco
+by Gregorius Magnus
+by Greta Garbo
+by Griza Leono
+by Groucho Marx
+by Gräfin zu Solms-Wildenfels
+by Guillaume Apollinaire
+by Guizot
+by Gunta Stölzl 
+by Gustaf Gründgens
+by Gustav Heinemann
+by Gustav Knuth
+by Gustav Landauer
+by Gustav Stresemann
+by Gustave Flaubert
+by Gustavo Adolfo Bécquer
+by Guy Bechor
+by Guy Lux
+by Guy de Maupassant
+by Gyula Török
+by György Hodos
+by Gábor Paál
+by Gérard de Nerval
+by Günter Grass
+by Günther Anders
+by Günther Jauch
+by H. G. Gadamer
+by H.C. Artmann
+by H.L. Mencken
+by Hagiwara Sakutarō
+by Han Shan
+by Hannah Arendt
+by Hannelore Kohl
+by Hannes Sauberzweig
+by Hanns Johst
+by Hans Albrecht Moser
+by Hans Christian Andersen
+by Hans Kasper
+by Hans Krailsheimer
+by Hans Kruppa
+by Hans Kudszus
+by Hans Küng
+by Hans Lohberger
+by Hans Magnus Enzensberger
+by Hans Rubner
+by Hans Ueli Küng
+by Hans Urs von Balthasar
+by Hans von Grimmelshausen
+by Hans-Dietrich Genscher
+by Hans-Georg Gadamer
+by Hans-Horst Skupy
+by Hans-Joachim Kuhlenkampff
+by Hans-Joachim Schoeps
+by Hans-Jürgen Mahlitz
+by Harald Schmidt
+by Harold Macmillan
+by Harold Pinter
+by Harriet Beecher Stowe
+by Harry Bellafonte
+by Harry S. Truman
+by Harry Ward Beecher
+by Hartley Coleridge
+by Haruki Murakami
+by Hasegawa Nyozekan
+by Hattori Ransetsu
+by Hedwig Courths-Mahler
+by Heidi Kabel
+by Heiko Thieme
+by Heimito von Doderer
+by Heinar Müller
+by Heiner Geißler
+by Heiner Müller
+by Heinrich Böll
+by Heinrich Hanselmann
+by Heinrich Heine
+by Heinrich Jung-Stilling
+by Heinrich Schliemann
+by Heinrich Zille
+by Heinrich von Kleist
+by Heinrich von Stein
+by Heinz Alfred Kissinger
+by Heinz Erhard
+by Heinz Erhardt
+by Heinz Nirdorf
+by Heinz Riesenhuber
+by Heinz Rühmann
+by Helen Keller
+by Helga Feddersen
+by Helga Norton
+by Helge Schneider
+by Hellerick
+by Hellmut Walters
+by Helmar Frank
+by Helmar Nahr
+by Helmut Graf von Moltke
+by Helmut Kohl
+by Helmut Qualtinger
+by Helmut Schmidt
+by Henning Bahs 
+by Henning Venske
+by Henri Bergson
+by Henri Frédéric Amiel
+by Henri Lacordaire
+by Henri Vallienne
+by Henri de Toulouse-Lautrec
+by Henri-Frédéric Amiel
+by Henrik Ibsen
+by Henry Becque
+by Henry David Thoreau
+by Henry Fielding
+by Henry Fonda
+by Henry Ford
+by Henry Guisan
+by Henry James
+by Henry Kissinger
+by Henry Lawson
+by Henry Louis Mencken
+by Henry Miller
+by Henry Murger
+by Henry Thomas Buckle
+by Henry de Montherlant
+by Henryk Sienkiewicz
+by Heraclitus
+by Heraklit
+by Herbert Clark Hoover
+by Herbert George Wells
+by Herbert Grönemeyer
+by Herbert Spencer
+by Herbert V. Prochnow
+by Herbert von Karajan
+by Herman Bang
+by Herman Melville
+by Hermann Allmers
+by Hermann Gmeiner
+by Hermann Göring
+by Hermann Hesse
+by Hermann Joachim Bang
+by Hermann Josef Abs
+by Hermann Kesten
+by Herodot
+by Heywood Hale Broun
+by Hilde Domin
+by Hildegard Knef
+by Hildegard von Bingen
+by Hillary Clinton
+by Hippocrates
+by Hippokrates
+by Hippolyte Taine
+by Hjalmar Söderberg
+by Ho Chi Minh
+by Hoffmann von Fallersleben
+by Homer
+by Honore de Balzac
+by Honoré de Balsac
+by Horace
+by Horaz
+by Horst Tappert
+by Huang Zunxian
+by Hugo Chávez
+by Hugo Grotius
+by Hugo von Hofmannsthal
+by Humphrey Bogart
+by Huysmans
+by Héctor Timerman
+by Ignazio Silone
+by Igor Guberman
+by Ikkyu
+by Ildefonso Grados Rodríguez
+by Immanuel Kant
+by Indira Gandhi
+by Inge Meysel
+by Ingeborg Bachmann
+by Ingrid van Bergen
+by Ionesco
+by Irina Lyut
+by Iryna Vidanova
+by Isaac Asimov
+by Isaac Newton
+by Isokrates
+by Istvan Ertl
+by Ito Sachio
+by Ivan Bunin
+by Ivan Goncharov
+by Ivan Krylov
+by Ivan Turgenev
+by Iwano Homei
+by J. B. S. Haldane
+by J. R. R. Tolkien
+by Jack London
+by Jacob Cats
+by Jacques Godfrain
+by Jacques Prevert
+by Jacques Tati
+by Jaden Smith
+by Jadvihin Sh.
+by Jakob Augstein
+by Jakob Bosshart
+by Jakub Kolas
+by James Boswell
+by James D. Rose
+by James Dean
+by James Joyce
+by James Madison
+by Jan Philipp Reemtsma
+by Jane Austen
+by Jane Fonda
+by Janin
+by Janusz Gaudyn
+by Jaroslav Hašek
+by Javier Marias
+by Javier Ruiz Soler
+by Jay Cee
+by Jean Anouilh
+by Jean Anthelme Brillat-Savarin
+by Jean Baudrillard
+by Jean Cocteau
+by Jean Gabin
+by Jean Genet
+by Jean Giono
+by Jean Giraudoux
+by Jean Jaurès
+by Jean Kerr
+by Jean Molière
+by Jean Paul
+by Jean Paul Getty
+by Jean Paul Sartre
+by Jean Racine
+by Jean Rigeaux
+by Jean Sibelius
+by Jean de La Bruyère
+by Jean de La Fontaine
+by Jean deLa Bruyère
+by Jean le Rond d’Alembert
+by Jean-Baptiste Alphonse Karr
+by Jean-Baptiste de La Salle
+by Jean-Ferdinand Denis
+by Jean-Jacques Rousseau
+by Jean-Jaques Ampère  
+by Jean-Luc Godard
+by Jean-Paul Belmondo
+by Jean-Paul Sartre
+by Jean-Pierre Claris de Florian
+by Jean-Pierre Raffarin
+by Jeanne Moreau
+by Jeannine Luczak
+by Jens Stoltenberg
+by Jeremias Gotthelf
+by Jeremy Irons
+by Jerome K. Jerome
+by Jerry Lewis
+by Jimi Hendrix
+by Jimmy Carter
+by Joachim Fuchsberger
+by Joachim Kaiser
+by Joachim Meisner
+by Joachim Ringelnatz
+by Joachim du Bellay
+by Joaquín Cantó
+by Johann Georg Hamann
+by Johann Gottfried Herder
+by Johann Gottfried Seume
+by Johann Gottlieb Fichte
+by Johann Heinrich Pestalozzi
+by Johann Heinrich Voss
+by Johann Kaspar Lavater
+by Johann Mario Simmel
+by Johann Martin Miller
+by Johann Nepomuk Nestroy
+by Johann Peter Eckermann
+by Johann Wolfgang von Goethe
+by Johannes Calvin
+by Johannes Heesters
+by Johannes Kepler
+by Johannes Müller
+by Johannes R. Becher
+by Johannes Rau
+by Johannes Scotus 
+by Johannes Urzidil
+by John Adams
+by John B. Priestley
+by John Cleese
+by John Donne
+by John Dryden
+by John Elster
+by John Ernst Steinbeck
+by John F. Kennedy
+by John Galsworthy
+by John Keats
+by John Knittel
+by John Lennon
+by John Locke
+by John Maynard Keynes
+by John Naisbitt
+by John Osborne
+by John Ray
+by John Ruskin
+by John Russel
+by John Saunders
+by John Selden
+by John Steinbeck
+by John Stuart Mill
+by John Swinton
+by John Tobin
+by John Wayne
+by John Wells
+by John Winthrop
+by John of Salisbury
+by Johnny Carson
+by Jonathan Cooper
+by Jonathan Sacks 
+by Jonathan Swift
+by Jonathan Tropper
+by Jorge Camacho
+by Jorge Luis Borges
+by Jorge Mario Bergoglio
+by Joris-Karl Huysmans
+by Joschka Fischer
+by Josef Bulva
+by Josef Kraus
+by Josef Stalin
+by Josef Viktor von Scheffel
+by Joseph Addison
+by Joseph Beuys
+by Joseph Brodsky
+by Joseph Conrad
+by Joseph Goebbels
+by Joseph Huber
+by Joseph Joubert
+by Joseph Kühnel
+by Joseph Marmette
+by Joseph Ratzinger
+by Joseph Unger
+by Joseph Weißenberg
+by Joseph de Maistre
+by Joseph von Eichendorff
+by Josephine Baker
+by Josh Billings
+by Jostein Gaarder
+by Joszef Eötvös
+by José Antonio Vergara
+by José Inácio de Abreu e Lima
+by José Luis Rodríguez Zapatero
+by José Saramago
+by José Zapatero
+by Joubert
+by Juan de la Cruz
+by Judge Best
+by Jules
+by Jules Lemaitre
+by Jules Petit-Senn 
+by Jules Renard
+by Jules Romains
+by Jules Verne
+by Julian Tuwim
+by Julien Offray de La Mettrie
+by Juliette Binothe
+by Juliette Greco
+by Julio Baghy
+by Julius Caesar
+by Julius Fučík
+by Julius Nyerere
+by Jurij Brězan
+by Justus von Liebig
+by Juvenal
+by Jérôme et Jean Tharaud
+by Jörg Wolle
+by Jürgen Klinsmann
+by Kafu Nagai
+by Kai Thiemann
+by Kaji Motojiro
+by Kajii Motojirō
+by Kamo no Chōmei
+by Kanjinchō
+by Karel Soltan
+by Karel Wilgenhof
+by Karel Čapek
+by Karl August von Hardenberg
+by Karl Barth
+by Karl Carstens
+by Karl Dall
+by Karl Ferdinand Gutzkow
+by Karl Gutzkow
+by Karl Heinrich Waggerl
+by Karl Heinz Schaeffer
+by Karl Jaspers
+by Karl Julius Weber
+by Karl Kraus
+by Karl Lagerfeld
+by Karl Marx
+by Karl Ove Knausgård
+by Karl Pils
+by Karl Popper
+by Karl Raimund Popper
+by Karl Scheffler
+by Karl Schulze
+by Karl Schwarzer
+by Karl Simrock
+by Karl Valentin
+by Karlheinz Deschner
+by Kate Winslet
+by Katharina von Siena
+by Kazuko Okakura
+by Kenelm Robinson
+by Kenji Miyazawa
+by Khalil Gibran
+by Kido Okamoto
+by Kierkegaard
+by Kikuchi Kan
+by Kishida Kunio
+by Klaus Kinkel
+by Klaus Staeck
+by Knut Hamsun
+by Kobayashi Ichizō
+by Kobayashi Issa
+by Kofi Yamgnane
+by Konfucio
+by Konfuzius
+by Konrad Adenauer
+by Konrad Lorenz
+by Konstantin Melikhan
+by Konstantin Wecker
+by Kristiane Allert-Wybranietz
+by Kurt Gödel
+by Kurt Haberstich
+by Kurt Marti
+by Kurt Tucholsky
+by Kurt Vonnegut
+by Kåre Valebrokk
+by Kоnstatin Pоsdnyakov
+by L. L. Zamenhof
+by L.L. Zamenhof
+by Lamartine
+by Laotse
+by Laozi
+by Larry Laudan
+by Laure Conan
+by Laurent Fabius
+by Laurent Lafforgue
+by Le Dantec
+by Leah Rabin
+by Lech Wałęsa
+by Leconte de Lisle
+by Lee Iacocca
+by Lenoir
+by Leo Groll
+by Leo Tolstoi
+by Leo Tolstoy
+by Leonardo da Vinci
+by Leonardo di Vinci
+by Leonhard Ragaz
+by Leopardi
+by Leopold von Ranke
+by Leopold von Sacher-Masoch
+by Lev Kopelev
+by Lev Semyonovich Vygotsky
+by Lev Sergeyevich Ovalov
+by Lew N. Graf Tolstoi
+by Libera Folio
+by Lilli Palmer
+by Linji
+by Linus Ganman
+by Linus Pauling
+by Linus Torvalds
+by Liselotte Pulver
+by Livius
+by Livy
+by Lord Acton
+by Lord Byron
+by Lord Chesterfield
+by Lord Halifax
+by Lore Lorentz
+by Loriot
+by Lothar Matthäus
+by Lothar Schmidt
+by Loti
+by Louis Aragon
+by Louis Armstrong
+by Louis Brandeis
+by Louis Hémon
+by Louis Pasteur
+by Louis Segond
+by Louis XIV
+by Louise Kielstrup
+by Louÿs
+by Luciano Bianciardi
+by Lucius Annaeus Seneca
+by Lucius Apuleius 
+by Lucretius
+by Ludoviko Zamenhof
+by Ludwig A. Feuerbach
+by Ludwig Andreas Feuerbach
+by Ludwig Börne
+by Ludwig Büchner
+by Ludwig Erhard
+by Ludwig Feuerbach
+by Ludwig Fulda
+by Ludwig Marcuse
+by Ludwig Uhland
+by Ludwig Wittgenstein
+by Ludwig van Beethoven
+by Luis Bunuel
+by Luise Rinser
+by Lupus Servatus
+by Léon Cladel
+by Léon Tolstoï
+by Lü Buwei 
+by M. Guizot
+by M. de Guérin
+by MUIRIEL
+by Machado de Assis
+by Madame de Stael
+by Mae West
+by Maeterlinck
+by Mahatma Gandhi
+by Mahmoud Ahmadinejad
+by Mai Wenbiao
+by Makota Valdina
+by Malcolm X
+by Malouin
+by Manfred Krafft
+by Manfred Rommel
+by Manuel Bandeira
+by Manuel Valls
+by Mao Zifu
+by Marc Aurel
+by Marc Monnier
+by Marc Segar
+by Marcel Achard
+by Marcel Ayme
+by Marcel Pagnol
+by Marcel Proust
+by Marcel Reich-Ranicki
+by Marcel Schwob
+by Marcello Mastroianni
+by Marco Tullio Cicerone
+by Marcus Aurelius
+by Marcus Lucius Annaeus Seneca
+by Marcus Scriptor
+by Margaret Thatcher
+by Margriet de Moor
+by Marguerite Duras
+by Marguerite Gräfin von Blessington
+by Marguerite Yourcenar
+by Maria Montessori
+by Maria Theresia
+by Maria-Theresia Radloff
+by Marie Antoinette
+by Marie Corelli
+by Marie Curie
+by Marie François Xavier Bichat
+by Marie Luise Kaschnitz
+by Marie Under
+by Marie von Ebner-Eschenbach
+by Marilyn Monroe
+by Mario Adorf
+by Mario Puzo
+by Mario Sergio Cortella
+by Marjorie Boulton
+by Mark Twain
+by Marlene Dietrich
+by Marlon Brando
+by Marquis de Vauvenargues
+by Marshall McLuhan
+by Martha Finley
+by Martial
+by Martin Buber
+by Martin Heidegger
+by Martin Held
+by Martin Kessel
+by Martin Luther
+by Martin Luther King
+by Martin Luther King Jr.
+by Martin Opitz
+by Martin Walser
+by Martina Navrátilová
+by Marvin Minsky
+by Mary MacLane
+by Mary Wollstonecraft
+by Masahiro Morioka
+by Masaoka Shiki
+by Mateo Kopenhago
+by Matheus Chaud  
+by Matthew Arnold
+by Matthias Claudius
+by Matze Knop
+by Maupassant
+by Maurice Chapelan
+by Maurice Chevalier
+by Maurice Druon
+by Maurizio Caprile
+by Mauro Nervi
+by Max Born
+by Max Frisch
+by Max Liebermann
+by Max Planck
+by Max Weinreich
+by Maxim Gorkij
+by Maxim Gorky
+by Maxim Kantor
+by McDutchie
+by Mehmet Scholl
+by Meike Winnemuth
+by Meister Eckhart
+by Menander
+by Mencius
+by Meng Haoran
+by Meng-Tzu
+by Mercier
+by Meryl Streep
+by Michael Bloomberg
+by Michael Ende
+by Michael Jackson
+by Michael Lee
+by Michael Machatschke
+by Michael Meacher
+by Michael Nalbandian
+by Michael Newton
+by Michael Seemann
+by Michail Bulgakov
+by Michail Dmitrievič Čulkov
+by Michail Gorbatschow
+by Michail Jurewitsch Lermontow
+by Michel Aaron Weill
+by Michel Audiard
+by Michel Crépeau
+by Michel Foucault
+by Michel Guillaume Jean de Crèvecoeur
+by Michel Onfray
+by Michel de Montaigne
+by Michelet
+by Miguel de Cervantes
+by Miguel de Saavedra
+by Miguel de Unamuno
+by Mikhail Bakhtin
+by Mikhail Bulgakov
+by Mikhail Gasparov
+by Mikhail Gishpling
+by Mikhail Gorbachev
+by Mikhail Gribanovsky
+by Mikhail Lermontov
+by Mikhail Veller
+by Mildred Scheel
+by Mirabeau
+by Mirbeau
+by Mishima Yukio
+by Mitt Romney
+by Miyazawa Kenji
+by Mizuhara Shūōshi
+by Mme de Genlis
+by Mme de Staal
+by Mme de Stael
+by Mme de la Fayette
+by Mohandas Karamchand Gandhi
+by Molière
+by Montalembert
+by Montesquieu
+by Mori Ogai
+by Moritz Heimann
+by Moritz Schlick
+by Morteza Mirbaghian
+by Moselly
+by Motojiro Kajii
+by Muhammad Ali
+by Murger
+by Musset
+by Mustafa Kemal Atatürk
+by Mutter Teresa
+by Mykhailo Kotsiubynsky
+by Nadaud
+by Nagaru Tanigawa
+by Nakajima Atsushi
+by Nanni Spissu
+by Napoleon Bonaparte
+by Napoleon Hill
+by Napoléon
+by Napoléon Aubin
+by Natsume Soseki
+by Neil Armstrong
+by Neil Selinger
+by Nelly Sachs
+by Nestroy
+by Niccolò Machiavelli
+by Nicholas Chamfort
+by Nicolas Boileau
+by Nicolas Chamfort
+by Nicolas Sarkozy
+by Nicole Haller
+by Nicolino Rossi
+by Nicolás Maduró
+by Niels Bohr
+by Nikita Chruschtschow
+by Nikolai Gogol
+by Nikolai Ivanovich Khokhlov
+by Nikolai Ostrovsky
+by Nikolaus Lenau
+by Nitobe Inazo
+by Noam Chomsky
+by Noel Rosa
+by Norbert Blüm
+by Norman Mailer
+by Norman Vincent Peale
+by Novalis
+by Ogawa Mimei
+by Oktavio Paz
+by Olaf Gulbransson
+by Oliver Cromwell
+by Oliver Hassencamp
+by Oliver Kalkofe
+by Oliver Wendell Holmes Sr.
+by Oliver Wendell Holmes, Jr.
+by Oliver Wendell Holmes, Sr.
+by Orson Welles
+by Ortega y Gasset
+by Osamu Dazai
+by Oscar Wilde
+by Oskar Kokoschka
+by Oskar Lafontaine
+by Oskar Maria Graf
+by Oswald Bumke
+by Oswald Marbach
+by Oswald Spengler
+by Otto Flake
+by Otto Julius Bierbaum
+by Otto Rehhagel
+by Otto Schily
+by Otto Waalkes
+by Otto von Bismarck
+by Otto von Habsburg
+by Ovid
+by Pablo Alborán
+by Pablo Neruda
+by Papst Franziskus I.
+by Papst Johannes XXIII.
+by Pasteur
+by Patricia Wilson
+by Patrick Devedjian
+by Patrick Süskind,
+by Paul Ambroise Valéry
+by Paul Bertololy
+by Paul Celan
+by Paul Chaffey
+by Paul Claudel
+by Paul Dirac
+by Paul Ernst
+by Paul François Foucart
+by Paul Getty
+by Paul Tillich
+by Paul Valery
+by Paul Verlaine
+by Paul Volcker
+by Paul Watzlawick
+by Paul de Man
+by Paul Éluard
+by Paul-Eerik Rummo
+by Paulo Coelho
+by Paulo Freire
+by Pearl Bailey
+by Pearl S. Buck
+by Pedro Calderòn
+by Percy Bysshe Shelley
+by Peter Alexander Ustinov
+by Peter Altenberg
+by Peter Bamm
+by Peter Drucker
+by Peter Frankenfeld 
+by Peter Gabriel
+by Peter Hoeg
+by Peter Kropotkin
+by Peter Köhler
+by Peter Maffay
+by Peter Maurer 
+by Peter Rosegger
+by Peter Sellers
+by Peter Sirius
+by Peter Sloterdijk
+by Peter Tamm
+by Peter Tille
+by Peter Weck
+by Peter Wrycza
+by Petter Hoff
+by Pfirsichbaeumchen
+by Pfirsichbäumchen
+by Phil Bosmans
+by Philip James Bailey
+by Philip Rosenthal
+by Philippe Aubert de Gaspé
+by Pierre Ambroise de Laclos
+by Pierre Arpaillange - Garde des Sceaux
+by Pierre Beaumarchais
+by Pierre Charron
+by Pierre Corneille
+by Pierre Curie
+by Pierre Daninos
+by Pierre Desproges
+by Pierre Lellouche
+by Pierre Teilhard de Chardin
+by Pierre de Coubertin
+by Pierre-Joseph Proudhon
+by Piet Hein
+by Placido Domingo
+by Plato
+by Platon
+by Plautus
+by Plinius der Ältere
+by Plotin
+by Plutarch
+by Polybe
+by Pons-Augustin Alletz
+by Ponson du Terrail
+by Pope Benedict XVI
+by Pope John Paul II
+by Pope John XXIII
+by Poul Thorsen
+by Pouriau
+by Pravin Lal
+by Premtschand
+by Prosper Mérimée
+by Prosper de Barante
+by Protagoras
+by Proust
+by Publilus Syrus
+by Publius Cornelius Tacitus
+by Publius Terenz
+by Pythagoras
+by Pythagoras von Samos
+by Queen Victoria
+by Quinet
+by Quintilian
+by Quintus Horatius Flaccus
+by R. D. Blackmore
+by Rabbi Nachman
+by Rabelais
+by Rabindranath Tagore
+by Radosław Sikorski
+by Raffaele Morelli
+by Raggione
+by Rainer Barzel
+by Rainer Maria Rilke
+by Ralph Boller
+by Ralph Nader
+by Ralph Waldo Emerson
+by Ramana Maharshi
+by Rasul Gamzatov
+by Ray Bradbury
+by Raymond Aron
+by Raymond Devos
+by Raymond Schwartz
+by Raymond barre
+by Reginald Peck
+by Reinhard Mey
+by Reinhard Rokitta
+by Remarque
+by Renard
+by Renzo Piano
+by René Bazin
+by René Boylesve
+by René Char
+by René Descartes
+by René Favaloro
+by René de Saussure
+by Renée Triolle
+by Revue encyclopédique, ou Analyse raisonnée des 
+by Reybaud
+by Ricarda Huch
+by Richard Brautigan
+by Richard Brinsley Sheridan
+by Richard Cohen
+by Richard David Precht
+by Richard Dawkins
+by Richard Meier
+by Richard Nixon
+by Richard P. Feynman
+by Richard Porson
+by Richard Wagner
+by Richard von Schaukal
+by Richard von Weizsäcker
+by Rivière
+by Robert Browning
+by Robert Burns
+by Robert Burton
+by Robert E. Lee
+by Robert Frost
+by Robert Kennedy
+by Robert Lee Frost
+by Robert Lembke
+by Robert Lemke
+by Robert Louis Stevenson
+by Robert Musil
+by Robert Oppenheimer
+by Robert Pfützner
+by Robert Phillipson
+by Robert Tressell
+by Robert Walser
+by Robert Wilhelm Bunsen
+by Roberto Pigro
+by Robin Cook
+by Robin Williams
+by Roda Roda
+by Roger Schutz
+by Roland Spindler
+by Rolf Merkle
+by Romain Gary
+by Romain Rolland
+by Romano Sergio
+by Ron Kritzfeld
+by Ron Patterson
+by Ronald Reagan
+by Ronny Patz
+by Ronsard
+by Rosa Luxemburg
+by Roselyne Bachelot-Narquin
+by Rubén Fernández Asensio
+by Rudi Carrell
+by Rudolf Augstein
+by Rudolf Langer
+by Rudolf Platte
+by Rudolf Rolfs
+by Rudolf Steiner
+by Rudyard Kipling
+by Rupert Schützbach
+by Régis Debray
+by Sacha Baron Cohen 
+by Sacha Guitry
+by Saint François-Xavier 
+by Saint Thomas d'Aquin
+by Saint-Augustin
+by Sainte-Beuve
+by Sakunosuke Oda
+by Sakutaro Hagiwara
+by Salman Rushdie
+by Salmon Chase
+by Salomon Baer-Oberdorf
+by Salvador Allende
+by Salvador Dali
+by Salvador de Madariaga
+by Sam Rayburn
+by Samain
+by Samuel Beckett
+by Samuel Butler
+by Samuel Butler d.J.
+by Samuel Goldwyn
+by Samuel Johnson
+by Samuel Koch
+by Samuel Smiles
+by Samuel Taylor Coleridge
+by Sand
+by Sanjugo Naoki
+by Sasha Sokolov
+by Saul Kripke
+by Schopenhauer
+by Schu Schuemou
+by Sebastian Castellio
+by Sei Shonagon
+by Seneca
+by Senta Berger
+by Sepp Herberger
+by Serafín Estébanez Calderón
+by Serge Halimi
+by Sergei Dovlatov
+by Sergei Lukyanenko
+by Sergei Yesenin
+by Sergey Kapitsa
+by Sergio Leone
+by Shakespeare
+by Shimon Peres
+by Shishir
+by Shmuel Yosef Agnon
+by Sholto and Reuben Percy
+by Sibylle Lewitscharoff
+by Siddhartha Gautama
+by Siegfried Lenz
+by Siegfried Lowitz
+by Sigismund von Radecki
+by Sigmund Freud
+by Sigmund Graff
+by Sigmund Jähn
+by Silverstein
+by Simon Dach
+by Simone Weil
+by Simone de Beauvoir
+by Simonide de Céos
+by Simono Pejno
+by Sinclair Lewis
+by Sir Baden Powell
+by Sir Charles Spencer Chaplin
+by Sir Julian Sorrel Huxley
+by Sir Peter Ustinov
+by Sir Thomas Browne
+by Sir Winston Churchill
+by Société chimique de Paris
+by Socrates
+by Sokrates
+by Soljenitsyne
+by Sophia Loren
+by Sophie von La Roche
+by Sophocles
+by Sophokles
+by Spike Milligan
+by St. Augustine
+by Stanislaw Brzorowski
+by Stanisław Jerzy Lec
+by Stefan Maul
+by Stefan Zweig
+by Stellan Engholm
+by Sten Johansson
+by Stendhal
+by Stephan King
+by Stephen Hawking
+by Stephen King
+by Stephen Leacock 
+by Stephen Marche
+by Steve Jobs
+by Steven Pinker
+by Steven Spielberg
+by Stipan Blažetin
+by Stéphane Hessel
+by Suetonius
+by Sully Prudhomme
+by Sumner Everingham
+by Susan Savandon
+by Susan Sontag
+by Susanne Donner
+by Sylvester Stallone
+by Sándor Szathmári
+by Sébastien-Roch-Nicol Chamfort
+by Sören Aabye Kierkegaard
+by Sören Kierkegaard
+by T. E. Lawrence
+by T. S. Eliot
+by T.H. Huxley
+by T.S. Arthur
+by Tachihara Michizō
+by Tacitus
+by Taine
+by Takamura Kōtarō
+by Talleyrand
+by Tamy
+by Taro Aso
+by Tatoeba : Hans07
+by Tatoeba : Tamy
+by Tatoeba : Zaghawa
+by Tatoeba : wallebot
+by Tatoeba Eldad
+by Tatoeba Espi
+by Tatoeba MUIRIEL
+by Tatoeba Nero
+by Tatoeba Paron
+by Tatoeba Pfirsichbaeumchen
+by Tatoeba Shishir
+by Tatoeba TAMY
+by Tatoeba Vee
+by Tatoeba al_ex_an_der
+by Tatoeba dada
+by Tatoeba dejo
+by Tatoeba emptybook
+by Tatoeba erikspen
+by Tatoeba human600
+by Tatoeba martin9
+by Tatoeba nimfeo
+by Tatoeba pne
+by Tatoeba quickfitter
+by Tatoeba rado
+by Tatoeba raeldor
+by Tatoeba sacredceltic
+by Tatoeba user pandark
+by Tatoeba xeklat
+by Tatoeba: Brokahontis
+by Tatoeba: CK
+by Tatoeba: Haehnchenpaella
+by Tatoeba: Rekholder
+by Tatoeba: Vortarulo
+by Tatoeba: al_ex_an_der
+by Tatoeba: halfb1t
+by Tatoeba: orcrist
+by Tatoeba: sacredceltic/MUIRIEL
+by Tatoeba: sysko
+by Tatoeba: tigro1973
+by Tatoeba:Esperantostern
+by Tatoeba:Goofy
+by Tatoeba:Martinod
+by Tatoeba:Muiriel
+by Tatoeba:Scott
+by Tatoeba:Spamster
+by Tatoeba:Sudajaengi
+by Tatoeba:Tlustulimu
+by Tatoeba:al_ex_an_der
+by Tatoeba:arcticmonkey
+by Tatoeba:fs
+by Tatoeba:kroko
+by Tatoeba:sacredceltic
+by Tatoeba:slomox
+by Tatoeba:trotter
+by Tatoeba:vortarulo
+by Tatoeba:xeklat
+by Tayama Katai
+by Tayllerand
+by Temistocle Solera
+by Tennessee Williams
+by Tenzin Gyatso
+by Terada Torahiko
+by Terence
+by Teresa von Ávila
+by The Beatles
+by The Gossip
+by Theodor Adorno
+by Theodor Fontane
+by Theodor Herzl
+by Theodor Heuss
+by Theodor Körner
+by Theodor Storm
+by Theodor W. Adorno
+by Theodore Hesburgh
+by Theodore Roosevelt
+by Theodore Woodward
+by Theophile Gautier
+by Theuriet
+by Thierry
+by Thomas Alva Edison
+by Thomas Aquinas
+by Thomas Bernhard
+by Thomas Carlyle
+by Thomas Charlyle
+by Thomas Friedman
+by Thomas Fuller
+by Thomas Gottschalk
+by Thomas Gray
+by Thomas Hobbes
+by Thomas Huxley
+by Thomas Jefferson
+by Thomas Mann
+by Thomas More
+by Thomas Niederreuther
+by Thomas Paine
+by Thomas Romanus Bökelmann
+by Thomas von Aquin
+by Thomas von Kempen
+by Thorstein Veblen
+by Thorsten Sueße
+by Thruman Carpote
+by Théodore Simon Jouffroy
+by Théognis de Mégare
+by Tilla Durieux
+by Tim Vine
+by Timothy Leary
+by Tom Hustad
+by Tom Waits
+by Tommy Jackson
+by Touzalin
+by Tristan Coloma
+by Trude Hesterberg
+by Truman Capote
+by Tsunetomo Yamamoto
+by Ueda Bin
+by Uesugi Yōzan
+by Umberto Eco
+by Unbekannt
+by Unknown
+by Upton Sinclair
+by Uschi Glas
+by Uwe Ochsenknecht
+by Vaclav Havel
+by Valéry Giscard d’Estaing
+by Valéry Giscard-d'Estaing
+by Vance Packard
+by Vasily Klyuchevsky
+by Vauvenargues
+by Vegetius
+by Venedikt Erofeev 
+by Verbum
+by Vergil
+by Vergilius 
+by Verlaine
+by Verona Feldbusch
+by Veronica Lacey
+by Victor Hugo
+by Victor Rougemont
+by Vigny
+by Viktor Tsoi
+by Viktor de Kowa
+by Vincent Dunin-Marcinkevich
+by Vincent Van Gogh
+by Vincent Willem van Gogh
+by Vinko Ošlak
+by Virgil
+by Virginia Woolf
+by Vissarion Belinsky
+by Viviane Reding
+by Vizi László
+by Vladimir Lenin
+by Vladimir Lobanov
+by Vladimir Posner
+by Vladimir Varankin
+by Volney
+by Voltaire
+by Vsevolod Ovchinnikov
+by Vyacheslav Rybakov
+by Waldemar Bonsels
+by Walter Benjamin
+by Walter Flex
+by Walter Gropius
+by Walter Krämer
+by Walter Pater
+by Walter Rathenau
+by Walter Scheel
+by Walter Ulbricht
+by Walter Whitman
+by Walther Rathenau
+by Warren Buffet
+by Wei Wu Wei
+by Wellington
+by Werner Bukofzer
+by Werner Finck
+by Werner Heisenberg
+by Werner Mitsch
+by Werner Petschko
+by Werner Schneider
+by Werner Schneyder
+by Werner von Siemens
+by Wernher von Braun
+by Wieslaw Brudzinski 
+by Wikipedia
+by Wilbur Wright
+by Wilhelm Busch
+by Wilhelm II (German Emperor)
+by Wilhelm Ludwig Wekhrlin
+by Wilhelm Raabe
+by Wilhelm von Humboldt
+by Will Rogers
+by William Blackstone
+by William Blake
+by William Butler Yeats
+by William Faulkner
+by William Gibson
+by William Howard Taft
+by William James
+by William Morris
+by William Pitt, 1st Earl of Chatham
+by William Rogers
+by William S. Sessions
+by William Shakespeare
+by William Somerset Maugham
+by William of Wykeham
+by Willy Brandt
+by Winfried Bornemann
+by Winston Churchill
+by Witold Gombrowicz
+by Wladimir I. Lenin
+by Wladimir Lyra
+by Wolf Biermann
+by Wolf Schneider
+by Wolf-Jakob Schmidt
+by Wolfdieter Schnurre
+by Wolfgang A Mozart
+by Wolfgang Amadeus Mozart
+by Wolfgang Borchert
+by Wolfgang Herbst
+by Wolfgang Hildesheimer
+by Wolfgang Neuss
+by Wolfgang Schäuble
+by Wolfgang Thüne
+by Wolfgang Tilgner
+by Woody Allen
+by Xanthippe 
+by Xavier Darcos
+by Yagyu Munenori
+by Yasunari Kawabata
+by Yehudi Menuhin
+by Yevgeny Yevtushenko
+by Yogi Bear
+by Yoram Shoval
+by Yosa Buson
+by Yosano Akiko
+by Yukio Mishima
+by Yumeno Kyusaku
+by Yuri Nikulin
+by Yvan Sagnet
+by Yves Montand
+by Yves Simon
+by Zamenhof
+by Zarah Leander
+by Zarko Petan
+by Zbigniew Kwieciński
+by Ze'ev Jabotinsky
+by Zhang Qianye
+by Zhao Buzhi
+by Zhuangzi
+by Zig Ziglar
+by Zofia Nałkowska 
+by Zola
+by Zsa Zsa Gabor
+by Zsuzsa Polgár
+by a judge
+by a priest
+by baron d’Holbach
+by bunbuku
+by by Frederick Wilhelm Christian Gerstäcker
+by cardinal de Richelieu
+by halfb1t
+by hayastan
+by marafon
+by marquise de Lambert
+by nimfeo
+by ramen
+by sacredceltic
+by sharptoothed
+by soweli_Elepanto
+by surrealists
+by the
+by the brother Grimm
+by the brothers Grimm
+by wallebot
+by xeklat
+by Äsop
+by Édouard Herriot
+by Éliphas Lévi
+by Émile Burnouf
+by Émile Durkheim
+by Épicure
+by Étienne de La Boétie
+by Ólafur Ragnar Grímsson
+by Ödön von Horvath
+by Đuso Šimara Pužarov
+by 坂口安吾
+by-John Cotton
+by-Karl Marx
+by-Martin Swift
+by-Ralph Waldo Emerson
 cacophony
 cacófato
 calque
-canonical
+canonical texts
 caption
 car
 casino
@@ -661,52 +2943,84 @@ catholicism
 certainty
 change
 check
+check eng-to-jpn translation
+check eng<->jpn translation
 chemistry
 chess
 childbirth
 childlish
-children's
-chinese
+children's game
+children's speech
+chinese proverb
 chore
 citation
 city
 clarification
 classical
-classroom
+classical quotation
+classroom rules
 cliche
 climate
 clipped
 clocks
 clothes
-cmt
+cmt alternative gender
+cmt alternative grammatical number
+cmt alternative vocabulary
+cmt link to related
+cmt on alternative spelling
+cmt on alternative wording
+cmt on context
+cmt on meaning
+cmt on morphology
+cmt on orthography
+cmt on punctuation
+cmt on reading
+cmt on register
+cmt on situation
+cmt on territorial variant
+cmt on translation
+cmt on usage
+cmt on vocabulary
 colloquial
+colloquial /  umgangssprachlich
+colloquial Hebrew
+colloquial Hebrew variant
+colloquial Hebrew variantX
+colloquial spelling
 coloquial
 color
-comma
+comma splice
 command
-comment
-commente
-common
+comment on origin
+comment on sentence
+comment on translation
+comment on vocabulary
+commente on sentence
+common lore
 communication
 comparing
 comparison
 complaint
-complex
+complex sentence
+complex verbal predicate
 compliment
-compound
+compound sentence
 compound-complex
 computer
+computer science
 computer-generated
 concert
 conditional
 confort
 confusion
 congiuntivo
-considered
+considered ungrammatical in modern English
 contradiction
 contrepèterie
 contribution
 controversial
+controversial translation
 conversation
 cooking
 country
@@ -715,22 +3029,22 @@ court
 courtroom
 creativity
 crime
-criminal
+criminal slang
 curiosity
-current
-currently
-customer
+current events
+currently under investigation
+customer service
 customs
 cute
-cyrillic
-d'après
+cyrillic script
+d'après Desproges
 da
 dangers
 date
 dated
-dative
+dative case
 day_of_the_week
-de
+de Ovid
 death
 debatable
 definition
@@ -742,14 +3056,14 @@ dentist
 derogatory
 description
 desire
-desktop
+desktop publishing
 devise
 dialectal
 dialogue
-dictionary
-difficult
+dictionary speak
+difficult pronunciation
 dimasadventures
-direct
+direct address
 directions
 dirt
 disappearance
@@ -759,9 +3073,10 @@ disease
 dislikes
 disparaging
 diving
-do
-double
-doubled
+do not translate!
+double entendre
+double negative
+doubled words
 drugs
 dual
 dubious
@@ -776,85 +3091,203 @@ economy
 education
 ekspritaĵo
 electricity
-elevated
+elevated style
 ellipsis
 emergency
 emotion
 enantiosemia
 encouragement
-encyclopedia
-ends
+encyclopedia speak
+ends with a S
 entertainment
 environment
 epenthesis
-errores
+errores de traduccion
 escuses
 euphemism
 euphémisme
-everyday
+everyday life
 evolution
 exaggeration
-excavated
+excavated texts
 exclamation
 exclamative
 excuse
 expectation
-experimental
-extra-long
+experimental used
+extra-long sentence
 eŭfemismo
 fact
 facts
-fairy
-fake
+fairy tale
+fake chinese wisdom
+fake commercial
+fake latin
+fake proverb
+fake weather lore
 false
 famale_name
 familiar
 familier
 family
+family name
 famiy_name
-famous
-fancy
+famous last words
+famous transliterations
+fancy vocab
 fantasy
 farm
-fast
+fast food
 fear
 feelings
 feels¬emotions
 female
+female inanimate object
+female name
+female speaker
 feminine
+feminine definite
+feminine object
+feminine speaker
+feminine subject
 fire
 first_name
 fitness
-five
+five senses
 flowers
 food
-foreign
+food labelling
+foreign proverb
 formal
+formal hebrew
+formal sounding
+formal writing
 franco-provençal
-français
-free
-french
+français de Savoie
+français des Antilles
+français du Canada
+français imaginaire
+free translation
+french pidgin
 frequency
-friday
-from
+friday night
+from 1984
+from A la Clairefontaine
+from Albany Law Journal
+from Andromaque
+from Animal Farm
+from Anna Karenina
+from Bede's Ecclesiastical History
+from Bizet's opera Carmen
+from Book of Changes
+from Bouvard et Pécuchet
+from Boyhood
+from Chanson du XIX siècle
+from China
+from Code pêche fluv., 1875
+from Dead Souls
+from Don Quichotte
+from Du Contrat Social
+from Following the Equator: A Journey Around the W
+from Hamlet
+from How to Analyze People on Sight
+from Huainanzi
+from Jewish prayer
+from Kitab al-Zummurrud
+from L'Ours et l'Amateur des jardins
+from La Chauve-souris le Buisson et le Canard
+from La Marseillaise
+from La Mort et le Bûcheron
+from La Revue Scientifique
+from La civilité française pour l'instruction de l
+from La légende des siècles
+from Laiterie
+from Le Coq et le Renard
+from Le petit chien qui secoue de l'argent et des 
+from Le renard et le bouc
+from Les Deux Aventuriers et le talisman
+from Les Pensées
+from Littell's Living Age, vol XIX
+from Lorna Doone
+from Macbeth
+from Master and Margarita
+from Mozi
+from Nine Chapters
+from Ode an die Freude
+from Pantagruel
+from Principes de politique des souverains
+from Pâté d’anguille
+from Recreations in mathematics and natural philos
+from Revue de l’Agenais‎
+from Revue des Deux Mondes
+from Roman de Renart
+from Romeo and Juliet
+from Salammbô
+from Snow White
+from Spirit of the English
+from Star Trek
+from Tao Te Ching
+from The Cruicible
+from The Fanciers' journal
+from The Giving Tree
+from The Literary Gazette and Journal of the Belle
+from The Literary World, Volume IV
+from The Little Prince
+from The Melancholy of Haruhi Suzumiya
+from The Nether World
+from The Party
+from The Pickwick Papers
+from The Policeman's Beard is Half Constructed
+from The Saturday Magazine, vol 14
+from The Schoolmaster, and Edinburgh weekly magazi
+from The Social Contract
+from The Tale of the Dead Princess and the Seven K
+from The Unland
+from The beacon of temperance
+from The shadow in the house
+from Three Kingdoms
+from Théol. cath.t.4
+from Trial of Mary Ann Carlile 
+from Un ménage de garçon
+from Une vie manquée: scènes de moeurs vaudoises
+from Vendidad
+from War and Peace
+from What Men Live By
+from la Main Gauche
+from the Avesta
+from the Bhagavad Gita
+from the Bible
+from the Economist
+from the Gospel of John
+from the Heart Sūtra
+from the New Testament
+from the Tale of the Heike
+from the report of The Conference on the Teaching 
+from Âne Mort
+from Émile ou de l'éducation
+from İstiklâl Marşı
+from Хо
 fruit
-full
+full conjugation
 fun
-funnily
-furigana
+funnily tagged
+furigana mistake
 future
+future continuous
+future simple
+future tense
 gaelic
 gambling
-garden
-gas
+garden path sentence
+gas station
 gastronomy
 gay
 geek
-genders
-genealogyc
-genelogic
-general
-genetive
+genders in English
+genealogyc tree
+genelogic tree
+general truth
+genetive case
 gentle
 geography
 geometry
@@ -863,21 +3296,27 @@ gloomy
 golf
 government
 grammar
-graphic
+grammar check
+graphic design
 greeting
 habit
 haiku
 hair
-hard
+hard to parse
+hard to translate
 harp
-has
+has audio
+has link
+has video
 headline
 health
 help
 helping
-hi-tech
-historical
-historically
+hi-tech version
+historical fact
+historical orthography
+historical person
+historically charged
 history
 hobby
 holiday
@@ -893,25 +3332,35 @@ hygiene
 iambic
 ideology
 idiom
-idiomatic
+idiom translation
+idiomatic expression
 idiome
 idom
 ignorance
 illness
-image
-imaginary
+image on sentence
+imaginary french
 immigration
 immoral
 imperative
+imperative mood
 imperfective
-impersonal
+impersonal sentence
 impolite
 important
 impossible
-in
+in a café
+in court
+in the park
+in the school
+in the shop
+in the transport
+in À l'ombre des jeunes filles en fleur
 incomplete
-incorrect
-indefinite-personal
+incomplete sentence
+incorrect grammar
+incorrect transcription
+indefinite-personal sentence
 informal
 informatique
 injury
@@ -919,22 +3368,24 @@ innuendo
 insane
 insistence
 instructions
+instructions on a test
 insult
 insulting
 intent
 intention
 intermediate
-internet
+internet lingo
 introduction
 invitation
-irish
+irish accent
 irony
-italics
+italics needed
 j-pop
 jargon
 jealousy
 job
 joke
+joke translation
 journalism
 joy
 khmer
@@ -942,48 +3393,71 @@ kids
 king
 kokin-wakashū
 landscape
+landscape description
 language
+language symbols
 law
 learning
 legal
+legal language
 leismo
 lesbian
-less
+less than 10 words
+less than 8 words
+less than natural
 letter
 library
 likes
 limerick
 lingual
-linguistic
+linguistic diseases
 linguistics
-link
+link on comments
 literal
-literary
+literal translation
+literary style
 literature
-lnk
-loan
+lnk on comments
+lnk to alternative gender
+lnk to alternative number
+lnk to alternative orthography
+lnk to alternative punctuation
+lnk to alternative spelling
+lnk to alternative vocabulary
+lnk to alternative wording
+lnk to related
+loan word
+loan word from Japanese
 local
-localised
+local life
+localised translation
 location
 locution
 logic
-long
-loose
+long form
+long word
+loose translation
 love
 ludov
 lugar-comum
 lyric
 lyrics
 male
-mama
+male name
+male speaker
+mama joke
 man'yōshū
 manga
+manga title
 masculine
+masculine object
+masculine speaker
+masculine subject
 material
 mathematics
 maths
 mathématiques
-maybe
+maybe delete
 meal
 meaning
 measurement
@@ -1002,84 +3476,123 @@ misleading
 misogynistic
 misogyny
 misquote
-mistaked
+mistaked translation
 mnemonic
-modern
-modified
+modern rendering
+modified quote
 money
 month
-more
-most
+more natural if changed to "my father" 
+more than 3 tags
+more than 40 words
+more than 6 words
+most important phrases
 motto
 movement
-multiple
+multiple sentences
 museum
 music
-musical
+musical instrument
+musical instruments
 mythology
-names
+names of 2 people
+names of 3 people
+names of 4 people
 nationality
-native
+native check needed
 natural
+natural event
 nature
 near-duplicate
 necessity
-needs
+needs native check
 negativa
 negative
 negotiation
 neologism
-neuter
+neuter object
+neuter subject
 news
 nickname
 nl-NL
 nl_NL
-no
+no apparent meaning
 noise
-nominative
-non
-non-ASCII
-non-existent
+nominative sentence
+non literal
+non literal translation
+non natural
+non-ASCII character in an English sentence
+non-existent words
 non-finite
-non-literal
-non-official
+non-literal translation
+non-official vocabulary
 non-purist
 non-sentence
 non-standard
+non-standard capitalisation
+non-standard grammar
+non-standard orthography
+non-standard punctuation
+non-standard spelling
 nonsense
-nonstandard
-noob
-not
+nonstandard use of "ironic"
+noob stories
+not 100% true
+not a literal translation
+not a sentence
+not a sentence, should be deleted
+not an English sentence
+not exact
+not for WWWJDIC
+not grammatical
+not how life actually works
+not natural
+not ok
+not really a sentence
+not used in Brazil
 notice
-notional
+notional agreement
 number
-nursery
-object
-objeto
+nursery rhyme
+object clause
+objeto pleonástico
 obligation
 obscene
 obscure
-obvious
-of
+obvious statement
+of Alphonse Allais
+of Antisthenes
+of Aristotle
+of Bion
+of Democritus
+of Diogenes of Sinope
 offensive
 offer
-office
-old
+office corruption
+old kana
+old slavic vocabulary
 old-fashioned
-older
-on
+older brother variant
+older sister variant
+on a bicycle
+on the radio
 onomatopoeia
 opinion
 order
 orthography
 ortografía
 outdated
+outdated information
+outdated slang
+outdated spelling
 ownership
 oxymoron
-package
+package label
 palindrome
 pangram
-par
+par Thierry
+par Étienne de Jouy
 paradox
 paragoge
 paragraph
@@ -1089,110 +3602,147 @@ parenting
 parody
 participle
 parting
-passato
+passato remoto
 passive
-passé
-past
+passive aggressive
+passive voice
+passé simple
+past continuous
+past perfect
+past present
+past simple
+past tense
 pastry
-pater
+pater nostrum
 patriotic
 peaton
 pejorative
-perfect
+perfect past
 perfective
 permission
-personal
+personal dative
+personal relation
+personal relations
 perverb
 pet
 philosophy
 phone
 photo
-photograph
+photograph caption
 photography
-phrasal
+phrasal verb
 physics
-phương
-pick-up
+phương ngôn
+pick-up line
 pidgin
 pigeons'
 pink
 pk
-place
+place name
 plants
-play
+play on grammar
+play on words
 pleonasm
 plural
-pluralis
+plural object
+pluralis modestatis
 pléonasme
 poem
 poetic
+poetic Hebrew
 poetry
-pointing
+pointing to photo
 poker
 police
+police order
 polite
+polite form
 politeness
-political
-politically
+political science
+politically correct term
+politically incorrect
 politics
 polonism
 polytonic
 poop
-popular
+popular culture
+popular language
 possession
-possessor
+possession with genetive case
+possession with locative case
+possessor explicit
+possessor implicit
 possibility
-possible
-possibly
-post
-potentially
+possible copyright violation
+possibly Swiss French
+possibly impolite
+possibly unnatural
+post office
+potentially offensive
 prediction
 preference
-preferred
-present
-pretérito
+preferred translation
+present continuous
+present perfect
+present perfect continuous
+present simple
+present tense
+pretérito indefinido
+pretérito perfecto
 price
-prix
+prix de l'humour politique 1992
+prix de l'humour politique 1993
+prix de l'humour politique 1997
 problem
 profession
-program
+program interface text
 programming
 prohibition
 promise
-pronunciation
+pronunciation challenge
 propaganda
 protest
 prover-like
 proverb
+proverb (in context)
 proverb-like
 proverbe
-proverbial
+proverbial phrase
 proverbo
 provocative
 psalm-26
 psalm-50-21
 pseudo-anglicism
 psychology
-public
+public domain
+public transport
 pun
 punchline
-punctuation
-punto
+punctuation rules
+punto y coma
 puristic
 purpose
 quantity
-question
+question and answer
 quote
 racism
 racist
 rare
-rather
-real
+rare case
+rare meaning
+rare orthography
+rare word
+rather odd sentence
+real estate agent
 reason
-recent
-recycling
+recent usage
+recycling comments
+recycling of comments
+recycling profiles
+recycling the wall
 redundancy
-reflexive
+reflexive pronoun
+reflexive pronoun(s)
 refran
 regional
 regionalism
@@ -1209,7 +3759,7 @@ reprimand
 reproach
 request
 rerecord
-responsible
+responsible translation
 restaurant
 rhetorical
 rhyme
@@ -1220,9 +3770,12 @@ robot
 romance
 romantic
 rude
-russian
+russian loan word
 sadness
-said
+said by female
+said by male
+said to female
+said to male
 sailing
 sarcastic
 satire
@@ -1230,58 +3783,73 @@ saying
 scenery
 schedule
 school
+school subject
 science
+science fiction
 scolding
 season
 self-referential
 senryuu
 sentence
 sequence
-set
-several
+set expression
+set phrase
+several words
 sex
 sexist
 sexual
-shameless
+shameless promo
 shop
 shopping
-short
+short form
 sign
 silepse
 silly
+silly rhyme
+silly translation
 simbols
 simile
 simple
+simple future
+simple past
+simple sentence
 singular
+singular "they"
+singular object
 size
 sketchy
 slander
 slang
 sleep
-slightly
+slightly modified from the original
 slogan
+slogan of the Ministry of Truth
 soccer
-social
+social network
 sociology
 software
 song
-speech
+song title
+speech act
 spoken
 sports
 spring
-starts
+starts with letter N
 stereotype
 stilted
-stranded
+stranded preposition
 strange
-subject
+strange stuff
+subject explicit
+subject implicit
 subjonctif
 subjunctive
+subjunctive mood
 sugest
 suggestion
 summer
 sunset
-superlative
+superlative degree
 supermarket
 superstition
 supporting
@@ -1291,88 +3859,113 @@ sympathy
 symptom
 synecdoche
 tableround
-tag
+tag question
 tale
-tales
-talking
+tales of Columbus
+talking to machines
 tanka
 tarot
 tautology
 taxes
 taxi
-tea
+tea party
 technical
 technics
 telephone
 tenancy
 tennis
 terrorism
-that
-the
+that that
+the World Wide Web
 theater
 threat
 time
 title
-to
+to 2nd Person Formal
+to 2nd pl informal
+to 2nd sing informal
+to 2nd sing/pl formal
+to be reviewed
 toast
-tone
-tongue
-tour
+tone twister
+tongue twister
+tour agent
 toys
 tr
-traduction
-tradução
+traduction challenge
+tradução livre
 traffic
 train
-translated
+translated by Louis Fabulet
+translated by Samuel Taylor Coleridge
+translated idiom
+translated lyrics
+translated mnemonic
+translated palindrome
+translated place name
+translated poem
+translated proverb
+translated quote
+translated rhyme
+translated title
+translated tongue twister
+translated wordplay
 translated-idiom
 translated-proverb
 translated-quote
 translation
+translation challenge
+translation of Barack Obama
 transport
 transportation
 travel
 trees
 trivial
 trope
-true
+true story
 truism
 twitter
-typographically
+typographically incorrect punctiation
 typography
 umgangssprachlich
-uncommon
-under
+umgangssprachlich / colloquial
+uncommon grammar
+under revision
 university
-unlikely
+unlikely direct translation from French
 unnatural
-unseen
+unnatural transcription
+unseen action
 unsourced
-untranslated
+untranslated pun
 untrue
-unusual
-urban
-usage
-useful
-uzbek
+unusual sentence structure
+unusual use of the genitive
+unusual wording
+urban legend
+usage problem (American Heritage dict.)
+useful for Tatoeba
+useful info
+uzbek pilav recipe
 v
 valediction
 vegetarian
 verb_of_motion
-verbal
-verbatim
+verbal participle
+verbatim translation
 verbose
 verlan
 verse
-very
+very low frequency
 violence
-vocaburaly
-vocative
-von
+vocaburaly 
+vocative case
+von Manger
 voseo
 vulgar
 walkie-talkie
 war
+war on terrorism
 warning
 weapon
 wear
@@ -1381,25 +3974,29 @@ web
 wedding
 winter
 wish
-with
+with video link
 witticism
 wordplay
 work
 worship
-wrong
+wrong audio
+wrong grammar
+wrong translation
+wrong transliteration
 xenophobia
 year
-younger
+younger brother variant
+younger sister
 zoo
-À
-ŝerca
+À l'ancienne
+ŝerca latineco
 π
 ОК
 акіянскі
-русские
+русские запятые
 тарашкевіца
 тире
-من
+من الآثار
 कहावत
 €
 ありました。
@@ -1412,12 +4009,11 @@ zoo
 四字熟語
 子供
 成语
-消防夫
+消防夫 is out-of-date term
 清少納言
 理发店
 緊縛
 自転車に乗って
 苏州方式
-試着
-證道歌
+試着 = しちゃく
 魏峰的《截拳道》
