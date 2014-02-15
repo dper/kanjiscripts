@@ -31,28 +31,28 @@ Script_dir = File.dirname(__FILE__)
 
 # A note for a flash card containing a sentence in kanji, kana, and English.
 class Note
+	attr_accessor :kanji	# The kanji sentence.
+	attr_accessor :kana	# The kana reading of the sentence.
+	attr_accessor :english	# The English meaning of the sentence.
+
 	# Generates the kana.
 	def make_kana kanji
 		#TODO Write this.
+		return 'かな'
 	end
 
 	# Creates a Note.
 	def initialize(kanji, english)
 		@kanji = kanji
 		@english = english
-
-		#TODO
-		#@kana = make_kana kanji
-	end
-
-	# Returns true if both sentences have no dangerous tags.
-	def safe_tags?
-		#TODO Write this.
+		@kana = make_kana kanji
 	end
 end
 
 # Sentence corpus.
 class Corpus
+	attr_accessor :notes	# Notes for the Japanese/English sentence pairs.
+
 	# Parses tags file.
 	def parse_tags
 		path = Script_dir + '/tags.csv'
@@ -82,7 +82,7 @@ class Corpus
 		text = IO.readlines path
 		@pairs = []
 		
-		# The indices file is a bunch of lines like this: sentence_id [tab] meaning_id [tab] text.
+		# The indices file has lines like this: sentence_id [tab] meaning_id [tab] text.
 		# The sentence_id is the Japanese sentence.
 		# The meaning_id is an English translation of it.
 		# The text is a heavily annotated Japanese sentence.
@@ -102,6 +102,12 @@ class Corpus
 		@japanese = {}
 		@usernames = {}
 
+		# The sentences file has lines like this:
+		# 	id [tab] lang [tab] text [tab] username [tab] date_added [tab] date_last_modified.
+		# The id is the sentence id.
+		# The text is the sentence.
+		# The username is the user who has adopted the sentence.
+
 		text.each do |line|
 			id = line.split[0].to_i
 			lang = line.split[1]
@@ -118,6 +124,31 @@ class Corpus
 		end
 	end
 
+	# Returns true iff the sentence is adopted.
+	def adopted? id
+		return @usernames.key? id
+	end
+
+	# Returns true iff the tags are all safe.
+	def safe_tags? id
+		# If there are no tags, it is safe.
+		unless @tags.key? id
+			return true
+		end
+
+		#TODO Add more tags here.
+		dangerous = ['ambiguous']
+
+		# Examine each tag.  If it's dangerous, return false.
+		@tags[id].each do |tag|
+			if dangerous.include? tag
+				return false
+			end
+		end
+
+		return true
+	end
+	
 	# Makes notes for each of the Japanese/English sentence pairs.
 	def make_notes
 		notes = []
@@ -125,6 +156,16 @@ class Corpus
 		@pairs.each do |pair|
 			sentence_id = pair[0]
 			meaning_id = pair[1]
+
+			# Unadopted sentences aren't used.
+			unless (adopted? sentence_id) and (adopted? meaning_id)
+				next
+			end
+
+			# Only sentences with safe tags are used.
+			unless (safe_tags? sentence_id) and (safe_tags? meaning_id)
+				next
+			end
 
 			sentence = @japanese[sentence_id]
 			meaning = @english[meaning_id]
@@ -145,18 +186,28 @@ class Corpus
 		parse_sentences	
 		verbose 'Making notes for sentence pairs ...'
 		make_notes
-		
-		#TODO Filter the sentences. 
 	end
-	
-	#TODO Write a function that for a word makes a list of containing sentences.
-	#TODO Probably these sentences should be sorted by length: shortest first.
+
+	# Writes a list of all the tags used.
+	def show_all_tags
+		tags = @tags.values
+		tags.uniq!
+		tags.sort!
+		puts tags
+	end
 end
 
 # Prints a list of notes.
 def show_notes notes
+	s = ''
 
+	notes.each do |note|
+		s += note.kanji + "\t" + note.kana + "\t" + note.english + "\n"
+	end
+
+	puts s
 end
 
 $corpus = Corpus.new
-#TODO Use the corpus.
+$corpus.show_all_tags
+#show_notes $corpus.notes
