@@ -96,7 +96,7 @@ To generate phonetic (kana) readings of sentences written in standard Japanese (
 
 First, install the necessary packages.  Be careful not to skip any, because if you're missing some of these, the resulting error messages may not be helpful.
 
-    # apt-get install mecab ruby-ffi ruby-dev ruby-mecab
+    # apt-get install mecab mecab-ipadic-utf8 ruby-ffi ruby-dev ruby-mecab
 
 Install the **natto** gem (<https://bitbucket.org/buruzaemon/natto/wiki/Installation-and-Configuration>).
 
@@ -112,7 +112,7 @@ irb(main):001:0> require 'natto'
 irb(main):002:0> require 'nkf'
 => true
 irb(main):003:0> nm = Natto::MeCab.new
-=> #<Natto::MeCab:0x000000024a26b0 @tagger=#<FFI::Pointer address=0x0000000244d120>, @options={}, @dicts=[#<Natto::DictionaryInfo:0x000000024a24a8 type="0", filename="/var/lib/mecab/dic/debian/sys.dic", charset="EUC-JP">], @version="0.996">
+=> #<Natto::MeCab:0x0000000149e638 @tagger=#<FFI::Pointer address=0x000000017aae40>, @options={}, @dicts=[#<Natto::DictionaryInfo:0x0000000149e408 type="0", filename="/var/lib/mecab/dic/debian/sys.dic", charset="UTF-8">], @version="0.996">
 irb(main):004:0> 
 ```
 
@@ -127,10 +127,8 @@ irb(main):002:0> require 'natto'
 irb(main):003:0> require 'nkf'
 => true
 irb(main):004:0> nm = Natto::MeCab.new
-=> #<Natto::MeCab:0x000000024a26b0 @tagger=#<FFI::Pointer address=0x0000000244d120>, @options={}, @dicts=[#<Natto::DictionaryInfo:0x000000024a24a8 type="0", filename="/var/lib/mecab/dic/debian/sys.dic", charset="EUC-JP">], @version="0.996">
+=> #<Natto::MeCab:0x0000000149e638 @tagger=#<FFI::Pointer address=0x000000017aae40>, @options={}, @dicts=[#<Natto::DictionaryInfo:0x0000000149e408 type="0", filename="/var/lib/mecab/dic/debian/sys.dic", charset="UTF-8">], @version="0.996">
 irb(main):005:0> 
 ```
    
-If you get an error at any step, something is wrong.  Look at the error message, review the above steps and try to figure it out.
-
-The way in which kana is generated depends on MeCab.  If you're interested in tweaking the output, see the Japanese documentation here: <http://mecab.googlecode.com/svn/trunk/mecab/doc/index.html#parse>.
+If you get an error at any step, something is wrong.  Look at the error message, review the above steps and try to figure it out.  Also make sure you see `charset="UTF-8"` and not `charset="EUC-JP"`.  It is probably a good idea to try a natto test script as well; e.g., <http://tinyurl.com/ptag5wn>.  The way in which kana is generated depends on MeCab.  If you're interested in tweaking the output, see the Japanese documentation here: <http://mecab.googlecode.com/svn/trunk/mecab/doc/index.html#parse>.

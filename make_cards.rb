@@ -18,6 +18,10 @@
 # == AUTHOR
 # Douglas P Perkins - https://dperkins.org - https://microca.st/dper
 
+ENV['MECAB_PATH']='/usr/lib/libmecab.so.2'
+require 'natto'
+require 'nkf'
+
 $verbose = true
 
 # Displays an error message if verbose operation is enabled.
@@ -35,17 +39,34 @@ class Note
 	attr_accessor :kana	# The kana reading of the sentence.
 	attr_accessor :english	# The English meaning of the sentence.
 
+	# Converts kanji text to its furigana equivalent.
+	# Based on an example at http://tinyurl.com/ptag5wn.
+	def furigantz s
+		nm = Natto::MeCab.new
+		memo = []
+
+		nm.parse(s) do |n|
+			if n.char_type == 2
+				yomi = n.feature.split(',')[-2]
+				memo << NKF.nkf('-h1 -w', yomi)
+			else
+				memo << n.surface
+			end
+		end
+
+		return memo.join
+	end
+
 	# Generates the kana.
 	def make_kana
-		#TODO Write this.
-		return 'かな'
+		@kana = furigantz @kanji			
 	end
 
 	# Creates a Note.
 	def initialize(japanese, english)
 		@kanji = String.new japanese
 		@english = String.new english
-		@kana = make_kana
+		make_kana
 	end
 end
 
