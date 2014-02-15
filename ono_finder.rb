@@ -143,6 +143,13 @@ class Wordfreq
 			verbose (get_frequency word).to_s + "\t" + word
 		end
 	end
+
+	# Prints a list of words.
+	def show_words words
+		words.each do |word|
+			verbose word
+		end
+	end
 end
 
 $edict = Edict.new
@@ -151,4 +158,8 @@ words = $edict.get_ono_words
 $wordfreq = Wordfreq.new
 words = $wordfreq.sort_by_frequent words
 
-verbose words
+# Just one of the two following functions should be called.
+# Choose whichever output format you like.
+
+$wordfreq.show_frequencies words
+#$wordfreq.show_words words

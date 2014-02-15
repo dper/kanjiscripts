@@ -1,7 +1,7 @@
 onojapanese
 ===========
 
-A script for playing with onomatopoeic Japanese words.
+A script for playing with onomatopoeic Japanese words.  There are two parts to this: a script that finds onomatopoeic words and a second script that finds sentences containing those words.
 
 
 Dictionary
@@ -63,3 +63,12 @@ Be aware of the following.
 	We allow our members to submit book titles and other things you might not consider sentences.
 Translations may not always be accurate, even though the linked sentences are correct sentences.
 ```
+
+
+Word Frequency Files
+====================
+
+* `ono_words.txt` is a list of all the onomatopoeic words in edict sorted from most to least frequent.
+* `ono_freq.txt` is the same list except that the word's frequency is included along with the word.
+
+Both `ono_words.txt` and `ono_freq.txt` can be generated using `ono_finder.rb`.  This need only be done rarely, because relevant updates to edict are infrequent.
