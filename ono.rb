@@ -152,12 +152,22 @@ class Corpus
 		path = Script_dir + '/tags.csv'
 		text = IO.readlines path
 		
-		# The tags file is a bunch of lines.
-		# Format: number + tab + tag.
-		# The number is the sentence ID.
-		# The tag could be several words in length.
+		# The tags file is a bunch of lines like this: number + tab + tag.
+		# The number is the sentence ID. Tags can be multiple words with spaces.
 		# If a sentence is tagged several times, each one is a separate line.
-		#TODO	
+		
+		@tags = {}
+		
+		text.each do |line|
+			number = line.split[0].to_i
+			tag = line.split[1]
+			
+			if @tags.key? number
+				@tags[number] << tag
+			else
+				@tags[number] = [tag]
+			end
+		end
 	end
 	
 	# Reads
