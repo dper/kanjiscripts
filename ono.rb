@@ -128,7 +128,7 @@ class Wordfreq
 
 	# Takes a list of words and returns a sorted list.
 	# The new list is sorted most to least frequent.
-	# Words not contained in the wordfreq file are placed last.
+	# Words not contained in the word frequency file go last.
 	def sort_by_frequent words
 		sorted_words = words.sort do |word1, word2|
 			(get_frequency word2) <=> (get_frequency word1)
@@ -151,6 +151,12 @@ class Corpus
 	def parse_tags
 		path = Script_dir + '/tags.csv'
 		text = IO.readlines path
+		
+		# The tags file is a bunch of lines.
+		# Format: number + tab + tag.
+		# The number is the sentence ID.
+		# The tag could be several words in length.
+		# If a sentence is tagged several times, each one is a separate line.
 		#TODO	
 	end
 	
