@@ -76,7 +76,7 @@ class Corpus
 	def parse_indices
 		path = Script_dir + '/jpn_indices.csv'
 		text = IO.readlines path
-		@translation = {}
+		@pairs = []
 		
 		# The indices file is a bunch of lines like this: sentence_id [tab] meaning_id [tab] text.
 		# The sentence_id is the Japanese sentence.
@@ -86,12 +86,7 @@ class Corpus
 		text.each do |line|
 			sentence_id = line.split[0].to_i
 			meaning_id = line.split[1].to_i
-			
-			if @tags.key? sentence_id
-				@tags[sentence_id] << meaning_id
-			else
-				@tags[sentence_id] = [meaning_id]
-			end
+			@pairs << [sentence_id, meaning_id]
 		end
 	end
 
@@ -119,6 +114,17 @@ class Corpus
 		end
 	end
 
+	# Makes notes for each of the Japanese/English sentence pairs.
+	def make_notes
+		notes = []
+
+		@pairs.each do |pair|
+			sentence_id = pair[0]
+			meaning_id = pair[1]
+			#TODO Stuff.
+		end
+	end
+
 	# Creates a Corpus.
 	def initialize
 		verbose 'Parsing tags.csv ...'
@@ -127,6 +133,8 @@ class Corpus
 		parse_indices
 		verbose 'Parsing sentences_detailed.csv ...'
 		parse_sentences	
+		verbose 'Making notes for sentence pairs ...'
+		make_notes
 		
 		#TODO Filter the sentences. 
 	end
