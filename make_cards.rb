@@ -51,16 +51,21 @@ end
 
 # A flashcard deck maker.  This sorts and writes notes.
 class DeckMaker
+	# Sort the notes from shortest to longest Japanese sentence.
+	def sort_notes
+		verbose 'Sorting notes by sentence length ...'
+		@notes.sort! do |note1, note2| note1.kanji.length <=> note2.kanji.length end	
+	end
+
 	# Creates a DeckMaker
 	def initialize notes
 		@notes = Array.new notes
-
-		#TODO Sort the notes.
+		sort_notes
 	end
 
 	# Prints a list of notes.
 	def write_deck
-		verbose 'Writing notes...'
+		verbose 'Writing notes ...'
 		verbose ''
 
 		@notes.each do |note|
@@ -168,7 +173,7 @@ class Corpus
 			end
 		end
 
-		verbose 'English/Japanese pairs: ' + @pairs.size.to_s + '.'
+		verbose 'Unfiltered English/Japanese pairs: ' + @pairs.size.to_s + '.'
 	end
 
 	# Returns true iff the sentence is adopted.
@@ -262,3 +267,4 @@ end
 
 $corpus = Corpus.new
 $deckmaker = DeckMaker.new $corpus.notes
+$deckmaker.write_deck
