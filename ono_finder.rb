@@ -150,6 +150,16 @@ class Wordfreq
 			verbose word
 		end
 	end
+	
+	def show_words_inline words
+		s = ''	
+	
+		words.each do |word|
+			s += word + ' '
+		end
+		
+		verbose s
+	end
 end
 
 $edict = Edict.new
@@ -161,5 +171,6 @@ words = $wordfreq.sort_by_frequent words
 # Just one of the two following functions should be called.
 # Choose whichever output format you like.
 
-$wordfreq.show_frequencies words
+#$wordfreq.show_frequencies words
 #$wordfreq.show_words words
+$wordfreq.show_words_inline words
