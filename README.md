@@ -94,7 +94,9 @@ Kana
 
 To generate phonetic (kana) readings of sentences written in standard Japanese (using kanji), we use a program called **Mecab** (<https://code.google.com/p/mecab/>).  The website there is not particularly enlightening.  Regardless, Mecab is a morphological analyzer, which means it looks at a series of symbols and tries to parse them into words that form a sentence.  There are several steps to the installation.  I'm running Debian Sid, and if you're running a similar flavor of Linux, you can follow my directions fairly closely.  If you aren't, this could be tedious.  Sorry!
 
-First, install the necessary packages.  Be careful not to skip any, because if you're missing some of these, the resulting error messages may not be helpful.
+*Warning: If you miss any steps or do them a little incorrectly, the error messages you see later might not have any releveant information.  Go through this process slowly.*
+
+First, install the necessary packages.  Make sure you install `mecab-ipadic-utf8` and not just the regular `mecab-ipadic`.
 
     # apt-get install mecab mecab-ipadic-utf8 ruby-ffi ruby-dev ruby-mecab
 
