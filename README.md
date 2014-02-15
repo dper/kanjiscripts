@@ -36,6 +36,7 @@ There are extensive numbers of sample sentences at Tatoeba (<http://tatoeba.org/
 * <http://tatoeba.org/files/downloads/sentences_detailed.csv>.  The sentences themselves.
 * <http://tatoeba.org/files/downloads/tags.csv>.  Tags for each sentence.
 * <http://tatoeba.org/files/downloads/jpn_indices.csv>.  English and Japanese sentence pair information.
+* <http://tatoeba.org/files/downloads/links.csv>.  Links between matching sentences.
 
 Or if you're lazy, copy and paste this.
 
