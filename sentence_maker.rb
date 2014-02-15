@@ -169,7 +169,6 @@ class Corpus
 
 			sentence = @japanese[sentence_id]
 			meaning = @english[meaning_id]
-
 			notes << Note.new(sentence, meaning)
 		end
 
