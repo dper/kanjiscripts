@@ -36,17 +36,38 @@ class Note
 	attr_accessor :english	# The English meaning of the sentence.
 
 	# Generates the kana.
-	def make_kana kanji
+	def make_kana
 		#TODO Write this.
 		return 'かな'
 	end
 
 	# Creates a Note.
 	def initialize(japanese, english)
-		@kanji = japanese
-		@english = english
-		@kana = make_kana japanese
+		@kanji = String.new japanese
+		@english = String.new english
+		@kana = make_kana
 	end
+end
+
+# A flashcard deck maker.  This sorts and writes notes.
+class DeckMaker
+	# Creates a DeckMaker
+	def initialize notes
+		@notes = Array.new notes
+
+		#TODO Sort the notes.
+	end
+
+	# Prints a list of notes.
+	def write_deck
+		verbose 'Writing notes...'
+		verbose ''
+
+		@notes.each do |note|
+			puts note.kanji + "\t" + note.kana + "\t" + note.english
+		end
+	end
+
 end
 
 # Sentence corpus.
@@ -239,15 +260,5 @@ class Corpus
 	end
 end
 
-# Prints a list of notes.
-def write_notes notes
-	verbose 'Writing notes...'
-	verbose ''
-
-	notes.each do |note|
-		puts note.kanji + "\t" + note.kana + "\t" + note.english
-	end
-end
-
 $corpus = Corpus.new
-#write_notes $corpus.notes
+$deckmaker = DeckMaker.new $corpus.notes
