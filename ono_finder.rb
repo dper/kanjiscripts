@@ -137,20 +137,21 @@ class Wordfreq
 		return sorted_words
 	end
 
-	# Prints a list of words and their frequencies.
+	# Prints a list of words and their frequencies, each pair on a line.
 	def show_frequencies words
 		words.each do |word|
 			verbose (get_frequency word).to_s + "\t" + word
 		end
 	end
 
-	# Prints a list of words.
+	# Prints a list of words where each word is on its own line.
 	def show_words words
 		words.each do |word|
 			verbose word
 		end
 	end
-	
+
+	# Prints a list of words separated by spaces.	
 	def show_words_inline words
 		s = ''	
 	

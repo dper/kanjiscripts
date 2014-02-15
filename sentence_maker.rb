@@ -8,7 +8,9 @@
 # ./sentence_maker.rb
 #
 # == DESCRIPTION
-# A script that takes a list of Japanese words and finds sentences for them.
+# A script that creates a tab-separated flash card file from Tatoeba.
+# Sentences are included if they are in English-Japanese pairs.
+# Only sentences with safe-looking tags are included.
 #
 # This script depends on several files having proper formatting located
 # in the same directory. See the README for file source information.
@@ -38,7 +40,9 @@ class Note
 	def initialize(kanji, english)
 		@kanji = kanji
 		@english = english
-		@kana = make_kana kanji
+
+		#TODO
+		#@kana = make_kana kanji
 	end
 
 	# Returns true if both sentences have no dangerous tags.
@@ -121,8 +125,14 @@ class Corpus
 		@pairs.each do |pair|
 			sentence_id = pair[0]
 			meaning_id = pair[1]
-			#TODO Stuff.
+
+			sentence = @japanese[sentence_id]
+			meaning = @english[meaning_id]
+
+			notes << Note.new(sentence, meaning)
 		end
+
+		@notes = notes
 	end
 
 	# Creates a Corpus.
@@ -143,7 +153,10 @@ class Corpus
 	#TODO Probably these sentences should be sorted by length: shortest first.
 end
 
-#TODO Read a word list.
+# Prints a list of notes.
+def show_notes notes
+
+end
 
 $corpus = Corpus.new
 #TODO Use the corpus.
