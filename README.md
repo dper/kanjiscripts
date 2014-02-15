@@ -109,7 +109,23 @@ $ export MECAB_PATH=/usr/lib/libmecab.so.2
 $ irb
 irb(main):001:0> require 'natto'
 => true
-irb(main):002:0> 
+irb(main):002:0> require 'nkf'
+=> true
+irb(main):003:0> 
+
+```
+
+If you prefer, you can set the path within Ruby.  This is what the script does.
+
+```
+$ irb
+irb(main):001:0> ENV['MECAB_PATH']='/usr/lib/libmecab.so.2'
+=> "/usr/lib/libmecab.so.2"
+irb(main):002:0> require 'natto'
+=> true
+irb(main):003:0> require 'nkf'
+=> true
+irb(main):004:0> 
 ```
    
 If you get an error instead of `=> true`, something is wrong.  Look at the error message, review the above steps and try to figure it out.
