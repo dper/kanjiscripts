@@ -41,11 +41,11 @@ class Note
 
 	# Converts kanji text to its furigana equivalent.
 	# Based on an example at http://tinyurl.com/ptag5wn.
-	def furigantz s
+	def make_kana
 		nm = Natto::MeCab.new
 		memo = []
 
-		nm.parse(s) do |n|
+		nm.parse(@kanji) do |n|
 			if n.char_type == 2
 				yomi = n.feature.split(',')[-2]
 				memo << NKF.nkf('-h1 -w', yomi)
@@ -54,12 +54,7 @@ class Note
 			end
 		end
 
-		return memo.join
-	end
-
-	# Generates the kana.
-	def make_kana
-		@kana = furigantz @kanji			
+		@kana = memo.join
 	end
 
 	# Creates a Note.
