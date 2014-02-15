@@ -1,7 +1,11 @@
 onojapanese
 ===========
 
-A script for playing with onomatopoeic Japanese words.  There are two parts to this: a script that finds onomatopoeic words and a second script that finds sentences containing those words.
+A script for playing with Japanese words and sentences.  There are several scripts.
+
+* `find_ono.rb`. Lists onomatopoiec words as noted in edict.
+* `list_tags.rb`. Lists tags used in the Tatoeba sentence corpus.
+* `make_cards.rb`. Makes text for Japanese/English flash cards.
 
 
 Dictionary
