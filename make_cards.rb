@@ -42,10 +42,10 @@ class Note
 	end
 
 	# Creates a Note.
-	def initialize(kanji, english)
-		@kanji = kanji
+	def initialize(japanese, english)
+		@kanji = japanese
 		@english = english
-		@kana = make_kana kanji
+		@kana = make_kana japanese
 	end
 end
 
@@ -55,6 +55,7 @@ class Corpus
 
 	# Parses tags file.
 	def parse_tags
+		verbose 'Parsing tags.csv ...'
 		path = Script_dir + '/tags.csv'
 		text = IO.readlines path
 		
@@ -75,31 +76,30 @@ class Corpus
 			end
 		end
 
-		verbose 'Unfiltered tags: ' + @tags.size.to_s + '.'
+		verbose 'Total tags: ' + @tags.size.to_s + '.'
 	end
-	
-	# Parses the Japanese-English pair index file.
-	def parse_indices
-		path = Script_dir + '/jpn_indices.csv'
+
+	# Parses the links file.
+	def parse_links
+		verbose 'Parsing links.csv ...'
+		path = Script_dir + '/links.csv'
 		text = IO.readlines path
-		@pairs = []
-		
-		# The indices file has lines like this: sentence_id [tab] meaning_id [tab] text.
-		# The sentence_id is the Japanese sentence.
-		# The meaning_id is an English translation of it.
-		# The text is a heavily annotated Japanese sentence.
+		@links = []
+
+		# The links file has lines like this: sentence_id [tab] translation_id.
 		
 		text.each do |line|
 			sentence_id = line.split("\t")[0].to_i
 			meaning_id = line.split("\t")[1].to_i
-			@pairs << [sentence_id, meaning_id]
+			@links << [sentence_id, meaning_id]
 		end
 
-		verbose 'Unfiltered English/Japanese pairs: ' + @pairs.size.to_s + '.'
+		verbose 'Unfiltered links: ' + @links.size.to_s + '.'
 	end
 
 	# Parses the corpus sentence file.	
 	def parse_sentences
+		verbose 'Parsing sentences_detailed.csv ...'
 		path = Script_dir + '/sentences_detailed.csv'
 		text = IO.readlines path
 		@english = {}
@@ -131,6 +131,25 @@ class Corpus
 		verbose 'Unfiltered Japanese sentences: ' + @japanese.size.to_s + '.'
 	end
 
+	# Makes pairs of Japanese/English sentences.
+	def find_pairs
+		verbose 'Finding Japanese/English pairs ...'
+		@pairs = []
+
+		# For each pair, see if it's English to Japanese.
+		# If so, add the ordered pair to the list.
+		@links.each do |pair|
+			sentence_id = pair[0]
+			translation_id = pair[1]
+
+			if (@english.key? sentence_id) and (@japanese.key? translation_id)
+				@pairs << {"english_id" => sentence_id, "japanese_id" => translation_id}
+			end
+		end
+
+		verbose 'English/Japanese pairs: ' + @pairs.size.to_s + '.'
+	end
+
 	# Returns true iff the sentence is adopted.
 	def adopted? id
 		return @usernames[id] != '\N'
@@ -158,66 +177,64 @@ class Corpus
 
 		return true
 	end
-	
+
 	# Makes notes for each of the Japanese/English sentence pairs.
 	def make_notes
+		verbose 'Making notes for sentence pairs ...'
 		notes = []
 		not_adopted = 0
 		unsafe_tags = 0
-		sentence_not_found = 0
-		meaning_not_found = 0
+		english_not_found = 0
+		japanese_not_found = 0
 
 		@pairs.each do |pair|
-			sentence_id = pair[0]
-			meaning_id = pair[1]
+			english_id = pair["english_id"]
+			japanese_id = pair["japanese_id"]
 
 			# Unadopted sentences aren't used.
-			unless (adopted? sentence_id) and (adopted? meaning_id)
+			unless (adopted? english_id) and (adopted? japanese_id)
 				not_adopted += 1
 				next
 			end
 
 			# Only sentences with safe tags are used.
-			unless (safe_tags? sentence_id) and (safe_tags? meaning_id)
+			unless (safe_tags? english_id) and (safe_tags? japanese_id)
 				unsafe_tags += 1
 				next
 			end
 
-			sentence = @japanese[sentence_id]
-			meaning = @english[meaning_id]
+			japanese = @japanese[japanese_id]
+			english = @english[english_id]
 
-			if not sentence
-				sentence_not_found += 1
-				verbose 'Warning: Sentence ' + sentence_id.to_s + ' not found.  Skipping.'
+			unless english
+				english_not_found += 1
+				verbose 'Warning: English sentence ' + english_id.to_s + ' not found.  Skipping.'
 				next
 			end
 
-			if not meaning
-				meaning_not_found += 1
-				verbose 'Warning: Meaning ' + meaning_id.to_s + ' not found.  Skipping.'
+			unless japanese
+				japanese_not_found += 1
+				verbose 'Warning: Japanese sentence ' + japanese_id.to_s + ' not found.  Skipping.'
 				next
 			end
 
-			notes << Note.new(sentence, meaning)
+			notes << Note.new(japanese, english)
 		end
 
 		@notes = notes
 		verbose 'Not adopted pairs: ' + not_adopted.to_s + '.'
 		verbose 'Unsafe tags pairs: ' + unsafe_tags.to_s + '.'
-		verbose 'Sentence not found: ' + sentence_not_found.to_s + '.'
-		verbose 'Meaning not found: ' + meaning_not_found.to_s + '.'
+		verbose 'English sentence not found: ' + english_not_found.to_s + '.'
+		verbose 'Japanese sentence not found: ' + japanese_not_found.to_s + '.'
 		verbose 'English/Japanese notes: ' + notes.size.to_s + '.'
 	end
 
 	# Creates a Corpus.
 	def initialize
-		verbose 'Parsing tags.csv ...'
 		parse_tags
-		verbose 'Parsing jpn_indices.csv ...'
-		parse_indices
-		verbose 'Parsing sentences_detailed.csv ...'
+		parse_links
 		parse_sentences	
-		verbose 'Making notes for sentence pairs ...'
+		find_pairs
 		make_notes
 	end
 end
@@ -233,4 +250,4 @@ def write_notes notes
 end
 
 $corpus = Corpus.new
-write_notes $corpus.notes
+#write_notes $corpus.notes
