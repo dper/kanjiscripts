@@ -163,7 +163,9 @@ class Corpus
 	def make_notes
 		notes = []
 		not_adopted = 0
-		unsafe_tags = 0	
+		unsafe_tags = 0
+		sentence_not_found = 0
+		meaning_not_found = 0
 
 		@pairs.each do |pair|
 			sentence_id = pair[0]
@@ -183,12 +185,27 @@ class Corpus
 
 			sentence = @japanese[sentence_id]
 			meaning = @english[meaning_id]
+
+			if not sentence
+				sentence_not_found += 1
+				verbose 'Warning: Sentence ' + sentence_id.to_s + 'not found.  Skipping.'
+				next
+			end
+
+			if not meaning
+				meaning_not_found += 1
+				verbose 'Warning: Meaning ' + meaning_id.to_s + 'not found.  Skipping.'
+				next
+			end
+
 			notes << Note.new(sentence, meaning)
 		end
 
 		@notes = notes
 		verbose 'Not adopted pairs: ' + not_adopted.to_s + '.'
 		verbose 'Unsafe tags pairs: ' + unsafe_tags.to_s + '.'
+		verbose 'Sentence not found: ' + sentence_not_found.to_s + '.'
+		verbose 'Meaning not found: ' + meaning_not_found.to_s + '.'
 		verbose 'English/Japanese notes: ' + notes.size.to_s + '.'
 	end
 
@@ -206,15 +223,14 @@ class Corpus
 end
 
 # Prints a list of notes.
-def show_notes notes
-	s = ''
+def write_notes notes
+	verbose 'Writing notes...'
+	verbose ''
 
 	notes.each do |note|
-		s += note.kanji + "\t" + note.kana + "\t" + note.english + "\n"
+		puts note.kanji + "\t" + note.kana + "\t" + note.english
 	end
-
-	puts s
 end
 
 $corpus = Corpus.new
-#show_notes $corpus.notes
+write_notes $corpus.notes
