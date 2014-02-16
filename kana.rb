@@ -35,14 +35,12 @@ def make_kana text
 end
 
 def test
-	text = '彼は狂人のように振る舞った。'
-	puts 'Original: ' + text
-	puts 'Reading:  ' + (make_kana text)
-	puts ''
+	sentences = ['彼は狂人のように振る舞った。', '私はアメリカ人です。']
 
-	text = 'English words and stuff, 日本語　スペース, 0123, ０１２３！？.'
-	puts 'Original: ' + text
-	puts 'Reading:  ' + (make_kana text)
+	sentences.each do |sentence|
+		puts 'Original: ' + sentence
+		puts '--------> ' + (make_kana sentence)
+	end
 end
 
 test
