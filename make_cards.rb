@@ -33,35 +33,15 @@ end
 
 Script_dir = File.dirname(__FILE__)
 
-# A note for a flash card containing a sentence in kanji, kana, and English.
+# A note for a flash card containing a sentence in kanji and English.
 class Note
 	attr_accessor :kanji	# The kanji sentence.
-	attr_accessor :kana	# The kana reading of the sentence.
 	attr_accessor :english	# The English meaning of the sentence.
-
-	# Converts kanji text to its furigana equivalent.
-	# Based on an example at http://tinyurl.com/ptag5wn.
-	def make_kana
-		nm = Natto::MeCab.new
-		memo = []
-
-		nm.parse(@kanji) do |n|
-			if n.char_type == 2
-				yomi = n.feature.split(',')[-2]
-				memo << NKF.nkf('-h1 -w', yomi)
-			else
-				memo << n.surface
-			end
-		end
-
-		@kana = memo.join
-	end
 
 	# Creates a Note.
 	def initialize(japanese, english)
 		@kanji = String.new japanese
 		@english = String.new english
-		make_kana
 	end
 end
 
@@ -85,7 +65,7 @@ class DeckMaker
 		verbose ''
 
 		@notes.each do |note|
-			puts note.kanji + "\t" + note.kana + "\t" + note.english
+			puts note.kanji + "\t" + note.english
 		end
 	end
 

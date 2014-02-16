@@ -73,6 +73,7 @@ def make_spacing (token, neighbors)
 
 	type = type token
 
+	#TODO Fix this function.
 	puts type + ' / ' + token.char_type.to_s + ' / ' + token.surface
 	puts token
 	puts
