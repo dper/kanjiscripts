@@ -71,42 +71,40 @@ def make_spacing (token, neighbors)
 		return token.feature.split(',').first
 	end
 
-	# If it's the first token, no spacing is needed.
-	unless neighbors[token]['left']
-		return ''
-	end
-
 	type = type token
+
+	puts type + ' ' + token.surface
+
 	left = neighbors[token]['left']
 	right = neighbors[token]['right']
+
+	# If it's the first token, no spacing is needed.
+	unless left
+		return ''
+	end
+
 	left_type = type left
 
-	#puts token.surface + ' // ' + token.feature.split(',').first
-	puts token.surface + ' // ' + type
+	case type
+		when '名詞'
+			return ' '
+		when '動詞'
+			if left_type == '名詞' then return ' ' end
 
-	# Do not split neighboring verbs.
-	if type.include? '動詞' and left_type.include? '動詞'
-		return ''
+			# A particle surrounded by verbs doesn't need space, but others do.
+			if left_type == '助詞'
+				two_left = neighbors[left]['left']
+				if two_left and (type two_left) != '動詞' then return ' ' end
+			end
+		when '助詞'
+			if left_type == '名詞' then return ' ' end
+		when '助動詞'
+			if token.surface == 'です' then return ' ' end
+		when '記号'
+			# Do nothing.
 	end
 
-	# A particle surrounded by verbs needs no spacing.
-	if type == '助詞' and left_type == '動詞' and right
-		if (type right).include? '動詞'
-			return ''
-		end
-	end
-
-	# Do not split neighboring nouns.
-	if type.include? '名詞' and left_type.include? '名詞'
-		#return ''
-	end
-
-	# Do not splt punctuation.
-	if (type token) == '記号'
-		return ''
-	end
-
-	return ' '
+	return ''
 end
 
 def make_kana sentence
