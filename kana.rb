@@ -39,11 +39,11 @@ def find_neighbors tokens
 		sides = {}
 
 		unless tokens.first == token
-			sides['left'] = index - 1
+			sides['left'] = tokens[index - 1]
 		end
 
 		unless tokens.last == token
-			sides['right'] = index + 1
+			sides['right'] = tokens[index + 1]
 		end
 
 		neighbors[token] = sides
@@ -54,7 +54,9 @@ end
 
 # Returns kana for a given token.
 def token_to_kana token
-	if token.char_type == 2
+	char_type = token.char_type
+
+	if (char_type == 2) or (char_type == 6)
 		yomi = token.feature.split(',')[-2]
 		return NKF.nkf('-h1 -w', yomi)
 	else
@@ -65,8 +67,33 @@ end
 # Returns spacing to go before the token, if necessary.
 # If no spacing is needed, returns the empty string.
 def make_spacing (token, neighbors)
+	def type token
+		return token.feature.split(',').first
+	end
+
 	# If it's the first token, no spacing is needed.
 	unless neighbors[token]['left']
+		return ''
+	end
+
+	type = type token
+	left_type = type neighbors[token]['left']
+
+	#puts token.surface + ' // ' + token.feature.split(',').first
+	puts token.surface + ' // ' + token.char_type.to_s
+
+	# Do not split neighboring verbs.
+	if type.include? '動詞' and left_type.include? '動詞'
+		return ''
+	end
+
+	# Do not split neighboring nouns.
+	if type.include? '名詞' and left_type.include? '名詞'
+		return ''
+	end
+
+	# Do not splt punctuation.
+	if (type token) == '記号'
 		return ''
 	end
 
@@ -87,7 +114,7 @@ def make_kana sentence
 end
 
 def test
-	sentences = ['彼はケーキが大好きです。', 'よろしくお願いします。']
+	sentences = ['彼はいちごケーキが大好きです。', 'よろしくお願いします。', '彼女は８２歳です。', '私は行きます。']
 
 	sentences.each do |sentence|
 		puts '---------- 漢字： ' + sentence
