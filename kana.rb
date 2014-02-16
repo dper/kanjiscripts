@@ -74,6 +74,8 @@ def make_spacing (token, neighbors)
 	type = type token
 
 	puts type + ' / ' + token.char_type.to_s + ' / ' + token.surface
+	puts token
+	puts
 
 	left = neighbors[token]['left']
 	right = neighbors[token]['right']
@@ -86,11 +88,14 @@ def make_spacing (token, neighbors)
 	left_type = type left
 
 	case type
+		# Nouns.
 		when '名詞'
 			# Numbers shouldn't be spaced from nouns.
 			unless token.char_type == 4 and left_type == '名詞'
 				return ' '
 			end
+
+		# Verbs.
 		when '動詞'
 			if left_type == '名詞' then return ' ' end
 
@@ -99,10 +104,21 @@ def make_spacing (token, neighbors)
 				two_left = neighbors[left]['left']
 				if two_left and (type two_left) != '動詞' then return ' ' end
 			end
-		when '助詞'
-			if left_type == '名詞' then return ' ' end
+
+		# Helping verbs.
 		when '助動詞'
 			if token.surface == 'です' then return ' ' end
+			if left_type = '名詞' then return ' ' end
+
+		# Particles.
+		when '助詞'
+			if left_type == '名詞' then return ' ' end
+
+		# Pre-noun adjectival.
+		when '連体詞'
+			# Do nothing.
+
+		# Punctuation.
 		when '記号'
 			# Do nothing.
 	end
@@ -124,7 +140,7 @@ def make_kana sentence
 end
 
 def test
-	sentences = ['彼はいちごケーキが大好きです。', 'よろしくお願いします。', '彼女は８２歳です。', '私は行きます。', 'となりに住んでいる二人は去年結婚していました。']
+	sentences = ['彼はいちごケーキが大好きです。', 'よろしくお願いします。', '彼女は８２歳です。', '私は行きます。', 'となりに住んでいる二人は去年結婚していました。', 'その本を箱の中に入れてください。', '元気な男の子ですよね。']
 
 	sentences.each do |sentence|
 		puts '---------- 漢字： ' + sentence
