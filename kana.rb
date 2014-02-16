@@ -13,7 +13,6 @@
 # == AUTHOR
 # Douglas P Perkins - https://dperkins.org - https://microca.st/dper
 
-
 ENV['MECAB_PATH']='/usr/lib/libmecab.so.2'
 require 'natto'
 require 'nkf'
@@ -46,6 +45,8 @@ def find_neighbors tokens
 		unless tokens.last == token
 			sides['right'] = index + 1
 		end
+
+		neighbors[token] = sides
 	end
 
 	return neighbors
@@ -61,13 +62,24 @@ def token_to_kana token
 	end
 end
 
+# Returns spacing to go before the token, if necessary.
+# If no spacing is needed, returns the empty string.
+def make_spacing (token, neighbors)
+	# If it's the first token, no spacing is needed.
+	unless neighbors[token]['left']
+		return ''
+	end
+
+	return ' '
+end
+
 def make_kana sentence
 	tokens = parse_sentence sentence
 	neighbors = find_neighbors tokens
 	kana = ''
 
 	tokens.each do |token|
-		#TODO Spacing goes here.
+		kana += make_spacing(token, neighbors)
 		kana += token_to_kana token
 	end
 
@@ -75,7 +87,7 @@ def make_kana sentence
 end
 
 def test
-	sentences = ['彼はケーキが大好きです。', 'ろしくお願いします。']
+	sentences = ['彼はケーキが大好きです。', 'よろしくお願いします。']
 
 	sentences.each do |sentence|
 		puts '---------- 漢字： ' + sentence
