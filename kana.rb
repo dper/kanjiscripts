@@ -35,11 +35,11 @@ def make_kana text
 end
 
 def test
-	sentences = ['彼は狂人のように振る舞った。', '私はアメリカ人です。']
+	sentences = ['よろしくお願いします。']
 
 	sentences.each do |sentence|
-		puts 'Original: ' + sentence
-		puts '--------> ' + (make_kana sentence)
+		puts sentence
+		puts '-> ' + (make_kana sentence)
 	end
 end
 
