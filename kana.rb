@@ -18,28 +18,68 @@ ENV['MECAB_PATH']='/usr/lib/libmecab.so.2'
 require 'natto'
 require 'nkf'
 
-def make_kana text
+# Parses the sentence.  Returns an array of tokens.
+def parse_sentence sentence
 	nm = Natto::MeCab.new
-	memo = []
+	tokens = []
 
-	nm.parse(text) do |n|
-		if n.char_type == 2
-			yomi = n.feature.split(',')[-2]
-			memo << NKF.nkf('-h1 -w', yomi)
-		else
-			memo << n.surface
+	nm.parse(sentence) do |token|
+		unless token.feature.split(',').first == 'BOS/EOS'
+			tokens << token
 		end
 	end
 
-	@kana = memo.join
+	return tokens
+end
+
+# Returns a hash of neighbors for an array of tokens.
+def find_neighbors tokens
+	neighbors = {}
+
+	tokens.each_with_index do |token, index|
+		sides = {}
+
+		unless tokens.first == token
+			sides['left'] = index - 1
+		end
+
+		unless tokens.last == token
+			sides['right'] = index + 1
+		end
+	end
+
+	return neighbors
+end
+
+# Returns kana for a given token.
+def token_to_kana token
+	if token.char_type == 2
+		yomi = token.feature.split(',')[-2]
+		return NKF.nkf('-h1 -w', yomi)
+	else
+		return token.surface
+	end
+end
+
+def make_kana sentence
+	tokens = parse_sentence sentence
+	neighbors = find_neighbors tokens
+	kana = ''
+
+	tokens.each do |token|
+		#TODO Spacing goes here.
+		kana += token_to_kana token
+	end
+
+	return kana
 end
 
 def test
-	sentences = ['よろしくお願いします。']
+	sentences = ['彼はケーキが大好きです。', 'ろしくお願いします。']
 
 	sentences.each do |sentence|
-		puts sentence
-		puts '-> ' + (make_kana sentence)
+		puts '---------- 漢字： ' + sentence
+		puts '---------- かな： ' + (make_kana sentence)
 	end
 end
 
