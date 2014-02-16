@@ -77,19 +77,28 @@ def make_spacing (token, neighbors)
 	end
 
 	type = type token
-	left_type = type neighbors[token]['left']
+	left = neighbors[token]['left']
+	right = neighbors[token]['right']
+	left_type = type left
 
 	#puts token.surface + ' // ' + token.feature.split(',').first
-	puts token.surface + ' // ' + token.char_type.to_s
+	puts token.surface + ' // ' + type
 
 	# Do not split neighboring verbs.
 	if type.include? '動詞' and left_type.include? '動詞'
 		return ''
 	end
 
+	# A particle surrounded by verbs needs no spacing.
+	if type == '助詞' and left_type == '動詞' and right
+		if (type right).include? '動詞'
+			return ''
+		end
+	end
+
 	# Do not split neighboring nouns.
 	if type.include? '名詞' and left_type.include? '名詞'
-		return ''
+		#return ''
 	end
 
 	# Do not splt punctuation.
@@ -114,7 +123,7 @@ def make_kana sentence
 end
 
 def test
-	sentences = ['彼はいちごケーキが大好きです。', 'よろしくお願いします。', '彼女は８２歳です。', '私は行きます。']
+	sentences = ['彼はいちごケーキが大好きです。', 'よろしくお願いします。', '彼女は８２歳です。', '私は行きます。', 'となりに住んでいる二人は去年結婚していました。']
 
 	sentences.each do |sentence|
 		puts '---------- 漢字： ' + sentence
