@@ -73,7 +73,7 @@ def make_spacing (token, neighbors)
 
 	type = type token
 
-	puts type + ' ' + token.surface
+	puts type + ' / ' + token.char_type.to_s + ' / ' + token.surface
 
 	left = neighbors[token]['left']
 	right = neighbors[token]['right']
@@ -87,7 +87,10 @@ def make_spacing (token, neighbors)
 
 	case type
 		when '名詞'
-			return ' '
+			# Numbers shouldn't be spaced from nouns.
+			unless token.char_type == 4 and left_type == '名詞'
+				return ' '
+			end
 		when '動詞'
 			if left_type == '名詞' then return ' ' end
 
