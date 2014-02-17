@@ -1,12 +1,12 @@
-onojapanese
-===========
+kanjiscripts
+============
 
 Several scripts for playing with Japanese words and sentences.
 
 * `find_ono.rb`. Lists onomatopoiec words as noted in edict.
-* `list_tags.rb`. Lists tags used in the Tatoeba sentence corpus.
 * `make_cards.rb`. Makes text for Japanese/English flash cards.
-* `kana.rb`. A script for generating a phonetic (kana) reading of a Japanese sentence. This script has errors and I recommend against using it for anything. Rather than delete it, I leave it here for your viewing pleasure.
+* `list_tags.rb`. Lists tags used in the Tatoeba sentence corpus.  On its own this is not useful, but one can use the output in other scripts to filter based on tags.
+* `kana.rb`. A script for generating a phonetic (kana) reading of a Japanese sentence. This script has errors and I recommend against using it for anything. It is here only for your viewing pleasure.
 
 These scripts have many dependencies.  To avoid wasting your time with predictable errors, read this entire file before running them.
 
@@ -38,8 +38,8 @@ There are extensive numbers of sample sentences at Tatoeba (<http://tatoeba.org/
 
 * <http://tatoeba.org/files/downloads/sentences_detailed.csv>.  The sentences themselves.
 * <http://tatoeba.org/files/downloads/tags.csv>.  Tags for each sentence.
-* <http://tatoeba.org/files/downloads/jpn_indices.csv>.  English and Japanese sentence pair information.
 * <http://tatoeba.org/files/downloads/links.csv>.  Links between matching sentences.
+* <http://tatoeba.org/files/downloads/jpn_indices.csv>.  English and Japanese sentence pair information.  Some of the sentence indices in this file are invalid.  I currently don't use the file but did in the past.
 
 Or if you're lazy, copy and paste this.
 
@@ -87,13 +87,13 @@ Tags
 
 * `tags.txt` is a list of all tags used in Tatoeba.
 
-Over time, it is possible that Tatoeba will expand to use more tags.  We like to filter out sentences that have dangerous-looking tags.  The script `list_tags.rb` lists all of the tags currently used in the Corpus and can be occasionally used to update `tags.txt`.
+Over time, the tags used in Tatoeba will change.  We like to filter out sentences that have dangerous-looking tags.  The script `list_tags.rb` lists all of the tags currently used in the Corpus and can be occasionally used to update `tags.txt`.
 
 
 Kana
 ====
 
-*Warning: Automated generation of kana is difficult.  Partly this is because words have multiple possible readings, so there's no way to have an error-free automated kana generator.  The file `kana.rb` is far from bug-free.  I recommend against using it in its current form or at all.  You only need to do install the following software if you're going to use `kana.rb`. Otherwise, skip this section.*
+*Warning: Automated generation of kana is difficult.  Partly this is because words have multiple possible readings, so there's no way to have an error-free automated kana generator.  The file `kana.rb` is bug ridden.  I recommend against using it.  You only need to do install the following software if you're going to use `kana.rb`. Otherwise, skip this section.*
 
 To generate phonetic (kana) readings of sentences written in standard Japanese (using kanji), we use a program called **Mecab** (<https://code.google.com/p/mecab/>).  The website there is not particularly enlightening.  Regardless, Mecab is a morphological analyzer, which means it looks at a series of symbols and tries to parse them into words that form a sentence.  There are several steps to the installation.  I'm running Debian Sid, and if you're running a similar flavor of Linux, you can follow my directions fairly closely.  If you aren't, this could be tedious.  Sorry!
 
