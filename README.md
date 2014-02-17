@@ -39,13 +39,11 @@ There are extensive numbers of sample sentences at Tatoeba (<http://tatoeba.org/
 * <http://tatoeba.org/files/downloads/sentences_detailed.csv>.  The sentences themselves.
 * <http://tatoeba.org/files/downloads/tags.csv>.  Tags for each sentence.
 * <http://tatoeba.org/files/downloads/links.csv>.  Links between matching sentences.
-* <http://tatoeba.org/files/downloads/jpn_indices.csv>.  English and Japanese sentence pair information.  Some of the sentence indices in this file are invalid.  I currently don't use the file but did in the past.
 
 Or if you're lazy, copy and paste this.
 
     wget http://tatoeba.org/files/downloads/sentences_detailed.csv
     wget http://tatoeba.org/files/downloads/tags.csv
-    wget http://tatoeba.org/files/downloads/jpn_indices.csv
     wget http://tatoeba.org/files/downloads/links.csv
 
 Beware of large files, as shown here.
@@ -55,7 +53,6 @@ $ date
 Sat Feb 15 22:07:45 JST 2014
 
 $ ls -lh *.csv | cut -b 18-
- 17M Feb  8 19:13 jpn_indices.csv
  88M Feb 15 18:11 links.csv
 284M Feb  8 19:14 sentences_detailed.csv
  11M Feb  8 19:15 tags.csv
