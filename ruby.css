@@ -4,72 +4,47 @@
  *
  */
 
-/* Ruby text.*/
 ruby {
 	display: inline-table;
 	text-align: center;
 	border-collapse: collapse;
 	border: none;
 	vertical-align: middle;
-	border-bottom: solid 0.75em transparent;
+	border-bottom: solid 1.3em transparent;
 }
 
 ruby > rt, rtc {
 	display: table-header-group;
+	color: green;
 }
 
-body ruby > rb, body rbc, ruby > rt + rt, body rtc + rtc {
+ruby > rb, rbc, ruby > rt + rt, rtc + rtc {
 	display: table-row;
 }
 
-body ruby > rt + rt, body.notIE rtc + rtc {
+ruby > rt + rt, rtc + rtc {
 	border-bottom: hidden;
 }
 
-
-body rb, rbc, body rt, rtc {
+rb, rbc, body rt, rtc {
 	white-space: nowrap;
 }
 
-body rtc > rt, body rbc > rb {
+rtc > rt, rbc > rb {
 	display: table-cell;
 }
 
-body rtc > rt[rbspan] {
+rtc > rt[rbspan] {
 	column-span: attr(rbspan);
 }
 
-body ruby > rt, body rtc {
-	font-size: 0.5em;
+ruby > rt, rtc {
+	font-size: 1.0em;
 	line-height: 1.2em;
 }
 
-body rp {
+rp {
 	display: none;
-}
-
-ruby.syllables rbc rb {
-	
-}
-
-ruby.syllables rbc rb:after {
-	content: "·"
-}
-
-ruby.syllables rbc rb:last-child:after {
-	content: "";
-}
-
-ruby.syllables rtc rt {
-	padding-right: 0.5em;
-}
-
-ruby.syllables rtc rt:last-child {
-	padding-right: 0;
-}
-
-body, ruby.unicodeRubyText rt, ruby.unicodeRubyBase rb {
-	font-family: "Arial MS Unicode", sans-serif;
 }
 
 ruby {
