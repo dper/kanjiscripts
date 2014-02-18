@@ -1,0 +1,77 @@
+/*
+ * This style sheet is based heavily on one from User Agent Man's blog.
+ * http://www.useragentman.com/blog/2010/10/29/cross-browser-html5-ruby-annotations-using-css/
+ *
+ */
+
+/* Ruby text.*/
+ruby {
+	display: inline-table;
+	text-align: center;
+	border-collapse: collapse;
+	border: none;
+	vertical-align: middle;
+	border-bottom: solid 0.75em transparent;
+}
+
+ruby > rt, rtc {
+	display: table-header-group;
+}
+
+body ruby > rb, body rbc, ruby > rt + rt, body rtc + rtc {
+	display: table-row;
+}
+
+body ruby > rt + rt, body.notIE rtc + rtc {
+	border-bottom: hidden;
+}
+
+
+body rb, rbc, body rt, rtc {
+	white-space: nowrap;
+}
+
+body rtc > rt, body rbc > rb {
+	display: table-cell;
+}
+
+body rtc > rt[rbspan] {
+	column-span: attr(rbspan);
+}
+
+body ruby > rt, body rtc {
+	font-size: 0.5em;
+	line-height: 1.2em;
+}
+
+body rp {
+	display: none;
+}
+
+ruby.syllables rbc rb {
+	
+}
+
+ruby.syllables rbc rb:after {
+	content: "·"
+}
+
+ruby.syllables rbc rb:last-child:after {
+	content: "";
+}
+
+ruby.syllables rtc rt {
+	padding-right: 0.5em;
+}
+
+ruby.syllables rtc rt:last-child {
+	padding-right: 0;
+}
+
+body, ruby.unicodeRubyText rt, ruby.unicodeRubyBase rb {
+	font-family: "Arial MS Unicode", sans-serif;
+}
+
+ruby {
+	ruby-align: center;
+}
