@@ -34,10 +34,15 @@ end
 # Returns kana for a given token.
 def token_to_kana token
 	char_type = token.char_type
+	surface = token.surface
 
 	if (char_type == 2) or (char_type == 6)
 		katakana = token.feature.split(',')[-2]
 		hiragana = NKF.nkf('-h1 -w', katakana)
+
+		if hiragana == surface
+			return surface
+		end
 
 		s = '<ruby>'
 		s += token.surface
@@ -46,7 +51,7 @@ def token_to_kana token
 		s += '</rt><rp>)</rp></ruby>'
 		return s
 	else
-		return token.surface
+		return surface
 	end
 end
 
