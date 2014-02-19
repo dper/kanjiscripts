@@ -134,3 +134,5 @@ irb(main):005:0>
 ```
    
 If you get an error at any step, something is wrong.  Look at the error message, review the above steps and try to figure it out.  Also make sure you see `charset="UTF-8"` and not `charset="EUC-JP"`.  It is probably a good idea to try a natto test script as well; e.g., <http://tinyurl.com/ptag5wn>.  The way in which kana is generated depends on MeCab.  If you're interested in tweaking the output, see the Japanese documentation here: <http://mecab.googlecode.com/svn/trunk/mecab/doc/index.html#parse>.
+
+Some useful Natto documentation can be found at <https://bitbucket.org/buruzaemon/natto/src/4972d86c17b67b43ebede3bd83ee3b4937e7c9c1/lib/natto/struct.rb?at=default> and <https://bitbucket.org/buruzaemon/natto/wiki/Node-Parsing-stat>.
