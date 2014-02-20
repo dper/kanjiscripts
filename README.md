@@ -134,3 +134,25 @@ irb(main):005:0>
 ```
    
 If you get an error at any step, something is wrong.  Look at the error message, review the above steps and try to figure it out.  Also make sure you see `charset="UTF-8"` and not `charset="EUC-JP"`.  It is probably a good idea to try a natto test script as well; e.g., <http://tinyurl.com/ptag5wn>.  The way in which kana is generated depends on MeCab.  If you're interested in tweaking the output, see the Japanese documentation here: <http://mecab.googlecode.com/svn/trunk/mecab/doc/index.html#parse>.
+
+
+MeCab Documentation
+===================
+
+There is limited MeCab documentation.  However, the fine people who bring us Natto have worked to fill in the gaps.
+
+When parsing nodes, each `Natto::MeCabNode` will have a `char_type` mapping the leading `char` to the following:
+
+* `0` - DEFAULT
+* `1` - SPACE
+* `2` - KANJI
+* `3` - SYMBOL
+* `4` - NUMERIC
+* `5` - ALPHA
+* `6` - HIRAGANA
+* `7` - KATAKANA
+* `8` - KANJINUMERIC
+* `9` - GREEK
+* `10` - CYRILLIC
+
+The above information is from <https://bitbucket.org/buruzaemon/natto/wiki/edit/Node-Parsing-char_type> and <http://d.hatena.ne.jp/NE555/20120107>.
