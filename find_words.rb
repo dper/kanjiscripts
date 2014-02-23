@@ -38,18 +38,32 @@ class Corpus
 	def initialize
 		verbose 'Reading ' + Pairs + ' ...'
 		path = Script_dir + '/' + Pairs
-		@text = IO.readlines path
+		text = IO.readlines path
+		pairs = []
+
+		text.each do |line|
+			# Ignore lines that start with #.
+			if line.start_with? '#'
+				next
+			end
+
+			pair = {}
+			pair["japanese"] = line.split("\t")[0]
+			pair["english"] = line.split("\t")[1]
+			pairs << pair
+		end
+
+		@pairs = pairs
 	end
 
 	# Finds all the example sentences containing a given word.
 	def find_word word
 		results = []
 
-		@text.each do |line|
-			japanese = line.split("\t").first
+		@pairs.each do |pair|
 			
-			if japanese.include? word
-				results << line
+			if pair["japanese"].include? word
+				results << pair
 			end
 		end
 
