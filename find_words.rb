@@ -31,9 +31,9 @@ def verbose message
 	end
 end
 
-
 # A large list of Japanese and English sentences.
 class Corpus
+	# Creates a Corpus.
 	def initialize
 		verbose 'Reading ' + Pairs + ' ...'
 		path = Script_dir + '/' + Pairs
@@ -68,7 +68,30 @@ class Corpus
 	end
 end
 
+# Finds words in sentences and makes lists of those sentences.
+class Finder
+	# Reads the target word file
+	def read_target_file
+		verbose 'Reading ' + Target_words + ' ...'
+		path = Script_dir + '/' + Target_words
+		text = IO.readlines path
+
+		@words = []
+
+		text.each do |line|
+			@words.concat line.split
+		end
+	end
+
+	# Creates a Finder.
+	def initialize corpus
+		@corpus = corpus
+		read_target_file
+		verbose @words
+	end
+
+	#TODO Stuff.
+end
+
 $corpus = Corpus.new
-list = ['本屋', '秋田']
-hash = $corpus.find_words list
-puts hash.values
+$finder = Finder.new $corpus
