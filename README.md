@@ -79,18 +79,13 @@ These scripts have many dependencies.  To avoid wasting your time with predictab
 Word Frequency Files
 ====================
 
-* `ono_words.txt` is a list of all the onomatopoeic words in edict sorted from most to least frequent.
-* `ono_freq.txt` is the same list except that the word's frequency is included along with the word.
-
-Both `ono_words.txt` and `ono_freq.txt` can be generated using `find_ono.rb`.  This need only be done rarely, because relevant updates to edict are infrequent.
+The file `ono_words.txt` is a list of all the onomatopoeic words in edict sorted from most to least frequent.  The file `ono_freq.txt` is the same list except with word's frequency included.  Both of these files are generated using `find_ono.rb`.  This should be done rarely, because the output only changes when `edict.txt` does.
 
 
 Tags
 ====
 
-* `tags.txt` is a list of all tags used in Tatoeba.
-
-Over time, the tags used in Tatoeba will change.  We like to filter out sentences that have dangerous-looking tags.  The script `list_tags.rb` lists all of the tags currently used in the Corpus and can be occasionally used to update `tags.txt`.
+The file `tags.txt` is a list of all tags used in Tatoeba.  Over time, the tags used in Tatoeba will change.  We like to filter out sentences that have dangerous-looking tags.  The script `list_tags.rb` lists all of the tags currently used in the Corpus and can be occasionally used to update `tags.txt`.
 
 
 Kana
@@ -144,6 +139,9 @@ When parsing nodes, each `Natto::MeCabNode` will have a `char_type` mapping the 
 * `9` - GREEK
 * `10` - CYRILLIC
 
-The above information is from <https://bitbucket.org/buruzaemon/natto/wiki/edit/Node-Parsing-char_type> and <http://d.hatena.ne.jp/NE555/20120107>.
+Relevant Natto documentation can be found at the following sites.
 
-Some other useful Natto documentation can be found at <https://bitbucket.org/buruzaemon/natto/src/4972d86c17b67b43ebede3bd83ee3b4937e7c9c1/lib/natto/struct.rb?at=default> and <https://bitbucket.org/buruzaemon/natto/wiki/Node-Parsing-stat>.
+* <https://bitbucket.org/buruzaemon/natto/wiki/edit/Node-Parsing-char_type>
+* <http://d.hatena.ne.jp/NE555/20120107>
+* <https://bitbucket.org/buruzaemon/natto/src/4972d86c17b67b43ebede3bd83ee3b4937e7c9c1/lib/natto/struct.rb?at=default>
+* <https://bitbucket.org/buruzaemon/natto/wiki/Node-Parsing-stat>
