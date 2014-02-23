@@ -48,10 +48,14 @@ class Corpus
 			end
 
 			pair = {}
-			pair["japanese"] = line.split("\t")[0]
-			pair["english"] = line.split("\t")[1]
+			pair["japanese"] = line.split("\t").first
+			pair["english"] = line.split("\t").last.chomp
 			pairs << pair
 		end
+
+		# Removes pairs where the Japanese half already appeared.
+		# Some sentences have multiple translations.  We use one.
+		pairs.uniq! { |pair| pair["japanese"] }
 
 		@pairs = pairs
 	end
@@ -61,7 +65,6 @@ class Corpus
 		results = []
 
 		@pairs.each do |pair|
-			
 			if pair["japanese"].include? word
 				results << pair
 			end
@@ -115,6 +118,7 @@ class Finder
 
 		#TODO Take the first few sentences from each word.
 		#TODO Put them in the output file.
+		puts results['秋田']
 	end
 end
 
