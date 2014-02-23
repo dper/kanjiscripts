@@ -6,17 +6,6 @@ Several scripts for playing with Japanese words and sentences.  The goal here is
 Choosing your own materials takes time.  However, if you choose what to study on your own, usually you end up being interested in it, which gives you motivation to study and means you're more likely to remember it later.  Also, you can tailor your studies to your life.  For example, are you going to the dentist next month?  Wouldn't it be great to add a hundred dentist or tooth related sentences to your flash card deck?  The scripts here are designed to help you make lists for this kind of situation.
 
 
-Scripts
-=======
-
-* `make_cards.rb`. After grabbing the dependencies, run this script to make a *large* file containing English and Japanese sentence pairs. You can search or filter this file for example sentences containing just the words you like.  The resulting file will be called `pairs.txt`.
-* `find_ono.rb`. Lists onomatopoiec words as noted in edict.
-* `list_tags.rb`. Lists tags used in the Tatoeba sentence corpus.  On its own this is not useful, but one can use the output in other scripts to filter based on tags.
-* `kana.rb`. A script for generating a phonetic (kana) reading of a Japanese sentence. This script has errors and I recommend against using it for anything. It is here only for your viewing pleasure.
-
-These scripts have many dependencies.  To avoid wasting your time with predictable errors, read this entire file before running them.
-
-
 Dictionary
 ==========
 
@@ -74,6 +63,17 @@ Be aware of the following.
 	We allow our members to submit book titles and other things you might not consider sentences.
 Translations may not always be accurate, even though the linked sentences are correct sentences.
 ```
+
+
+Scripts
+=======
+
+* `make_cards.rb`. After grabbing the dependencies, run this script to make a *large* file containing English and Japanese sentence pairs. You can search or filter this file for example sentences containing just the words you like.  The resulting file will be called `pairs.txt`.  You only need to run this script once at first, and then later when you grab new versions of the Tatoeba files.  The script can take a long time to run, depending on the speed of your computer.
+* `find_ono.rb`. Lists all the onomatopoiec words in edict.
+* `list_tags.rb`. Lists tags used in the Tatoeba sentence corpus.  On its own this is not useful, but one can use the output in other scripts to filter based on tags.
+* `kana.rb`. A script for generating a phonetic (kana) reading of a Japanese sentence. This script has errors and I recommend against using it for anything. It is here only for your viewing pleasure.
+
+These scripts have many dependencies.  To avoid wasting your time with predictable errors, read this entire file before running them.
 
 
 Word Frequency Files
