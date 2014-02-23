@@ -18,10 +18,6 @@
 # == AUTHOR
 # Douglas P Perkins - https://dperkins.org - https://microca.st/dper
 
-ENV['MECAB_PATH']='/usr/lib/libmecab.so.2'
-require 'natto'
-require 'nkf'
-
 $verbose = true
 
 # Displays an error message if verbose operation is enabled.
@@ -61,14 +57,18 @@ class DeckMaker
 
 	# Prints a list of notes.
 	def write_deck
-		verbose 'Writing notes ...'
-		verbose ''
+		verbose 'Making output text ...'
+		output = 'pairs.txt'
 
-		@notes.each do |note|
-			puts note.kanji + "\t" + note.english
+		verbose 'Writing to ' + output + ' ...'
+
+		open(output, 'w') do |file|
+			@notes.each do |note|
+				s = note.kanji + "\t" + note.english
+				file.puts s
+			end
 		end
 	end
-
 end
 
 # Sentence corpus.

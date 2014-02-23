@@ -9,7 +9,7 @@ Choosing your own materials takes time.  However, if you choose what to study on
 Scripts
 =======
 
-* `make_cards.rb`. Makes text for Japanese/English flash cards.  You should run this script first.
+* `make_cards.rb`. After grabbing the dependencies, run this script to make a *large* file containing English and Japanese sentence pairs. You can search or filter this file for example sentences containing just the words you like.  The resulting file will be called `pairs.txt`.
 * `find_ono.rb`. Lists onomatopoiec words as noted in edict.
 * `list_tags.rb`. Lists tags used in the Tatoeba sentence corpus.  On its own this is not useful, but one can use the output in other scripts to filter based on tags.
 * `kana.rb`. A script for generating a phonetic (kana) reading of a Japanese sentence. This script has errors and I recommend against using it for anything. It is here only for your viewing pleasure.
