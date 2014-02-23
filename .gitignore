@@ -3,3 +3,5 @@ sentences_detailed.csv
 tags.csv
 links.csv
 pairs.txt
+target_words.txt
+target_sentences.txt
