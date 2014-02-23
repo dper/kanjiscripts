@@ -19,6 +19,7 @@
 Pairs = 'pairs.txt'
 Target_words = 'target_words.txt'
 Target_sentences = 'target_sentences.txt'
+Target_sentence_count = 5
 
 Script_dir = File.dirname(__FILE__)
 
@@ -92,8 +93,17 @@ class Finder
 		verbose @words
 	end
 
-	#TODO Stuff.
+	# Looks up the words in the corpus.
+	def find_words
+		results = @corpus.find_words @words
+
+		#TODO Compare the target count with the actual count.
+
+		#TODO Take the first few sentences from each word.
+		#TODO Put them in the output file.
+	end
 end
 
 $corpus = Corpus.new
 $finder = Finder.new $corpus
+$finder.find_words
