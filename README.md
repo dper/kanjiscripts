@@ -1,10 +1,16 @@
 kanjiscripts
 ============
 
-Several scripts for playing with Japanese words and sentences.
+Several scripts for playing with Japanese words and sentences.  The goal here is to have some scripts that help us make lists of example Japanese and English sentences so we can in turn take those lists and use them to study Japanese.  If you are taking a course in school, you probably have a textbook and the teacher tells you what to study.  If you are studying on your own, which is particularly common if you live and work in Japan, though, you're on your own for deciding what's best for you.
 
+Choosing your own materials takes time.  However, if you choose what to study on your own, usually you end up being interested in it, which gives you motivation to study and means you're more likely to remember it later.  Also, you can tailor your studies to your life.  For example, are you going to the dentist next month?  Wouldn't it be great to add a hundred dentist or tooth related sentences to your flash card deck?  The scripts here are designed to help you make lists for this kind of situation.
+
+
+Scripts
+=======
+
+* `make_cards.rb`. Makes text for Japanese/English flash cards.  You should run this script first.
 * `find_ono.rb`. Lists onomatopoiec words as noted in edict.
-* `make_cards.rb`. Makes text for Japanese/English flash cards.
 * `list_tags.rb`. Lists tags used in the Tatoeba sentence corpus.  On its own this is not useful, but one can use the output in other scripts to filter based on tags.
 * `kana.rb`. A script for generating a phonetic (kana) reading of a Japanese sentence. This script has errors and I recommend against using it for anything. It is here only for your viewing pleasure.
 
