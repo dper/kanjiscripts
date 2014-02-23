@@ -76,11 +76,13 @@ class Finder
 		path = Script_dir + '/' + Target_words
 		text = IO.readlines path
 
-		@words = []
+		words = []
 
 		text.each do |line|
-			@words.concat line.split
+			words.concat line.split
 		end
+
+		@words = words.uniq
 	end
 
 	# Creates a Finder.
