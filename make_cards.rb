@@ -18,15 +18,6 @@
 # == AUTHOR
 # Douglas P Perkins - https://dperkins.org - https://microca.st/dper
 
-$verbose = true
-
-# Displays an error message if verbose operation is enabled.
-def verbose message
-	if $verbose
-		puts message
-	end
-end
-
 Script_dir = File.dirname(__FILE__)
 
 # A note for a flash card containing a sentence in kanji and English.
@@ -45,7 +36,7 @@ end
 class DeckMaker
 	# Sort the notes from shortest to longest Japanese sentence.
 	def sort_notes
-		verbose 'Sorting notes by sentence length ...'
+		puts 'Sorting notes by sentence length ...'
 		@notes.sort! do |note1, note2| note1.kanji.length <=> note2.kanji.length end	
 	end
 
@@ -57,10 +48,10 @@ class DeckMaker
 
 	# Prints a list of notes.
 	def write_deck
-		verbose 'Making output text ...'
+		puts 'Making output text ...'
 		output = 'pairs.txt'
 
-		verbose 'Writing to ' + output + ' ...'
+		puts 'Writing to ' + output + ' ...'
 
 		open(output, 'w') do |file|
 			@notes.each do |note|
@@ -77,7 +68,7 @@ class Corpus
 
 	# Parses tags file.
 	def parse_tags
-		verbose 'Parsing tags.csv ...'
+		puts 'Parsing tags.csv ...'
 		path = Script_dir + '/tags.csv'
 		text = IO.readlines path
 		
@@ -98,12 +89,12 @@ class Corpus
 			end
 		end
 
-		verbose 'Total tags: ' + @tags.size.to_s + '.'
+		puts 'Total tags: ' + @tags.size.to_s + '.'
 	end
 
 	# Parses the links file.
 	def parse_links
-		verbose 'Parsing links.csv ...'
+		puts 'Parsing links.csv ...'
 		path = Script_dir + '/links.csv'
 		text = IO.readlines path
 		@links = []
@@ -116,12 +107,12 @@ class Corpus
 			@links << [sentence_id, meaning_id]
 		end
 
-		verbose 'Unfiltered links: ' + @links.size.to_s + '.'
+		puts 'Unfiltered links: ' + @links.size.to_s + '.'
 	end
 
 	# Parses the corpus sentence file.	
 	def parse_sentences
-		verbose 'Parsing sentences_detailed.csv ...'
+		puts 'Parsing sentences_detailed.csv ...'
 		path = Script_dir + '/sentences_detailed.csv'
 		text = IO.readlines path
 		@english = {}
@@ -149,13 +140,13 @@ class Corpus
 			end
 		end
 
-		verbose 'Unfiltered English sentences: ' + @english.size.to_s + '.'
-		verbose 'Unfiltered Japanese sentences: ' + @japanese.size.to_s + '.'
+		puts 'Unfiltered English sentences: ' + @english.size.to_s + '.'
+		puts 'Unfiltered Japanese sentences: ' + @japanese.size.to_s + '.'
 	end
 
 	# Makes pairs of Japanese/English sentences.
 	def find_pairs
-		verbose 'Finding Japanese/English pairs ...'
+		puts 'Finding Japanese/English pairs ...'
 		@pairs = []
 
 		# For each pair, see if it's English to Japanese.
@@ -169,7 +160,7 @@ class Corpus
 			end
 		end
 
-		verbose 'Unfiltered English/Japanese pairs: ' + @pairs.size.to_s + '.'
+		puts 'Unfiltered English/Japanese pairs: ' + @pairs.size.to_s + '.'
 	end
 
 	# Returns true iff the sentence is adopted.
@@ -202,7 +193,7 @@ class Corpus
 
 	# Makes notes for each of the Japanese/English sentence pairs.
 	def make_notes
-		verbose 'Making notes for sentence pairs ...'
+		puts 'Making notes for sentence pairs ...'
 		notes = []
 		not_adopted = 0
 		unsafe_tags = 0
@@ -230,13 +221,13 @@ class Corpus
 
 			unless english
 				english_not_found += 1
-				verbose 'Warning: English sentence ' + english_id.to_s + ' not found.  Skipping.'
+				puts 'Warning: English sentence ' + english_id.to_s + ' not found.  Skipping.'
 				next
 			end
 
 			unless japanese
 				japanese_not_found += 1
-				verbose 'Warning: Japanese sentence ' + japanese_id.to_s + ' not found.  Skipping.'
+				puts 'Warning: Japanese sentence ' + japanese_id.to_s + ' not found.  Skipping.'
 				next
 			end
 
@@ -244,11 +235,11 @@ class Corpus
 		end
 
 		@notes = notes
-		verbose 'Not adopted pairs: ' + not_adopted.to_s + '.'
-		verbose 'Unsafe tags pairs: ' + unsafe_tags.to_s + '.'
-		verbose 'English sentence not found: ' + english_not_found.to_s + '.'
-		verbose 'Japanese sentence not found: ' + japanese_not_found.to_s + '.'
-		verbose 'English/Japanese notes: ' + notes.size.to_s + '.'
+		puts 'Not adopted pairs: ' + not_adopted.to_s + '.'
+		puts 'Unsafe tags pairs: ' + unsafe_tags.to_s + '.'
+		puts 'English sentence not found: ' + english_not_found.to_s + '.'
+		puts 'Japanese sentence not found: ' + japanese_not_found.to_s + '.'
+		puts 'English/Japanese notes: ' + notes.size.to_s + '.'
 	end
 
 	# Creates a Corpus.
