@@ -125,23 +125,7 @@ Natto Documentation
 
 There is limited MeCab documentation.  However, the fine people who bring us Natto have worked to fill in the gaps.
 
-When parsing nodes, each `Natto::MeCabNode` will have a `char_type` mapping the leading `char` to the following:
-
-* `0` - DEFAULT
-* `1` - SPACE
-* `2` - KANJI
-* `3` - SYMBOL
-* `4` - NUMERIC
-* `5` - ALPHA
-* `6` - HIRAGANA
-* `7` - KATAKANA
-* `8` - KANJINUMERIC
-* `9` - GREEK
-* `10` - CYRILLIC
-
 Relevant Natto documentation can be found at the following sites.
 
-* <https://bitbucket.org/buruzaemon/natto/wiki/edit/Node-Parsing-char_type>
-* <http://d.hatena.ne.jp/NE555/20120107>
 * <https://bitbucket.org/buruzaemon/natto/src/4972d86c17b67b43ebede3bd83ee3b4937e7c9c1/lib/natto/struct.rb?at=default>
 * <https://bitbucket.org/buruzaemon/natto/wiki/Node-Parsing-stat>
