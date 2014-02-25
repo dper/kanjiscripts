@@ -23,20 +23,11 @@ Target_sentence_count = 5
 
 Script_dir = File.dirname(__FILE__)
 
-$verbose = true
-
-# Displays an error message if verbose operation is enabled.
-def verbose message
-	if $verbose
-		puts message
-	end
-end
-
 # A large list of Japanese and English sentences.
 class Corpus
 	# Creates a Corpus.
 	def initialize
-		verbose 'Reading ' + Pairs + ' ...'
+		puts 'Reading ' + Pairs + ' ...'
 		path = Script_dir + '/' + Pairs
 		text = IO.readlines path
 		pairs = []
@@ -90,7 +81,7 @@ end
 class Finder
 	# Reads the target word file
 	def read_target_file
-		verbose 'Reading ' + Target_words + ' ...'
+		puts 'Reading ' + Target_words + ' ...'
 		path = Script_dir + '/' + Target_words
 		text = IO.readlines path
 
@@ -107,7 +98,7 @@ class Finder
 	def initialize corpus
 		@corpus = corpus
 		read_target_file
-		verbose @words
+		puts @words
 	end
 
 	# Looks up the words in the corpus.

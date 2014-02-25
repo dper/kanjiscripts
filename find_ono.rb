@@ -16,15 +16,6 @@
 # == AUTHOR
 # Douglas P Perkins - https://dperkins.org - https://microca.st/dper
 
-$verbose = true
-
-# Displays an error message if verbose operation is enabled.
-def verbose message
-	if $verbose
-		puts message
-	end
-end
-
 Script_dir = File.dirname(__FILE__)
 
 # Looks up words in Edict.
@@ -32,7 +23,7 @@ class Edict
 	# Creates an Edict.  Parsing the edict file takes a long time,
 	# so it is desirable to only make one of this.
 	def initialize
-		verbose 'Parsing edict.txt ...'
+		puts 'Parsing edict.txt ...'
 		path = Script_dir + '/edict.txt'
 		edict = IO.readlines path
 		@lookup_table = {}
@@ -71,7 +62,7 @@ class Edict
 
 	# Creates a list of all the onomotopoaeic words in edict.
 	def find_ono_words
-		verbose 'Finding the onomotopaeic words in edict ...'
+		puts 'Finding the onomotopaeic words in edict ...'
 
 		ono_words = []
 
@@ -99,7 +90,7 @@ end
 class Wordfreq
 	# Creates a Wordfreq.
 	def initialize
-		verbose 'Parsing wordfreq_ck.txt ...'
+		puts 'Parsing wordfreq_ck.txt ...'
 		path = Script_dir + '/wordfreq_ck.txt'
 		wordfreq = IO.readlines path
 		wordfreq.delete_if {|line| line.start_with? '#'}
@@ -140,14 +131,14 @@ class Wordfreq
 	# Prints a list of words and their frequencies, each pair on a line.
 	def show_frequencies words
 		words.each do |word|
-			verbose (get_frequency word).to_s + "\t" + word
+			puts (get_frequency word).to_s + "\t" + word
 		end
 	end
 
 	# Prints a list of words where each word is on its own line.
 	def show_words words
 		words.each do |word|
-			verbose word
+			puts word
 		end
 	end
 
@@ -159,7 +150,7 @@ class Wordfreq
 			s += word + ' '
 		end
 		
-		verbose s
+		puts s
 	end
 end
 
