@@ -32,64 +32,147 @@ CHAR_TYPE_KANJINUMERIC = 8
 CHAR_TYPE_GREEK = 9
 CHAR_TYPE_CYRILLIC = 10 
 
-# Parses the sentence.  Returns an array of tokens.
-def parse_sentence sentence
-	nm = Natto::MeCab.new
-	tokens = []
+# A sentence parsed by Natto is composed of tokens with the following properties.
+# - :prev - pointer to previous node
+# - :next - pointer to next node
+# - :enext - pointer to the node which ends at the same position
+# - :bnext - pointer to the node which starts at the same position
+# - :surface - surface string; length may be obtainedi with length/rlength members
+# - :feature - feature string
+# - :id - unique node id
+# - :length - length of surface form
+# - :rlength - length of the surface form including white space before the morph
+# - :rcAttr - right attribute id
+# - :lcAttr - left attribute id
+# - :posid - part-of-speech id
+# - :char_type - character type
+# - :stat - node status; 0 (NOR), 1 (UNK), 2 (BOS), 3 (EOS), 4 (EON)
+# - :isbest - 1 if this node is best node
+# - :alpha - forward accumulative log summation, only with marginal probability flag
+# - :beta - backward accumulative log summation, only with marginal probability flag
+# - :prob - marginal probability, only with marginal probability flag
+# - :wcost - word cost
+# - :cost - best accumulative cost from bos node to this node
 
-	nm.parse(sentence) do |token|
-		unless token.feature.split(',').first == 'BOS/EOS'
-			tokens << token
+# A Japanese sentence and its phonetic reading.
+class PhoneticSentence
+	attr_accessor :japanese # The Japanese sentence.
+	attr_accessor :kana	# The phonetic reading.
+
+	# Returns the token to the left of the argument, or nil if none.
+	def find_left token
+		index = @tokens.find_index token
+
+		if index == 0
+			return nil
+		else
+			return @tokens[index - 1]
 		end
 	end
 
-	return tokens
-end
-
-# Returns true iff a blank space should go before the token.
-def needs_space_before? token
-	#TODO Write this.
-	return true
-end
-
-# Returns kana for a given token.
-def token_to_kana token
-	char_type = token.char_type
-	surface = token.surface
-
-	if (char_type == CHAR_TYPE_KANJI) or (char_type == CHAR_TYPE_HIRAGANA)
-		katakana = token.feature.split(',')[-2]
-		hiragana = NKF.nkf('-h1 -w', katakana)
-		text = hiragana
-	else
-		text = surface
+	# Returns the token to the right of the argument, or nil if none.
+	def find_right token
+		index = @tokens.find_index token
+		
+		if index == @tokens.length - 1
+			return nil
+		else
+			return @tokens[index + 1]
+		end
 	end
 
-	# Put space between some tokens.
-	if needs_space_before? token
-		text = ' ' + text
+	# Returns true iff a blank space should go before the token.
+	def pad token
+		pos = pos token
+		left = find_left token
+		right = find_right token
+
+		# A leading token needs no lead spacing.
+		if (@tokens.find_index token) == 0
+			return false
+		end
+
+		# Consider what part of speech it and adjacent tokens are.
+		case pos
+		when '助詞'
+			if right and (pos left) == '助詞'
+				return false
+			end
+		when '記号'
+			return false
+		end
+
+		return true
 	end
 
-	return text
-end
-
-def make_kana sentence
-	tokens = parse_sentence sentence
-	s = ''
-
-	tokens.each do |token|
-		s += token_to_kana token
+	# Returns the token's grammatical part of speech.
+	def pos token
+		return token.feature.split(',').first
 	end
 
-	return s
+	# Returns kana for a given token.
+	def token_to_kana token
+		char_type = token.char_type
+		surface = token.surface
+
+		if (char_type == CHAR_TYPE_KANJI) or (char_type == CHAR_TYPE_HIRAGANA)
+			katakana = token.feature.split(',')[-2]
+			hiragana = NKF.nkf('-h1 -w', katakana)
+			text = hiragana
+		else
+			text = surface
+		end
+
+		# Put space between some tokens.
+		if pad token
+			text = ' ' + text
+		end
+
+		return text
+	end
+
+	# Makes kana for the Japanese sentence.
+	def make_kana
+		kana = ''
+
+		@tokens.each do |token|
+			kana += token_to_kana token
+		end
+
+		@kana = kana
+	end
+
+	# Parses the Japanese.
+	def parse
+		nm = Natto::MeCab.new
+		tokens = []
+
+		nm.parse(@japanese) do |token|
+			unless token.feature.split(',').first == 'BOS/EOS'
+				tokens << token
+			end
+		end
+
+		@tokens = tokens
+	end
+
+	# Makes a PhoneticSentence.
+	def initialize japanese
+		@japanese = japanese.dup
+		parse
+		make_kana
+	end
 end
+
+
 
 def test
 	sentences = ['彼はいちごケーキが大好きです。', 'どうぞよろしくお願いします。', 'あなたは猫を飼っているよね。']
 
 	sentences.each do |sentence|
 		puts '漢字： ' + sentence
-		puts 'かな： ' + (make_kana sentence)
+		s = PhoneticSentence.new sentence
+		puts 'かな： ' + s.kana
 	end
 end
 
