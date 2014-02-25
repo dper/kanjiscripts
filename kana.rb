@@ -100,6 +100,7 @@ class PhoneticSentence
 			end
 		when '記号'
 			return false
+		#TODO More and better checks should go here.
 		end
 
 		return true
