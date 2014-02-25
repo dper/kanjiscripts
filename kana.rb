@@ -39,17 +39,7 @@ def token_to_kana token
 	if (char_type == 2) or (char_type == 6)
 		katakana = token.feature.split(',')[-2]
 		hiragana = NKF.nkf('-h1 -w', katakana)
-
-		if hiragana == surface
-			return surface
-		end
-
-		s = '<ruby>'
-		s += token.surface
-		s += '<rp>(</rp><rt>'
-		s += hiragana
-		s += '</rt><rp>)</rp></ruby>'
-		return s
+		return hiragana
 	else
 		return surface
 	end
@@ -68,7 +58,7 @@ def make_kana sentence
 end
 
 def test
-	sentences = ['彼はいちごケーキが大好きです。']
+	sentences = ['彼はいちごケーキが大好きです。', 'どうぞよろしくお願いします。', 'あなたは猫を飼っているよね。']
 
 	sentences.each do |sentence|
 		puts '漢字： ' + sentence
