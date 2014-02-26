@@ -99,18 +99,28 @@ class Finder
 	def initialize corpus
 		@corpus = corpus
 		read_target_file
-		puts @words
 	end
 
 	# Looks up the words in the corpus.
 	def find_words
 		results = @corpus.find_words @words
 
-		#TODO Compare the target count with the actual count.
+		puts 'Desired sentences per word: ' + TARGET_SENTENCE_COUNT.to_s + '.' 
 
-		#TODO Take the first few sentences from each word.
+		@words.each do |word|
+			puts "*\t" + word + "\t" + results[word].length.to_s
+		end
+
+		sentences = []
+
+		@words.each do |word|
+			result = results[word].take TARGET_SENTENCE_COUNT
+			sentences << result
+		end
+
+		sentences.uniq!
+
 		#TODO Put them in the output file.
-		puts results['秋田']
 	end
 end
 
