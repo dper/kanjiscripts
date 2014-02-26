@@ -101,15 +101,28 @@ class Finder
 		read_target_file
 	end
 
-	# Looks up the words in the corpus.
-	def find_words
-		results = @corpus.find_words @words
-
-		puts 'Desired sentences per word: ' + TARGET_SENTENCE_COUNT.to_s + '.' 
+	# Shows some statistical analysis.
+	def analyze results
+		total = 0
 
 		@words.each do |word|
-			puts "*\t" + word + "\t" + results[word].length.to_s
+			found = results[word].length	
+			puts "***\t" + word + "\t" + found.to_s
+			total += found
 		end
+
+		sought = TARGET_SENTENCE_COUNT * @words.length
+		puts 'Desired sentences per word: ' + TARGET_SENTENCE_COUNT.to_s + '.'
+		puts 'Words sought: ' + @words.length.to_s + '.'
+		puts 'Sentences sought: ' + sought.to_s + '.'
+	end
+
+	# Looks up the words in the corpus.
+	def find_words
+		puts 'Finding words in the corpus ...'
+
+		results = @corpus.find_words @words
+		analyze results
 
 		sentences = []
 
@@ -119,10 +132,14 @@ class Finder
 		end
 
 		@sentences = sentences.uniq
+		puts 'Non-unique sentences found: ' + sentences.length.to_s + '.'
+		puts 'Unique sentences found: ' + @sentences.length.to_s + '.'
 	end
 
 	# Writes the sentences to the output file.
 	def write_sentences
+		puts 'Writing ' + Target_sentences + ' ...'
+
 		open(Target_sentences, 'w') do |file|
 			@sentences.each do |sentence|
 				s = sentence["japanese"]
