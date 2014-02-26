@@ -175,10 +175,9 @@ class PhoneticSentence
 	end
 end
 
-
-
-def test
-	sentences = ['彼はいちごケーキが大好きです。', 'どうぞよろしくお願いします。', 'あなたは猫を飼っているよね。', '私は１９８２に生まれました。', '私は昨夜、遅くまで起きていた。', '私は1982に生まれました。']
+# A test method for this class.
+def testPhonicSentence
+	sentences = ['彼はいちごケーキが大好きです。', 'どうぞよろしくお願いします。', 'あなたは猫を飼っているよね。', '私は１９８２に生まれました。', '私は昨夜、遅くまで起きていた。', '私は1982に生まれました。', '「トムとメアリーが離婚するって聞いたよ。」「それは噂だよ。」']
 
 	sentences.each do |sentence|
 		puts '漢字： ' + sentence
@@ -186,5 +185,3 @@ def test
 		puts 'かな： ' + s.kana
 	end
 end
-
-test
