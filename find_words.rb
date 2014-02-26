@@ -16,12 +16,13 @@
 # == AUTHOR
 # Douglas P Perkins - https://dperkins.org - https://microca.st/dper
 
+Script_dir = File.dirname(__FILE__)
+require Script_dir + '/' + 'kana'
+
 Pairs = 'pairs.txt'
 Target_words = 'target_words.txt'
 Target_sentences = 'target_sentences.txt'
-Target_sentence_count = 5
-
-Script_dir = File.dirname(__FILE__)
+TARGET_SENTENCE_COUNT = 5
 
 # A large list of Japanese and English sentences.
 class Corpus
