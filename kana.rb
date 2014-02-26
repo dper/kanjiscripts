@@ -32,32 +32,20 @@ CHAR_TYPE_KANJINUMERIC = 8
 CHAR_TYPE_GREEK = 9
 CHAR_TYPE_CYRILLIC = 10 
 
-# A sentence parsed by Natto is composed of tokens with the following properties.
-# - :prev - pointer to previous node
-# - :next - pointer to next node
-# - :enext - pointer to the node which ends at the same position
-# - :bnext - pointer to the node which starts at the same position
-# - :surface - surface string; length may be obtainedi with length/rlength members
-# - :feature - feature string
-# - :id - unique node id
-# - :length - length of surface form
-# - :rlength - length of the surface form including white space before the morph
-# - :rcAttr - right attribute id
-# - :lcAttr - left attribute id
-# - :posid - part-of-speech id
-# - :char_type - character type
-# - :stat - node status; 0 (NOR), 1 (UNK), 2 (BOS), 3 (EOS), 4 (EON)
-# - :isbest - 1 if this node is best node
-# - :alpha - forward accumulative log summation, only with marginal probability flag
-# - :beta - backward accumulative log summation, only with marginal probability flag
-# - :prob - marginal probability, only with marginal probability flag
-# - :wcost - word cost
-# - :cost - best accumulative cost from bos node to this node
-
 # A Japanese sentence and its phonetic reading.
 class PhoneticSentence
 	attr_accessor :japanese # The Japanese sentence.
 	attr_accessor :kana	# The phonetic reading.
+
+	# Returns the token's grammatical part of speech.
+	def pos token
+		return token.feature.split(',').first
+	end
+
+	# Returns the token's detailed part of speech.
+	def detail token
+		return token.feature.split(',')[1]
+	end
 
 	# Returns the token to the left of the argument, or nil if none.
 	def find_left token
@@ -84,6 +72,7 @@ class PhoneticSentence
 	# Returns true iff a blank space should go before the token.
 	def pad token
 		pos = pos token
+		detail = detail token
 		left = find_left token
 		right = find_right token
 
@@ -92,23 +81,39 @@ class PhoneticSentence
 			return false
 		end
 
+		puts token.surface + ' ' + pos + ' ' + (detail token)
+
 		# Consider what part of speech it and adjacent tokens are.
 		case pos
+		when '名詞'
+			if (detail == '数') and left and (detail left) == '数'
+				return false
+			end
+		when '動詞'
+			if detail == '非自立'
+				return false
+			end
+		when '助動詞'
+			if left and (pos left) == '動詞'
+				return false
+			end
+
+			if left and (pos left) == '助動詞'
+				return false
+			end
 		when '助詞'
 			if right and (pos left) == '助詞'
 				return false
 			end
+
+			if (detail == '接続助詞') and left and (pos left) == '動詞'
+				return false
+			end
 		when '記号'
 			return false
-		#TODO More and better checks should go here.
 		end
 
 		return true
-	end
-
-	# Returns the token's grammatical part of speech.
-	def pos token
-		return token.feature.split(',').first
 	end
 
 	# Returns kana for a given token.
@@ -168,7 +173,7 @@ end
 
 
 def test
-	sentences = ['彼はいちごケーキが大好きです。', 'どうぞよろしくお願いします。', 'あなたは猫を飼っているよね。']
+	sentences = ['彼はいちごケーキが大好きです。', 'どうぞよろしくお願いします。', 'あなたは猫を飼っているよね。', '私は１９８２に生まれました。']
 
 	sentences.each do |sentence|
 		puts '漢字： ' + sentence
