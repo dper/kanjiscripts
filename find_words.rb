@@ -22,7 +22,7 @@ require Script_dir + '/' + 'kana'
 Pairs = 'pairs.txt'
 Target_words = 'target_words.txt'
 Target_sentences = 'target_sentences.txt'
-TARGET_SENTENCE_COUNT = 5
+TARGET_SENTENCE_COUNT = 3
 
 # A large list of Japanese and English sentences.
 class Corpus
@@ -105,9 +105,11 @@ class Finder
 	def analyze results
 		total = 0
 
+		puts 'Number of sentences found for each word:'
+
 		@words.each do |word|
 			found = results[word].length	
-			puts "***\t" + word + "\t" + found.to_s
+			puts found.to_s + "\t" + word
 			total += found
 		end
 
