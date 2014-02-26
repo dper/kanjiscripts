@@ -115,15 +115,26 @@ class Finder
 
 		@words.each do |word|
 			result = results[word].take TARGET_SENTENCE_COUNT
-			sentences << result
+			sentences = sentences + result
 		end
 
-		sentences.uniq!
+		@sentences = sentences.uniq
+	end
 
-		#TODO Put them in the output file.
+	# Writes the sentences to the output file.
+	def write_sentences
+		open(Target_sentences, 'w') do |file|
+			@sentences.each do |sentence|
+				s = sentence["japanese"]
+				s += "\t"
+				s += sentence["english"]
+				file.puts s
+			end
+		end	
 	end
 end
 
 $corpus = Corpus.new
 $finder = Finder.new $corpus
 $finder.find_words
+$finder.write_sentences
