@@ -81,6 +81,11 @@ class PhoneticSentence
 			return false
 		end
 
+		# No space is needed after punctuation.
+		if left and (pos left) == '記号'
+			return false
+		end
+
 		puts token.surface + ' ' + pos + ' ' + (detail token)
 
 		# Consider what part of speech it and adjacent tokens are.
@@ -173,7 +178,7 @@ end
 
 
 def test
-	sentences = ['彼はいちごケーキが大好きです。', 'どうぞよろしくお願いします。', 'あなたは猫を飼っているよね。', '私は１９８２に生まれました。']
+	sentences = ['彼はいちごケーキが大好きです。', 'どうぞよろしくお願いします。', 'あなたは猫を飼っているよね。', '私は１９８２に生まれました。', '私は昨夜、遅くまで起きていた。', '私は1982に生まれました。']
 
 	sentences.each do |sentence|
 		puts '漢字： ' + sentence
