@@ -36,22 +36,22 @@ class Note
 	end
 end
 
-# A flashcard deck maker.  This sorts and writes notes.
-class DeckMaker
+# A sentence pair maker.  This sorts and writes notes.
+class PairMaker
 	# Sort the notes from shortest to longest Japanese sentence.
 	def sort_notes
 		puts 'Sorting notes by sentence length ...'
 		@notes.sort! do |note1, note2| note1.kanji.length <=> note2.kanji.length end	
 	end
 
-	# Creates a DeckMaker
+	# Creates a PairMaker
 	def initialize notes
 		@notes = Array.new notes
 		sort_notes
 	end
 
 	# Prints a list of notes.
-	def write_deck
+	def write_pairs
 		puts 'Writing output to ' + Pairs + ' ...'
 
 		open(Pairs, 'w') do |file|
@@ -254,5 +254,5 @@ class Corpus
 end
 
 $corpus = Corpus.new
-$deckmaker = DeckMaker.new $corpus.notes
-$deckmaker.write_deck
+$pairmaker = PairMaker.new $corpus.notes
+$pairmaker.write_pairs
