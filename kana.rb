@@ -17,23 +17,23 @@ ENV['MECAB_PATH']='/usr/lib/libmecab.so.2'
 require 'natto'
 require 'nkf'
 
-# A parsed sentence produces tokens, and each token has a character type.
-# Reference: https://bitbucket.org/buruzaemon/natto/wiki/Node-Parsing-char_type
-# Reference: http://d.hatena.ne.jp/NE555/20120107
-CHAR_TYPE_DEFAULT = 0
-CHAR_TYPE_SPACE = 1
-CHAR_TYPE_KANJI = 2
-CHAR_TYPE_SYMBOL = 3
-CHAR_TYPE_NUMERIC = 4
-CHAR_TYPE_ALPHA = 5
-CHAR_TYPE_HIRAGANA = 6
-CHAR_TYPE_KATAKANA = 7
-CHAR_TYPE_KANJINUMERIC = 8
-CHAR_TYPE_GREEK = 9
-CHAR_TYPE_CYRILLIC = 10 
-
 # A Japanese sentence and its phonetic reading.
 class PhoneticSentence
+	# A parsed sentence produces tokens, and each token has a character type.
+	# Reference: https://bitbucket.org/buruzaemon/natto/wiki/Node-Parsing-char_type
+	# Reference: http://d.hatena.ne.jp/NE555/20120107
+	CHAR_TYPE_DEFAULT = 0
+	CHAR_TYPE_SPACE = 1
+	CHAR_TYPE_KANJI = 2
+	CHAR_TYPE_SYMBOL = 3
+	CHAR_TYPE_NUMERIC = 4
+	CHAR_TYPE_ALPHA = 5
+	CHAR_TYPE_HIRAGANA = 6
+	CHAR_TYPE_KATAKANA = 7
+	CHAR_TYPE_KANJINUMERIC = 8
+	CHAR_TYPE_GREEK = 9
+	CHAR_TYPE_CYRILLIC = 10
+
 	attr_accessor :japanese # The Japanese sentence.
 	attr_accessor :kana	# The phonetic reading.
 
@@ -130,11 +130,16 @@ class PhoneticSentence
 		# This line is useful for debugging.
 		#puts surface + ' ' + char_type.to_s
 
-		kanji_types = [CHAR_TYPE_KANJI, CHAR_TYPE_HIRAGANA, CHAR_TYPE_KANJINUMERIC]
-		if kanji_types.include? char_type
+		if char_type == CHAR_TYPE_KANJI or char_type == CHAR_TYPE_KANJINUMERIC
 			katakana = token.feature.split(',')[-2]
 			hiragana = NKF.nkf('-h1 -w', katakana)
 			text = hiragana
+		elsif char_type == CHAR_TYPE_HIRAGANA
+			katakana = token.feature.split(',')[-2]
+			hiragana = NKF.nkf('-h1 -w', katakana)
+			text = hiragana
+
+			puts surface + ' ' + hiragana
 		else
 			text = surface
 		end
@@ -191,6 +196,7 @@ def testPhoneticSentence
 	sentences << '私は1982に生まれました。'
 	sentences << '「トムとメアリーが離婚するって聞いたよ。」「それは噂だよ。」'
 	sentences << '損害は千ドルと見積もりしています。'
+	sentences << 'なんでにゃんにゃん言ってるの？'
 
 	sentences.each do |sentence|
 		puts '漢字： ' + sentence
@@ -198,3 +204,6 @@ def testPhoneticSentence
 		puts 'かな： ' + s.kana
 	end
 end
+
+# Uncomment this line for testing.
+testPhoneticSentence
