@@ -19,6 +19,10 @@
 # Douglas P Perkins - https://dperkins.org - https://microca.st/dper
 
 Script_dir = File.dirname(__FILE__)
+Pairs = "pairs.txt"
+Tags = 'tags.csv'
+Links = 'links.csv'
+Sentences_detailed = 'sentences_detailed.csv'
 
 # A note for a flash card containing a sentence in kanji and English.
 class Note
@@ -48,12 +52,9 @@ class DeckMaker
 
 	# Prints a list of notes.
 	def write_deck
-		puts 'Making output text ...'
-		output = 'pairs.txt'
+		puts 'Writing output to ' + Pairs + ' ...'
 
-		puts 'Writing to ' + output + ' ...'
-
-		open(output, 'w') do |file|
+		open(Pairs, 'w') do |file|
 			@notes.each do |note|
 				s = note.kanji + "\t" + note.english
 				file.puts s
@@ -68,8 +69,8 @@ class Corpus
 
 	# Parses tags file.
 	def parse_tags
-		puts 'Parsing tags.csv ...'
-		path = Script_dir + '/tags.csv'
+		puts 'Parsing ' + Tags + ' ...'
+		path = Script_dir + '/' + Tags
 		text = IO.readlines path
 		
 		# The tags file is a bunch of lines like this: sentence_id [tab] tag_name .
@@ -94,8 +95,8 @@ class Corpus
 
 	# Parses the links file.
 	def parse_links
-		puts 'Parsing links.csv ...'
-		path = Script_dir + '/links.csv'
+		puts 'Parsing ' + Links + ' ...'
+		path = Script_dir + '/' + Links
 		text = IO.readlines path
 		@links = []
 
@@ -112,8 +113,8 @@ class Corpus
 
 	# Parses the corpus sentence file.	
 	def parse_sentences
-		puts 'Parsing sentences_detailed.csv ...'
-		path = Script_dir + '/sentences_detailed.csv'
+		puts 'Parsing ' + Sentences_detailed + ' ...'
+		path = Script_dir + '/' + Sentences_detailed
 		text = IO.readlines path
 		@english = {}
 		@japanese = {}
