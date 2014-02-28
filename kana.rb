@@ -137,9 +137,13 @@ class PhoneticSentence
 		elsif char_type == CHAR_TYPE_HIRAGANA
 			katakana = token.feature.split(',')[-2]
 			hiragana = NKF.nkf('-h1 -w', katakana)
-			text = hiragana
 
-			puts surface + ' ' + hiragana
+			# In cases where a word isn't known, no kana can be produced.
+			if katakana == '*'
+				text = token.surface
+			else
+				text = hiragana
+			end
 		else
 			text = surface
 		end
