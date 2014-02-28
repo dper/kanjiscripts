@@ -2,10 +2,10 @@
 # coding: utf-8
 #
 # == NAME
-# make_cards.rb
+# make_pairs.rb
 #
 # == USAGE
-# ./make_cards.rb
+# ./make_pairs.rb
 #
 # == DESCRIPTION
 # A script that creates a tab-separated flash card file from Tatoeba.
