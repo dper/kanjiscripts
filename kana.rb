@@ -86,7 +86,8 @@ class PhoneticSentence
 			return false
 		end
 
-		puts token.surface + ' ' + pos + ' ' + (detail token)
+		# This line is useful for debugging.
+		#puts token.surface + ' ' + pos + ' ' + (detail token)
 
 		# Consider what part of speech it and adjacent tokens are.
 		case pos
@@ -126,7 +127,11 @@ class PhoneticSentence
 		char_type = token.char_type
 		surface = token.surface
 
-		if (char_type == CHAR_TYPE_KANJI) or (char_type == CHAR_TYPE_HIRAGANA)
+		# This line is useful for debugging.
+		#puts surface + ' ' + char_type.to_s
+
+		kanji_types = [CHAR_TYPE_KANJI, CHAR_TYPE_HIRAGANA, CHAR_TYPE_KANJINUMERIC]
+		if kanji_types.include? char_type
 			katakana = token.feature.split(',')[-2]
 			hiragana = NKF.nkf('-h1 -w', katakana)
 			text = hiragana
@@ -176,8 +181,16 @@ class PhoneticSentence
 end
 
 # A test method for this class.
-def testPhonicSentence
-	sentences = ['彼はいちごケーキが大好きです。', 'どうぞよろしくお願いします。', 'あなたは猫を飼っているよね。', '私は１９８２に生まれました。', '私は昨夜、遅くまで起きていた。', '私は1982に生まれました。', '「トムとメアリーが離婚するって聞いたよ。」「それは噂だよ。」']
+def testPhoneticSentence
+	sentences = []
+	sentences << '彼はいちごケーキが大好きです。'
+	sentences << 'どうぞよろしくお願いします。'
+	sentences << 'あなたは猫を飼っているよね。'
+	sentences << '私は１９８２に生まれました。'
+	sentences << '私は昨夜、遅くまで起きていた。'
+	sentences << '私は1982に生まれました。'
+	sentences << '「トムとメアリーが離婚するって聞いたよ。」「それは噂だよ。」'
+	sentences << '損害は千ドルと見積もりしています。'
 
 	sentences.each do |sentence|
 		puts '漢字： ' + sentence

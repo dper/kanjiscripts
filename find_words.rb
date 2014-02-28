@@ -144,9 +144,10 @@ class Finder
 
 		open(Target_sentences, 'w') do |file|
 			@sentences.each do |sentence|
-				s = sentence["japanese"]
-				s += "\t"
-				s += sentence["english"]
+				japanese = sentence["japanese"]
+				english = sentence["english"]
+				kana = (PhoneticSentence.new japanese).kana
+				s = japanese + "\t" + kana + "\t" + english
 				file.puts s
 			end
 		end	
