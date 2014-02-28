@@ -201,6 +201,7 @@ def testPhoneticSentence
 	sentences << '「トムとメアリーが離婚するって聞いたよ。」「それは噂だよ。」'
 	sentences << '損害は千ドルと見積もりしています。'
 	sentences << 'なんでにゃんにゃん言ってるの？'
+	sentences << 'この顔にピンときたら１１０番！'
 
 	sentences.each do |sentence|
 		puts '漢字： ' + sentence
