@@ -144,6 +144,13 @@ class PhoneticSentence
 			else
 				text = hiragana
 			end
+		elsif char_type == CHAR_TYPE_NUMERIC
+			text = surface
+			
+			# The string 「１１０番」 is a long number.  The end needs conversion.
+			if text[-1] == '番'
+				text.gsub!('番', 'ばん')
+			end
 		else
 			text = surface
 		end
@@ -195,12 +202,14 @@ def testPhoneticSentence
 	sentences << '彼はいちごケーキが大好きです。'
 	sentences << 'どうぞよろしくお願いします。'
 	sentences << 'あなたは猫を飼っているよね。'
-	sentences << '私は１９８２に生まれました。'
+	sentences << '私は１９８２年に生まれました。'
 	sentences << '私は昨夜、遅くまで起きていた。'
-	sentences << '私は1982に生まれました。'
+	sentences << '私は1982年に生まれました。'
 	sentences << '「トムとメアリーが離婚するって聞いたよ。」「それは噂だよ。」'
 	sentences << '損害は千ドルと見積もりしています。'
 	sentences << 'なんでにゃんにゃん言ってるの？'
+	sentences << '彼女は２人姉妹がいます。'
+	sentences << 'この顔にピンときたら110番！'
 	sentences << 'この顔にピンときたら１１０番！'
 
 	sentences.each do |sentence|
