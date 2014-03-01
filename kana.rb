@@ -220,4 +220,4 @@ def testPhoneticSentence
 end
 
 # Uncomment this line for testing.
-testPhoneticSentence
+#testPhoneticSentence
