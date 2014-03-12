@@ -211,6 +211,7 @@ def testPhoneticSentence
 	sentences << '彼女は２人姉妹がいます。'
 	sentences << 'この顔にピンときたら110番！'
 	sentences << 'この顔にピンときたら１１０番！'
+	sentences << '努力したが何の成果も得られなかった。'
 
 	sentences.each do |sentence|
 		puts '漢字： ' + sentence
