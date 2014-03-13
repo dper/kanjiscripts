@@ -95,8 +95,16 @@ class PhoneticSentence
 			if (detail == '数') and left and (detail left) == '数'
 				return false
 			end
+
+			if detail == '接尾'
+				return false
+			end
 		when '動詞'
 			if detail == '非自立'
+				return false
+			end
+
+			if left and (pos left) == '動詞'
 				return false
 			end
 		when '助動詞'
@@ -202,6 +210,7 @@ def testPhoneticSentence
 	sentences << '彼はいちごケーキが大好きです。'
 	sentences << 'どうぞよろしくお願いします。'
 	sentences << 'あなたは猫を飼っているよね。'
+	sentences << '今更どうしようもない事だ。'
 	sentences << '私は１９８２年に生まれました。'
 	sentences << '私は昨夜、遅くまで起きていた。'
 	sentences << '私は1982年に生まれました。'
@@ -212,12 +221,12 @@ def testPhoneticSentence
 	sentences << 'この顔にピンときたら110番！'
 	sentences << 'この顔にピンときたら１１０番！'
 	sentences << '努力したが何の成果も得られなかった。'
-	sentences << '今更どうしようもない事だ。'
 
 	sentences.each do |sentence|
 		puts '漢字： ' + sentence
 		s = PhoneticSentence.new sentence
 		puts 'かな： ' + s.kana
+		puts ''
 	end
 end
 
