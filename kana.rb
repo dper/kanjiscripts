@@ -221,6 +221,9 @@ def testPhoneticSentence
 	sentences << 'この顔にピンときたら110番！'
 	sentences << 'この顔にピンときたら１１０番！'
 	sentences << '努力したが何の成果も得られなかった。'
+	sentences << '黄色いレインコートを着ている女の子はだれですか。'
+	sentences << 'こんな暖かい陽気は２月にしては異常だ。'
+	sentences << 'こんな暖かい陽気は2月にしては異常だ。'
 
 	sentences.each do |sentence|
 		puts '漢字： ' + sentence
@@ -231,4 +234,4 @@ def testPhoneticSentence
 end
 
 # Uncomment this line for testing.
-#testPhoneticSentence
+testPhoneticSentence
