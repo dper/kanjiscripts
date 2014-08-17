@@ -29,28 +29,30 @@ The word frequency list, `wordfreq_ck.txt`, is public domain and is included wit
 Example Sentences
 =================
 
-There are extensive numbers of sample sentences at Tatoeba (<http://tatoeba.org/eng/home> or <http://tatoeba.org/eng/downloads>).  The data gets rather large in size, and I do not want to try to keep this repository updated.  This is because these files are the *entire* Tatoeba corpus, not just the Japanese and English sentences we will use in the end.  Download the following files, and you can grab updated versions later as you see fit.
+There are extensive numbers of sample sentences at Tatoeba (<http://tatoeba.org/eng/home> or <http://tatoeba.org/eng/downloads>).  The data gets rather large in size, and I do not want to try to keep this repository updated.  This is because these files are the *entire* Tatoeba corpus, not just the Japanese and English sentences we will use in the end.  Download and unpack the following files, and you can grab updated versions later as you see fit.
 
-* <http://tatoeba.org/files/downloads/sentences_detailed.csv>.  The sentences themselves.
-* <http://tatoeba.org/files/downloads/tags.csv>.  Tags for each sentence.
-* <http://tatoeba.org/files/downloads/links.csv>.  Links between matching sentences.
+* <http://downloads.tatoeba.org/exports/sentences_detailed_and_links.tar.bz2>.
+* <http://downloads.tatoeba.org/exports/tags.tar.bz2>.
 
-Or if you're lazy, copy and paste this.
+If you're lazy, copy and paste this.
 
-    wget http://tatoeba.org/files/downloads/sentences_detailed.csv
-    wget http://tatoeba.org/files/downloads/tags.csv
-    wget http://tatoeba.org/files/downloads/links.csv
+    wget http://downloads.tatoeba.org/exports/sentences_detailed_and_links.tar.bz2
+    wget http://downloads.tatoeba.org/exports/tags.tar.bz2
+    tar xjvf sentences_detailed_and_links.tar.bz2
+    tar xjvf tags.tar.bz2
 
 Beware of large files, as shown here.
 
 ```Shell
 $ date
-Sat Feb 15 22:07:45 JST 2014
+Sun Aug 17 19:23:45 JST 2014
 
-$ ls -lh *.csv | cut -b 18-
- 88M Feb 15 18:11 links.csv
-284M Feb  8 19:14 sentences_detailed.csv
- 11M Feb  8 19:15 tags.csv
+$ ls -lh *.tar.bz2 *.csv | cut -b 18-
+ 99M Aug 16 16:00 links.csv
+108M Aug 16 16:01 sentences_detailed_and_links.tar.bz2
+323M Aug 16 16:00 sentences_detailed.csv
+ 13M Aug 16 16:00 tags.csv
+2.4M Aug 16 21:42 tags.tar.bz2
 ```
 
 The Tatoeba corpus is under a Creative Commons Attribution 2.0 license.  Here is a cautionary disclaimer from Tatoeba (<http://en.wiki.tatoeba.org/articles/show/using-the-tatoeba-corpus>).
