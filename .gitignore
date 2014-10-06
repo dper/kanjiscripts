@@ -1,9 +1,11 @@
 jpn_indices.csv
 sentences_detailed.csv
+sentences_detailed.tar.bz2
+sentences_detailed_and_links.tar.bz2
 tags.csv
+tags.tar.bz2
 links.csv
+links.tar.bz2
 pairs.txt
 target_words.txt
 target_sentences.txt
-sentences_detailed_and_links.tar.bz2
-tags.tar.bz2
