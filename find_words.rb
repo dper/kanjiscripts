@@ -22,7 +22,9 @@ require Script_dir + '/' + 'kana'
 Pairs = 'pairs.txt'
 Target_words = 'target_words.txt'
 Target_sentences = 'target_sentences.txt'
+
 TARGET_SENTENCE_COUNT = 3
+MAX_SENTENCE_LENGTH = 30
 
 # A large list of Japanese and English sentences.
 class Corpus
@@ -45,9 +47,17 @@ class Corpus
 			pairs << pair
 		end
 
+		puts "Corpus sentence pairs: " + pairs.size.to_s + "."
+
 		# Removes pairs where the Japanese half already appeared.
 		# Some sentences have multiple translations.  We use one.
 		pairs.uniq! { |pair| pair["japanese"] }
+		puts "Unique corpus sentence pairs: " + pairs.size.to_s + "."
+		
+		# Remove long sentences.
+		pairs.select! { |pair| pair["japanese"].size <= MAX_SENTENCE_LENGTH }
+		puts "Maximum sentence length: " + MAX_SENTENCE_LENGTH.to_s + "."
+		puts "Short sentence pairs: " + pairs.size.to_s + "."
 
 		@pairs = pairs
 	end
