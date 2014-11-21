@@ -24,7 +24,7 @@ Target_words = 'target_words.txt'
 Target_sentences = 'target_sentences.txt'
 
 TARGET_SENTENCE_COUNT = 3
-MAX_SENTENCE_LENGTH = 30
+MAX_SENTENCE_LENGTH = 15
 
 # A large list of Japanese and English sentences.
 class Corpus
