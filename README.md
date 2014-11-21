@@ -122,8 +122,18 @@ irb(main):004:0> nm = Natto::MeCab.new
 => #<Natto::MeCab:0x0000000149e638 @tagger=#<FFI::Pointer address=0x000000017aae40>, @options={}, @dicts=[#<Natto::DictionaryInfo:0x0000000149e408 type="0", filename="/var/lib/mecab/dic/debian/sys.dic", charset="UTF-8">], @version="0.996">
 irb(main):005:0> 
 ```
-   
+
 If you get an error at any step, something is wrong.  Look at the error message, review the above steps and try to figure it out.  Also make sure you see `charset="UTF-8"` and not `charset="EUC-JP"`.  It is probably a good idea to try a natto test script as well; e.g., <http://tinyurl.com/ptag5wn>.  The way in which kana is generated depends on MeCab.  If you're interested in tweaking the output, see the Japanese documentation here: <http://mecab.googlecode.com/svn/trunk/mecab/doc/index.html#parse>.
+
+
+Single Characters
+=================
+
+Suppose you're trying to learn some kanji, as opposed to words.  A good way to learn the kanji is to find some sentences that contain them.  You might have a text file that has one hundred kanji all on one line.  To use `find_words.rb`, you need a file with one word (in this case, one character) per line.  The command `fold` should do the trick.  Suppose your starting file is called `list.txt`.
+
+    fold -b3 list.txt > list.2.txt
+
+The above command will output the same kanji, with one per line.  Rename `list.2.txt` to `target_words.txt`, run `find_words.rb`, and you're done.
 
 
 Natto Documentation
