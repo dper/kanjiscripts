@@ -78,6 +78,7 @@ Scripts
 * `find_ono.rb`. Lists all the onomatopoiec words in edict.
 * `list_tags.rb`. Lists tags used in the Tatoeba sentence corpus.  On its own this is not useful, but one can use the output in other scripts to filter based on tags.
 * `kana.rb`. A script for generating a phonetic (kana) reading of a Japanese sentence.
+* `find_pairs.rb`. This script finds sentence pairs for target words.  It looks for words listed in `target_words.txt`, with one word per line, and finds up to three sentences for each of those words.  The results are placed in `target_sentences.txt`.  I use these sentences in flashcards, and long Japanese sentences are bad for flashcard use.  There is a maximum character length filter in `find_pairs.rb` that can be adjusted to your needs.
 
 These scripts have many dependencies.  To avoid wasting your time with predictable errors, read this entire file and grab dependencies before running them.
 
