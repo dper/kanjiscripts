@@ -35,14 +35,10 @@ There are extensive numbers of sample sentences at Tatoeba (<http://tatoeba.org/
 * <http://downloads.tatoeba.org/exports/links.tar.bz2>.
 * <http://downloads.tatoeba.org/exports/tags.tar.bz2>.
 
-If you're lazy, copy and paste this.
+To grab or update the sentence data, copy and paste this.
 
-    wget http://downloads.tatoeba.org/exports/sentences_detailed.tar.bz2
-    wget http://downloads.tatoeba.org/exports/links.tar.bz2
-    wget http://downloads.tatoeba.org/exports/tags.tar.bz2
-    tar xjvf sentences_detailed.tar.bz2
-    tar xjvf links.tar.bz2
-    tar xjvf tags.tar.bz2
+    cd tatoeba
+    ./update_tatoeba.sh
 
 Beware of large files, as shown here.
 
