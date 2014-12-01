@@ -104,7 +104,7 @@ First, install the necessary packages.  Make sure you install `mecab-ipadic-utf8
 
 Install the **natto** gem (<https://bitbucket.org/buruzaemon/natto/wiki/Installation-and-Configuration>).
 
-    # sudo gem install natto
+    # gem install natto
 
 The natto gem depends on a `libmecab.so.2` library, but it doesn't look for the library intelligently.  I check the Debian Sid documentation (<https://packages.debian.org/sid/amd64/libmecab2/filelist>) and see that the library is installed in `/usr/lib/libmecab.so.2`.  To test that everything is working, I do the following.
 
