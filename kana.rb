@@ -9,6 +9,7 @@
 #
 # == DESCRIPTION
 # A script that makes phonetic readings of Japanese sentences.
+# This is a library.  Do not call it from the command line.
 #
 # == AUTHOR
 # Douglas P Perkins - https://dperkins.org - https://microca.st/dper
