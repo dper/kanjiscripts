@@ -35,10 +35,10 @@ There are extensive numbers of sample sentences at Tatoeba (<http://tatoeba.org/
 * <http://downloads.tatoeba.org/exports/links.tar.bz2>.
 * <http://downloads.tatoeba.org/exports/tags.tar.bz2>.
 
-To grab or update the sentence data, copy and paste this.
+To grab or update the sentence data, do the following.
 
-    cd tatoeba
-    ./update_tatoeba.sh
+    $ cd tatoeba
+    $ ./update_tatoeba.sh
 
 Beware of large files, as shown here.
 
@@ -70,11 +70,12 @@ Translations may not always be accurate, even though the linked sentences are co
 Scripts
 =======
 
+The scripts I use most are `make_pairs.rb` and `find_pairs.rb`.  The first filters data to find English-Japanese sentence pairs, and the second looks through those for sentences containing target words.  The remaining scripts are useful in certain less frequent situations.
+
 * `make_pairs.rb`. After grabbing the dependencies, run this script to make a *large* file containing English and Japanese sentence pairs. You can search or filter this file for example sentences containing just the words you like.  The resulting file will be called `pairs.txt`.  You only need to run this script once at first, and then later when you grab new versions of the Tatoeba files.  The script can take a long time to run, depending on the speed of your computer.
+* `find_pairs.rb`. This script finds sentence pairs for target words.  It looks for words listed in `target_words.txt`, with one word per line, and finds up to three sentences for each of those words.  The results are placed in `target_sentences.txt`.  I use these sentences in flashcards, and long Japanese sentences are bad for flashcard use.  There is a maximum character length filter in `find_pairs.rb` that can be adjusted to your needs.
 * `find_ono.rb`. Lists all the onomatopoiec words in edict.
 * `list_tags.rb`. Lists tags used in the Tatoeba sentence corpus.  On its own this is not useful, but one can use the output in other scripts to filter based on tags.
-* `kana.rb`. A script for generating a phonetic (kana) reading of a Japanese sentence.
-* `find_pairs.rb`. This script finds sentence pairs for target words.  It looks for words listed in `target_words.txt`, with one word per line, and finds up to three sentences for each of those words.  The results are placed in `target_sentences.txt`.  I use these sentences in flashcards, and long Japanese sentences are bad for flashcard use.  There is a maximum character length filter in `find_pairs.rb` that can be adjusted to your needs.
 
 These scripts have many dependencies.  To avoid wasting your time with predictable errors, read this entire file and grab dependencies before running them.
 
