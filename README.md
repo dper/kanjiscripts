@@ -11,8 +11,8 @@ Dictionary
 
 The Japanese dictionary, `edict.txt`, is under a Creative Commons Attribution-Share Alike 3.0 license and is included with the source.
 
-* <http://www.csse.monash.edu.au/~jwb/edict.html>.
-* <http://ftp.monash.edu.au/pub/nihongo/edict.gz>.  Retrieved 2014-01-24.
+* <http://www.edrdg.org/jmdict/edict.html>.
+* <ftp://ftp.edrdg.org/pub/Nihongo/edict.gz>.  Retrieved 2014-01-24.
 * <http://www.edrdg.org/edrdg/licence.html>.
 
 
@@ -21,9 +21,9 @@ Word Frequencies
 
 The word frequency list, `wordfreq_ck.txt`, is public domain and is included with the source.
 
-* <http://ftp.monash.edu.au/pub/nihongo/00INDEX.html>.
-* <http://www.bcit-broadcast.com/monash/wordfreq.README>.
-* <http://ftp.monash.edu.au/pub/nihongo/wordfreq_ck.gz>.  Retrieved 2014-01-24.
+* <ftp://ftp.edrdg.org/pub/Nihongo/00INDEX.html>.
+* <ftp://ftp.edrdg.org/pub/Nihongo/wordfreq.README>.
+* <ftp://ftp.edrdg.org/pub/Nihongo/wordfreq_ck.gz>.  Retrieved 2014-01-24.
 
 
 Example Sentences
