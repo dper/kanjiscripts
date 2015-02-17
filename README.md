@@ -137,9 +137,7 @@ The above command will output the same kanji, with one per line.  Rename `list.2
 Natto Documentation
 ===================
 
-There is limited MeCab documentation.  However, the fine people who bring us Natto have worked to fill in the gaps.
-
-Relevant Natto documentation can be found at the following sites.
+There is limited MeCab documentation.  However, the fine people who bring us Natto have worked to fill in the gaps.  Relevant Natto documentation can be found at the following sites.
 
 * <https://bitbucket.org/buruzaemon/natto/src/4972d86c17b67b43ebede3bd83ee3b4937e7c9c1/lib/natto/struct.rb?at=default>
 * <https://bitbucket.org/buruzaemon/natto/wiki/Node-Parsing-stat>
