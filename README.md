@@ -144,3 +144,21 @@ Relevant Natto documentation can be found at the following sites.
 * <https://bitbucket.org/buruzaemon/natto/src/4972d86c17b67b43ebede3bd83ee3b4937e7c9c1/lib/natto/struct.rb?at=default>
 * <https://bitbucket.org/buruzaemon/natto/wiki/Node-Parsing-stat>
 * <https://mecab.googlecode.com/svn/trunk/mecab/doc/posid.html>
+
+
+Source
+======
+
+* Browse: <https://dperkins.org/git/gitlist/kanjiscripts.git/>
+* Clone: <https://dperkins.org/git/public/kanjiscripts.git/>
+* GitHub: <https://github.com/dper/kanjiscripts/>
+
+
+Contact
+=======
+
+If you want to contact the author, here are some ways.
+
+* <https://microca.st/dper>
+* <https://twitter.com/dpp0>
+* <https://dperkins.org/tag/contact.html>
