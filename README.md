@@ -29,7 +29,7 @@ The word frequency list, `wordfreq_ck.txt`, is public domain and is included wit
 Example Sentences
 =================
 
-There are extensive numbers of sample sentences at Tatoeba (<http://tatoeba.org/eng/home> or <http://tatoeba.org/eng/downloads>).  The data gets rather large in size, and I do not want to try to keep this repository updated.  This is because these files are the *entire* Tatoeba corpus, not just the Japanese and English sentences we will use in the end.  Download and unpack the following files, and you can grab updated versions later as you see fit.
+There are extensive numbers of sample sentences at [Tatoeba](http://tatoeba.org/eng/downloads).  The data gets rather large in size, and I do not want to try to keep this repository updated.  This is because these files are the *entire* Tatoeba corpus, not just the Japanese and English sentences we will use in the end.  Download and unpack the following files, and you can grab updated versions later as you see fit.
 
 * <http://downloads.tatoeba.org/exports/sentences_detailed.tar.bz2>.
 * <http://downloads.tatoeba.org/exports/links.tar.bz2>.
@@ -55,7 +55,7 @@ $ ls -lh *.tar.bz2 *.csv | cut -b 18-
 2.5M Oct  4 16:04 tags.tar.bz2
 ```
 
-The Tatoeba corpus is under a Creative Commons Attribution 2.0 license.  Here is a cautionary disclaimer from Tatoeba (<http://en.wiki.tatoeba.org/articles/show/using-the-tatoeba-corpus>).
+The Tatoeba corpus is under a Creative Commons Attribution 2.0 license.  Here is a cautionary [disclaimer](http://en.wiki.tatoeba.org/articles/show/using-the-tatoeba-corpus).
 
 ```
 Due to the nature of a public collaborative project, this data will never be 100% free of errors.
@@ -95,7 +95,7 @@ The file `tags.txt` is a list of all tags used in Tatoeba.  Over time, the tags 
 Kana
 ====
 
-To generate phonetic (kana) readings of sentences written in standard Japanese (using kanji), we use a program called **Mecab** (<https://code.google.com/p/mecab/>).  The website there is not particularly enlightening.  Regardless, Mecab is a morphological analyzer, which means it looks at a series of symbols and tries to parse them into words that form a sentence.  There are several steps to the installation.  I'm running Debian Sid, and if you're running a similar flavor of Linux, you can follow my directions fairly closely.  If you aren't, this could be tedious.  Sorry!
+To generate phonetic (kana) readings of sentences written in standard Japanese (using kanji), we use a program called [Mecab](https://code.google.com/p/mecab/).  The website there is not particularly enlightening.  Regardless, Mecab is a morphological analyzer, which means it looks at a series of symbols and tries to parse them into words that form a sentence.  There are several steps to the installation.  I'm running Debian Sid, and if you're running a similar flavor of Linux, you can follow my directions fairly closely.  If you aren't, this could be tedious.  Sorry!
 
 *Warning: If you miss any steps or do them a little incorrectly, the error messages you see later might not have any relevant information.  Go through this process slowly.*
 
@@ -103,11 +103,11 @@ First, install the necessary packages.  Make sure you install `mecab-ipadic-utf8
 
     # apt-get install mecab mecab-ipadic-utf8 ruby-ffi ruby-dev ruby-mecab
 
-Install the **natto** gem (<https://bitbucket.org/buruzaemon/natto/wiki/Installation-and-Configuration>).
+Install the [natto](https://bitbucket.org/buruzaemon/natto/wiki/Installation-and-Configuration) gem.
 
     # gem install natto
 
-The natto gem depends on a `libmecab.so.2` library, but it doesn't look for the library intelligently.  I check the Debian Sid documentation (<https://packages.debian.org/sid/amd64/libmecab2/filelist>) and see that the library is installed in `/usr/lib/libmecab.so.2`.  To test that everything is working, I do the following.
+The natto gem depends on a `libmecab.so.2` library, but it doesn't look for the library intelligently.  I check the Debian Sid [documentation](https://packages.debian.org/sid/amd64/libmecab2/filelist) and see that the library is installed in `/usr/lib/libmecab.so.2`.  To test that everything is working, I do the following.
 
 ```Ruby
 irb(main):001:0> ENV['MECAB_PATH']='/usr/lib/libmecab.so.2'
@@ -121,7 +121,7 @@ irb(main):004:0> nm = Natto::MeCab.new
 irb(main):005:0> 
 ```
 
-If you get an error at any step, something is wrong.  Look at the error message, review the above steps and try to figure it out.  Also make sure you see `charset="UTF-8"` and not `charset="EUC-JP"`.  It is probably a good idea to try a natto test script as well; e.g., <http://tinyurl.com/ptag5wn>.  The way in which kana is generated depends on MeCab.  If you're interested in tweaking the output, see the Japanese documentation here: <http://mecab.googlecode.com/svn/trunk/mecab/doc/index.html#parse>.
+If you get an error at any step, something is wrong.  Look at the error message, review the above steps and try to figure it out.  Also make sure you see `charset="UTF-8"` and not `charset="EUC-JP"`.  It is probably a good idea to try a natto test script as well; e.g., <http://tinyurl.com/ptag5wn>.  The way in which kana is generated depends on MeCab.  If you're interested in tweaking the output, see the [Japanese documentation](http://mecab.googlecode.com/svn/trunk/mecab/doc/index.html#parse).
 
 
 Single Characters
