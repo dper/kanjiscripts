@@ -10,6 +10,10 @@
 # == DESCRIPTION
 # A script that takes a list of words and makes a list of sentences.
 # Each sentence is in Japanese and English.
+#
+# The file pairs.txt must be in the same directory.
+# It is produced by the make_pairs.rb script.
+#
 # The target words must be in the file target_words.txt.
 # The output is written to the file target_sentences.txt.
 #
@@ -24,7 +28,7 @@ Target_words = 'target_words.txt'
 Target_sentences = 'target_sentences.txt'
 
 TARGET_SENTENCE_COUNT = 1 
-MAX_SENTENCE_LENGTH = 15
+MAX_SENTENCE_LENGTH = 20
 
 # A large list of Japanese and English sentences.
 class Corpus

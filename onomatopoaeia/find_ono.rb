@@ -168,5 +168,5 @@ words = $wordfreq.sort_by_frequent words
 # Choose whichever output format you like.
 
 #$wordfreq.show_frequencies words
-#$wordfreq.show_words words
-$wordfreq.show_words_inline words
+$wordfreq.show_words words
+#$wordfreq.show_words_inline words
