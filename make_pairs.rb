@@ -13,7 +13,7 @@
 # Only sentences with safe-looking tags are included.
 #
 # This script depends on the files tags.csv and links.csv being in
-# the same directory.  Download them before use.  See the README
+# the tatoeba subdirectory.  Download them before use.  See the README
 # for more information.
 #
 # == AUTHOR
