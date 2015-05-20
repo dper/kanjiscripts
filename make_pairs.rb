@@ -8,12 +8,13 @@
 # ./make_pairs.rb
 #
 # == DESCRIPTION
-# A script that creates a tab-separated flash card file from Tatoeba.
-# Sentences are included if they are in English-Japanese pairs.
+# A script that creates a list of English/Japanese sentence pairs.
+# The base data should be downloaded from Tatoeba.
 # Only sentences with safe-looking tags are included.
 #
-# This script depends on several files having proper formatting located
-# in the same directory. See the README for file source information.
+# This script depends on the files tags.csv and links.csv being in
+# the same directory.  Download them before use.  See the README
+# for more information.
 #
 # == AUTHOR
 # Douglas P Perkins - https://dperkins.org - https://microca.st/dper
