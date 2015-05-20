@@ -10,8 +10,12 @@
 # == DESCRIPTION
 # A script that finds onomatopoeic words in Japanese.
 #
-# This script depends on several files having proper formatting located
-# in the same directory. See the README for file source information.
+# The file edict.txt should be in this directory in UTF-8 format.
+# http://www.edrdg.org/jmdict/edict.html
+#
+# The file wordfreq_ck.txt should be in this directory in UTF-8 format.
+# ftp://ftp.edrdg.org/pub/Nihongo/00INDEX.html
+
 #
 # == AUTHOR
 # Douglas P Perkins - https://dperkins.org - https://microca.st/dper
@@ -163,6 +167,6 @@ words = $wordfreq.sort_by_frequent words
 # Just one of the two following functions should be called.
 # Choose whichever output format you like.
 
-#$wordfreq.show_frequencies words
+$wordfreq.show_frequencies words
 #$wordfreq.show_words words
-$wordfreq.show_words_inline words
+#$wordfreq.show_words_inline words
