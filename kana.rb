@@ -12,7 +12,7 @@
 # This is a library.  Do not call it from the command line.
 #
 # == AUTHOR
-# Douglas P Perkins - https://dperkins.org - https://microca.st/dper
+# Douglas Perkins - https://dperkins.org - https://microca.st/dper
 
 ENV['MECAB_PATH']='/usr/lib/libmecab.so.2'
 require 'natto'

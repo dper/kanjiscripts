@@ -18,7 +18,7 @@
 # The output is written to the file target_sentences.txt.
 #
 # == AUTHOR
-# Douglas P Perkins - https://dperkins.org - https://microca.st/dper
+# Douglas Perkins - https://dperkins.org - https://microca.st/dper
 
 Script_dir = File.dirname(__FILE__)
 require Script_dir + '/' + 'kana'
