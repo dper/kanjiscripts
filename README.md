@@ -16,46 +16,10 @@ The Japanese dictionary, `edict.txt`, is under a Creative Commons Attribution-Sh
 * <http://www.edrdg.org/edrdg/licence.html>.
 
 
-Word Frequencies
-================
-
-The word frequency list, `wordfreq_ck.txt`, is public domain and is included with the source.
-
-* <ftp://ftp.edrdg.org/pub/Nihongo/00INDEX.html>.
-* <ftp://ftp.edrdg.org/pub/Nihongo/wordfreq.README>.
-* <ftp://ftp.edrdg.org/pub/Nihongo/wordfreq_ck.gz>.
-
-
 Example Sentences
 =================
 
-There are extensive numbers of sample sentences at [Tatoeba](http://tatoeba.org/eng/downloads).  The data gets rather large in size, and I do not want to try to keep this repository updated.  This is because these files are the *entire* Tatoeba corpus, not just the Japanese and English sentences we will use in the end.  Download and unpack the following files, and you can grab updated versions later as you see fit.
-
-* <http://downloads.tatoeba.org/exports/sentences_detailed.tar.bz2>.
-* <http://downloads.tatoeba.org/exports/links.tar.bz2>.
-* <http://downloads.tatoeba.org/exports/tags.tar.bz2>.
-
-To grab or update the sentence data, do the following.
-
-    $ cd tatoeba
-    $ ./update_tatoeba.sh
-
-Beware of large files, as shown here.
-
-```Shell
-$ date
-Mon Oct  6 10:57:12 JST 2014
-
-$ ls -lh *.tar.bz2 *.csv | cut -b 18-
-102M Oct  4 16:00 links.csv
- 35M Oct  4 16:02 links.tar.bz2
-333M Oct  4 16:00 sentences_detailed.csv
- 76M Oct  4 16:01 sentences_detailed.tar.bz2
- 13M Oct  4 16:00 tags.csv
-2.5M Oct  4 16:04 tags.tar.bz2
-```
-
-The Tatoeba corpus is under a Creative Commons Attribution 2.0 license.  Here is a cautionary [disclaimer](http://en.wiki.tatoeba.org/articles/show/using-the-tatoeba-corpus).
+There are extensive numbers of sample sentences at [Tatoeba](http://tatoeba.org/eng/downloads).  The data gets rather large in size, and I do not want to try to keep this repository updated.  This is because these files are the *entire* Tatoeba corpus, not just the Japanese and English sentences we will use in the end.  The Tatoeba corpus is under a Creative Commons Attribution 2.0 license.  Here is a cautionary [disclaimer](http://en.wiki.tatoeba.org/articles/show/using-the-tatoeba-corpus).
 
 ```
 Due to the nature of a public collaborative project, this data will never be 100% free of errors.
@@ -70,26 +34,15 @@ Translations may not always be accurate, even though the linked sentences are co
 Scripts
 =======
 
-The scripts I use most are `make_pairs.rb` and `find_pairs.rb`.  The first filters data to find English-Japanese sentence pairs, and the second looks through those for sentences containing target words.  The remaining scripts are useful in certain less frequent situations.
+There are many different scripts.  See the comments at the top of each script for more information.
 
 * `make_pairs.rb`. After grabbing the dependencies, run this script to make a *large* file containing English and Japanese sentence pairs. You can search or filter this file for example sentences containing just the words you like.  The resulting file will be called `pairs.txt`.  You only need to run this script once at first, and then later when you grab new versions of the Tatoeba files.  The script can take a long time to run, depending on the speed of your computer.
 * `find_pairs.rb`. This script finds sentence pairs for target words.  It looks for words listed in `target_words.txt`, with one word per line, and finds up to three sentences for each of those words.  The results are placed in `target_sentences.txt`.  I use these sentences in flashcards, and long Japanese sentences are bad for flashcard use.  There is a maximum character length filter in `find_pairs.rb` that can be adjusted to your needs.
-* `find_ono.rb`. Lists all the onomatopoiec words in edict.
-* `list_tags.rb`. Lists tags used in the Tatoeba sentence corpus.  On its own this is not useful, but one can use the output in other scripts to filter based on tags.
+* `frequency/frequencies.rb`.  Lists words by frequency of use filtered by part of speech.
+* `onomatopeia/find_ono.rb`. Lists all the onomatopoiec words in edict.
+* `tags/list_tags.rb`. Lists tags used in the Tatoeba sentence corpus.  On its own this is not useful, but one can use the output in other scripts to filter based on tags.
 
-These scripts have many dependencies.  To avoid wasting your time with predictable errors, read this entire file and grab dependencies before running them.
-
-
-Word Frequency Files
-====================
-
-The file `ono_words.txt` is a list of all the onomatopoeic words in edict sorted from most to least frequent.  The file `ono_freq.txt` is the same list except with word's frequency included.  Both of these files are generated using `find_ono.rb`.  This should be done rarely, because the output only changes when `edict.txt` does.
-
-
-Tags
-====
-
-The file `tags.txt` is a list of all tags used in Tatoeba.  Over time, the tags used in Tatoeba will change.  We like to filter out sentences that have dangerous-looking tags.  The script `list_tags.rb` lists all of the tags currently used in the Corpus and can be occasionally used to update `tags.txt`.
+These scripts have many dependencies.  To avoid wasting your time with predictable errors, be sure to download the dependencies before running them.
 
 
 Kana
