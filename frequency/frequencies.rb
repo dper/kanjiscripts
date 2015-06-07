@@ -23,7 +23,6 @@ class Frequencies
 	def initialize
 		@words = []
 
-		puts 'Parsing ' + Aggregates + ' ...'
 		path = Script_dir + '/' + Aggregates
 		text = IO.readlines path
 
@@ -40,47 +39,43 @@ class Frequencies
 		end		
 	end
 
-	def get_speech_type type
+	def get_word_type (type)
 		filtered_words = @words.keep_if { |word| word["pos"] == type }
 		return filtered_words.map { |word| word["text"] }
 	end
+end
 
-
-	# Returns a list of the adverbs.
-	def get_adverbs
-		return get_speech_type '副詞'
+def find_frequencies
+	pos = case ARGV[0]
+		when 'adjectives' then '形容詞'
+		when 'adverbs' then '副詞'
+		when 'conjunctions' then '接続詞'
+		when 'interjections' then '感動詞'
+		when 'nouns' then '名詞'
+		when 'particles' then '助詞'
+		when 'verbs' then '動詞'
+		else nil 
 	end
 
-	# Returns a list of the adjectives.
-	def get_adjectives
-		return get_speech_type '形容詞'
-	end
+	count = ARGV.length == 2 ? ARGV[1].to_i : 0
 
-	# Returns a list of the nouns.
-	def get_adjectives
-		return get_speech_type '名詞'
-	end
+	if pos then
+		$frequencies = Frequencies.new
+		words = $frequencies.get_word_type pos
 
-	# Returns a list of the verbs.
-	def get_adjectives
-		return get_speech_type '動詞'
-	end
+		if count and count > 0
+			words = words[0, count]	
+		end
 
-	# Returns a list of the particles.
-	def get_particles
-		return get_speech_type '助詞'
-	end
-
-	# Returns a list of the interjections.
-	def get_particles
-		return get_speech_type '感動詞'
-	end
-
-	# Returns a list of the conjunctions.
-	def get_conjunctions
-		return get_speech_type '接続詞'
+		puts words
+	else
+		puts 'Error: Invalid part of speech.'
 	end
 end
 
-$frequencies = Frequencies.new
-puts $frequencies.get_adverbs
+if ARGV.length == 0
+	# If run without arguments, show valid arguments.
+	puts "This program shows common Japanese words.  The words are sorted by common speech.  Valid choices: nouns, verbs, adjectives, adverbs, particles, interjections, and conjunctions.  A certain number of words can be requested.  If the number of words is not specified, as many as possible are shown.\n\nExample uses:\n./frequencies.rb nouns 100\n./frequencies.rb prepositions 50"
+else
+	find_frequencies
+end
