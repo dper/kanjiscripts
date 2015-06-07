@@ -45,6 +45,7 @@ class Frequencies
 	end
 end
 
+# Finds words of the type specified as command line arguments.
 def find_frequencies
 	pos = case ARGV[0]
 		when 'adjectives' then '形容詞'
