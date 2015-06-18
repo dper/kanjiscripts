@@ -21,13 +21,13 @@
 # Douglas Perkins - https://dperkins.org - https://microca.st/dper
 
 Script_dir = File.dirname(__FILE__)
-require Script_dir + '/' + 'kana'
+require Script_dir + '/../' + 'kana'
 
 Pairs = 'pairs.txt'
 Target_words = 'target_words.txt'
 Target_sentences = 'target_sentences.txt'
 
-TARGET_SENTENCE_COUNT = 1 
+TARGET_SENTENCE_COUNT = 3
 MAX_SENTENCE_LENGTH = 20
 
 # A large list of Japanese and English sentences.
