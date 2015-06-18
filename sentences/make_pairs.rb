@@ -71,7 +71,7 @@ class Corpus
 	# Parses tags file.
 	def parse_tags
 		puts 'Parsing ' + Tags + ' ...'
-		path = Script_dir + '/tatoeba/' + Tags
+		path = Script_dir + '/../tatoeba/' + Tags
 		text = IO.readlines path
 		
 		# The tags file is a bunch of lines like this: sentence_id [tab] tag_name .
@@ -97,7 +97,7 @@ class Corpus
 	# Parses the links file.
 	def parse_links
 		puts 'Parsing ' + Links + ' ...'
-		path = Script_dir + '/tatoeba/' + Links
+		path = Script_dir + '/../tatoeba/' + Links
 		text = IO.readlines path
 		@links = []
 
@@ -115,7 +115,7 @@ class Corpus
 	# Parses the corpus sentence file.	
 	def parse_sentences
 		puts 'Parsing ' + Sentences_detailed + ' ...'
-		path = Script_dir + '/tatoeba/' + Sentences_detailed
+		path = Script_dir + '/../tatoeba/' + Sentences_detailed
 		text = IO.readlines path
 		@english = {}
 		@japanese = {}
