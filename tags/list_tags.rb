@@ -19,7 +19,7 @@
 Script_dir = File.dirname(__FILE__)
 
 def read_tags
-	path = Script_dir + '../tatoeba/tags.csv'
+	path = Script_dir + '/../tatoeba/tags.csv'
 	text = IO.readlines path
 	tags = []
 
