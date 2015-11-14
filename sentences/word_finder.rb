@@ -20,16 +20,13 @@ Script_dir = File.dirname(__FILE__)
 require Script_dir + '/../' + 'kana'
 
 Pairs = 'pairs.txt'
-Target_words = 'target_words.txt'
-Target_sentences = 'target_sentences.txt'
-
-TARGET_SENTENCE_COUNT = 3
-MAX_SENTENCE_LENGTH = 25
 
 # A large list of Japanese and English sentences.
 class Corpus
 	# Creates a Corpus.
-	def initialize
+	def initialize max_sentence_length
+		@max_sentence_length = max_sentence_length
+
 		puts 'Reading ' + Pairs + ' ...'
 		path = Script_dir + '/' + Pairs
 		text = IO.readlines path
@@ -55,8 +52,8 @@ class Corpus
 		puts "Unique corpus sentence pairs: " + pairs.size.to_s + "."
 		
 		# Remove long sentences.
-		pairs.select! { |pair| pair["japanese"].size <= MAX_SENTENCE_LENGTH }
-		puts "Maximum sentence length: " + MAX_SENTENCE_LENGTH.to_s + "."
+		pairs.select! { |pair| pair["japanese"].size <= @max_sentence_length }
+		puts "Maximum sentence length: " + @max_sentence_length.to_s + "."
 		puts "Short sentence pairs: " + pairs.size.to_s + "."
 
 		@pairs = pairs
@@ -90,29 +87,13 @@ end
 
 # Finds words in sentences and makes lists of those sentences.
 class Finder
-	# Reads the target word file
-	def read_target_file
-		puts 'Reading ' + Target_words + ' ...'
-		path = Script_dir + '/' + Target_words
-		text = IO.readlines path
-
-		words = []
-
-		text.each do |line|
-			words.concat line.split
-		end
-
-		@words = words.uniq
-	end
-
 	# Creates a Finder.
-	def initialize corpus
-		@corpus = corpus
-		read_target_file
+	def initialize max_sentence_length
+		@corpus = Corpus.new max_sentence_length
 	end
 
-	# Shows some statistical analysis.
-	def analyze results
+	# Outputs some information on what was found.
+	def analyze
 		total = 0
 
 		puts 'Number of sentences found for each word:'
@@ -130,41 +111,35 @@ class Finder
 	end
 
 	# Looks up the words in the corpus.
-	def find_words
-		puts 'Finding words in the corpus ...'
-
-		results = @corpus.find_words @words
-		analyze results
+	def find_sentences sentences_per_word
+		@results = @corpus.find_words @words
 
 		sentences = []
 
 		@words.each do |word|
-			result = results[word].take TARGET_SENTENCE_COUNT
+			result = @results[word].take sentences_per_word
 			sentences = sentences + result
 		end
 
 		@sentences = sentences.uniq
-		puts 'Non-unique sentences found: ' + sentences.length.to_s + '.'
-		puts 'Unique sentences found: ' + @sentences.length.to_s + '.'
+
+		totals = {}
+		totals['non-unique'] = sentences.length.to_s
+		totals['unique'] = @sentences.length.to_s
+		return totals
 	end
 
-	# Writes the sentences to the output file.
-	def write_sentences
-		puts 'Writing ' + Target_sentences + ' ...'
+	# Returns the sentence triples.
+	def get_sentences
+		triples = []
 
-		open(Target_sentences, 'w') do |file|
-			@sentences.each do |sentence|
-				japanese = sentence["japanese"]
-				english = sentence["english"]
-				kana = (PhoneticSentence.new japanese).kana
-				s = japanese + "\t" + kana + "\t" + english
-				file.puts s
-			end
-		end	
+		@sentences.each do |sentence|
+			japanese = sentence["japanese"]
+			english = sentence["english"]
+			kana = (PhoneticSentence.new japanese).kana
+			triples << japanese + "\t" + kana + "\t" + english + "\n"
+		end
+
+		return triples
 	end
 end
-
-$corpus = Corpus.new
-$finder = Finder.new $corpus
-$finder.find_words
-$finder.write_sentences
