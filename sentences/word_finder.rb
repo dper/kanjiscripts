@@ -40,8 +40,8 @@ class Corpus
 			end
 
 			pair = {}
-			pair["japanese"] = line.split("\t").first
-			pair["english"] = line.split("\t").last.chomp
+			pair['japanese'] = line.split("\t").first
+			pair['english'] = line.split("\t").last.chomp
 			pairs << pair
 		end
 
@@ -66,7 +66,7 @@ class Corpus
 		results = []
 
 		@pairs.each do |pair|
-			if pair["japanese"].include? word
+			if pair['japanese'].include? word
 				results << pair
 			end
 		end
@@ -136,8 +136,8 @@ class Finder
 		triples = []
 
 		@sentences.each do |sentence|
-			japanese = sentence["japanese"]
-			english = sentence["english"]
+			japanese = sentence['japanese']
+			english = sentence['english']
 			kana = (PhoneticSentence.new japanese).kana
 			triples << japanese + "\t" + kana + "\t" + english + "\n"
 		end
