@@ -16,13 +16,15 @@
 # https://dperkins.org
 # https://microca.st/dper
 
-Script_dir = File.dirname(__FILE__)
 require Script_dir + '/../' + 'kana'
 
 Pairs = 'pairs.txt'
 
 # A large list of Japanese and English sentences.
 class Corpus
+	# Sentence pair count information.
+	attr_accessor :information
+
 	# Creates a Corpus.
 	def initialize max_sentence_length
 		@max_sentence_length = max_sentence_length
@@ -44,17 +46,18 @@ class Corpus
 			pairs << pair
 		end
 
-		puts "Corpus sentence pairs: " + pairs.size.to_s + "."
+
+		@information = {}
+		@information['pairs'] = pairs.size
 
 		# Removes pairs where the Japanese half already appeared.
 		# Some sentences have multiple translations.  We use one.
 		pairs.uniq! { |pair| pair["japanese"] }
-		puts "Unique corpus sentence pairs: " + pairs.size.to_s + "."
+		@information['unique_pairs'] = pairs.size
 		
 		# Remove long sentences.
 		pairs.select! { |pair| pair["japanese"].size <= @max_sentence_length }
-		puts "Maximum sentence length: " + @max_sentence_length.to_s + "."
-		puts "Short sentence pairs: " + pairs.size.to_s + "."
+		@information['short_pairs'] = pairs.size
 
 		@pairs = pairs
 	end
@@ -92,27 +95,27 @@ class Finder
 		@corpus = Corpus.new max_sentence_length
 	end
 
-	# Outputs some information on what was found.
-	def analyze
-		total = 0
+	# Returns information about the corpus sentence count.
+	def get_corpus_information
+		return @corpus.information
+	end
 
-		puts 'Number of sentences found for each word:'
+	# Outputs word and sentence count information on what was found.
+	def get_search_information
+		information = []
 
 		@words.each do |word|
-			found = results[word].length	
-			puts found.to_s + "\t" + word
-			total += found
+			found = @results[word].length	
+			information << {'word' => word, 'found' => found}
 		end
 
-		sought = TARGET_SENTENCE_COUNT * @words.length
-		puts 'Desired sentences per word: ' + TARGET_SENTENCE_COUNT.to_s + '.'
-		puts 'Words sought: ' + @words.length.to_s + '.'
-		puts 'Sentences sought: ' + sought.to_s + '.'
+		return information
 	end
 
 	# Looks up the words in the corpus.
-	def find_sentences sentences_per_word
-		@results = @corpus.find_words @words
+	def find_sentences (words, sentences_per_word)
+		@words = words
+		@results = @corpus.find_words words
 
 		sentences = []
 

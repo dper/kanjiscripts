@@ -21,21 +21,19 @@
 # Douglas Perkins - https://dperkins.org - https://microca.st/dper
 
 Script_dir = File.dirname(__FILE__)
-require Script_dir + '/' + 'word_finder.rb'
-
-Target_words = 'target_words.txt'
-Target_sentences = 'target_sentences.txt'
-
-TARGET_SENTENCE_COUNT = 3
-MAX_SENTENCE_LENGTH = 25
+require './word_finder.rb'
 
 
 # Finds words in sentences and makes lists of those sentences.
 class Text_Finder
+	TARGET_SENTENCE_COUNT = 3
+	MAX_SENTENCE_LENGTH = 25
+
 	# Creates a Finder.
 	def initialize
-		puts 'Reading ' + Target_words + ' ...'
-		path = Script_dir + '/' + Target_words
+		target_words = 'target_words.txt'
+		puts 'Reading ' + target_words + ' ...'
+		path = Script_dir + '/' + target_words
 		text = IO.readlines path
 
 		words = []
@@ -43,41 +41,42 @@ class Text_Finder
 		@words = words.uniq
 
 		@finder = Finder.new MAX_SENTENCE_LENGTH
-	end
-
-	def analyze results
-		total = 0
-
-		puts 'Number of sentences found for each word:'
-
-		@words.each do |word|
-			found = results[word].length	
-			puts found.to_s + "\t" + word
-			total += found
-		end
-
-		sought = TARGET_SENTENCE_COUNT * @words.length
-		puts 'Desired sentences per word: ' + TARGET_SENTENCE_COUNT.to_s + '.'
-		puts 'Words sought: ' + @words.length.to_s + '.'
-		puts 'Sentences sought: ' + sought.to_s + '.'
+		corpus_information = @finder.get_corpus_information
+		unique = corpus_information['unique_pairs']
+		short = corpus_information['short_pairs']
+		puts 'Unique corpus pairs: ' + unique.to_s + '.'
+		puts 'Short corpus pairs: ' + short.to_s + '.'
 	end
 
 	# Looks up the words in the corpus.
 	def find_sentences
+		puts 'Maximum sentence length: ' + MAX_SENTENCE_LENGTH.to_s + '.'
+		puts 'Desired sentences per word: ' + TARGET_SENTENCE_COUNT.to_s + '.'
+		puts 'Words sought: ' + @words.length.to_s + '.'
+		sought = TARGET_SENTENCE_COUNT * @words.length
+		puts 'Sentences sought: ' + sought.to_s + '.'
 		puts 'Finding words in the corpus ...'
+		puts '-------------------------------'
+		
 
-		totals = @finder.find_sentences TARGET_SENTENCE_COUNT
+		totals = @finder.find_sentences @words, TARGET_SENTENCE_COUNT
+		
+		@finder.get_search_information.each do |result|
+			puts result['found'].to_s + "\t" + result['word']
+		end
 
+		puts '-------------------------------'
 		puts 'Non-unique sentences found: ' + totals['non-unique'].to_s + '.'
 		puts 'Unique sentences found: ' + totals['unique'].to_s + '.'
 	end
 
 	# Writes the sentences to the output file.
 	def write_sentences
-		puts 'Writing ' + Target_sentences + ' ...'
+		target_sentences = 'target_sentences.txt'
+		puts 'Writing ' + target_sentences + ' ...'
 		sentences = @finder.get_sentences
 
-		open(Target_sentences, 'w') do |file|
+		open(target_sentences, 'w') do |file|
 			sentences.each do |sentence|
 				file.puts sentence
 			end
