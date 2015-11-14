@@ -36,7 +36,7 @@ Scripts
 
 There are many different scripts.  See the comments at the top of each script for more information.
 
-* `sentences/find_words.rb`. This script finds sentence pairs for target words.  It looks for words listed in `target_words.txt`, with one word per line, and finds up to three sentences for each of those words.  The results are placed in `target_sentences.txt`.  I use these sentences in flashcards, and long Japanese sentences are bad for flashcard use.  There is a maximum character length filter in `find_pairs.rb` that can be adjusted to your needs.
+* `sentences/find_words_in_file.rb`. This script finds sentence pairs for target words.  It looks for words listed in `target_words.txt`, with one word per line, and finds up to three sentences for each of those words.  The results are placed in `target_sentences.txt`.  I use these sentences in flashcards, and long Japanese sentences are bad for flashcard use.  There is a maximum character length filter in `find_pairs.rb` that can be adjusted to your needs.
 * `sentences/make_pairs.rb`. After grabbing the dependencies, run this script to make a *large* file containing English and Japanese sentence pairs. You can search or filter this file for example sentences containing just the words you like.  The resulting file will be called `pairs.txt`.  You only need to run this script once at first, and then later when you grab new versions of the Tatoeba files.  The script can take a long time to run, depending on the speed of your computer.
 * `frequency/frequencies.rb`.  Lists words by frequency of use filtered by part of speech.
 * `onomatopeia/find_ono.rb`. Lists all the onomatopoiec words in edict.
@@ -80,11 +80,11 @@ If you get an error at any step, something is wrong.  Look at the error message,
 Single Characters
 =================
 
-Suppose you're trying to learn some kanji, as opposed to words.  A good way to learn the kanji is to find some sentences that contain them.  You might have a text file that has one hundred kanji all on one line.  To use `find_words.rb`, you need a file with one word (in this case, one character) per line.  The command `fold` should do the trick.  Suppose your starting file is called `list.txt`.
+Suppose you're trying to learn some kanji, as opposed to words.  A good way to learn the kanji is to find some sentences that contain them.  You might have a text file that has one hundred kanji all on one line.  To use `find_words_in_file.rb`, you need a file with one word (in this case, one character) per line.  The command `fold` should do the trick.  Suppose your starting file is called `list.txt`.
 
     fold -b3 list.txt > list.2.txt
 
-The above command will output the same kanji, with one per line.  Rename `list.2.txt` to `target_words.txt`, run `find_words.rb`, and you're done.
+The above command will output the same kanji, with one per line.  Rename `list.2.txt` to `target_words.txt`, run `find_words_in_file.rb`, and you're done.
 
 
 Natto Documentation
