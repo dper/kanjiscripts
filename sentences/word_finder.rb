@@ -29,7 +29,6 @@ class Corpus
 	def initialize max_sentence_length
 		@max_sentence_length = max_sentence_length
 
-		puts 'Reading ' + Pairs + ' ...'
 		path = Script_dir + '/' + Pairs
 		text = IO.readlines path
 		pairs = []
@@ -100,7 +99,7 @@ class Finder
 		return @corpus.information
 	end
 
-	# Outputs word and sentence count information on what was found.
+	# Returns word and sentence count information on what was found.
 	def get_search_information
 		information = []
 
