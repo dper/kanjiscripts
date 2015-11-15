@@ -16,7 +16,7 @@
 # https://dperkins.org
 # https://microca.st/dper
 
-require Script_dir + '/../' + 'kana'
+require '..kana'
 
 Pairs = 'pairs.txt'
 
