@@ -23,7 +23,6 @@ puts "<html><body>This is a test</body></html>"
 
 Script_dir = File.dirname(__FILE__)
 require './word_finder.rb'
-puts "Success!"
 
 # Finds words in sentences and makes lists of those sentences.
 class Text_Finder

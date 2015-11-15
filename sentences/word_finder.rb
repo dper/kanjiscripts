@@ -16,7 +16,7 @@
 # https://dperkins.org
 # https://microca.st/dper
 
-require '../kana'
+require '../kana.rb'
 
 # A large list of Japanese and English sentences.
 class Corpus
