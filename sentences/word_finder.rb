@@ -16,13 +16,7 @@
 # https://dperkins.org
 # https://microca.st/dper
 
-<<<<<<< HEAD
-require '..kana'
-=======
 require '../kana'
->>>>>>> origin/master
-
-Pairs = 'pairs.txt'
 
 # A large list of Japanese and English sentences.
 class Corpus
@@ -33,7 +27,7 @@ class Corpus
 	def initialize max_sentence_length
 		@max_sentence_length = max_sentence_length
 
-		path = Script_dir + '/' + Pairs
+		path = Script_dir + '/' + 'pairs.txt'
 		text = IO.readlines path
 		pairs = []
 
