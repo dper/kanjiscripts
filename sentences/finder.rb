@@ -2,7 +2,7 @@
 # coding: utf-8
 #
 # == NAME
-# word_finder.rb
+# finder.rb
 #
 # == USAGE
 # This is a library. Don't call it directly.

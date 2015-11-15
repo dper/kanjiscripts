@@ -21,7 +21,7 @@
 # Douglas Perkins - https://dperkins.org - https://microca.st/dper
 
 Script_dir = File.dirname(__FILE__)
-require './word_finder.rb'
+require './finder.rb'
 
 # Finds words in sentences and makes lists of those sentences.
 class Text_Finder

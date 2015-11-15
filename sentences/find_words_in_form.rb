@@ -16,7 +16,7 @@
 
 Script_dir = File.dirname(__FILE__)
 require "cgi"
-require './word_finder.rb'
+require './finder.rb'
 
 # Finds words in sentences and makes lists of those sentences.
 class Text_Finder
