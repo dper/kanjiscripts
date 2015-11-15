@@ -23,11 +23,12 @@ class Text_Finder
 	def get_parameters cgi
 		@max_sentence_length = cgi['max_sentence_length']
 		@sentences_per_word = cgi['sentences_per_word']
-
 		text = cgi['words']
-
-		words = text.split
+		text.gsub!("　", " ") # Handle full-width spaces.
+		text.gsub!("\n", " ") # Handle line breaks.
+		words = text.split.uniq
 		@words = words.uniq
+		puts @words
 	end
 
 	# Creates a Finder.
