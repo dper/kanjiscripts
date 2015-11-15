@@ -43,7 +43,6 @@ class Corpus
 			pairs << pair
 		end
 
-
 		@information = {}
 		@information['pairs'] = pairs.size
 
@@ -54,9 +53,11 @@ class Corpus
 		
 		# Remove long sentences.
 		pairs.select! { |pair| pair["japanese"].size <= @max_sentence_length }
+
 		@information['short_pairs'] = pairs.size
 
 		@pairs = pairs
+
 	end
 
 	# Finds all the example sentences containing a given word.

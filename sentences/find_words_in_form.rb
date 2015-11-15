@@ -21,14 +21,13 @@ require './finder.rb'
 class Text_Finder
 	# Stores information from forms.
 	def get_parameters cgi
-		@max_sentence_length = cgi['max_sentence_length']
-		@sentences_per_word = cgi['sentences_per_word']
+		@max_sentence_length = Integer(cgi['max_sentence_length'])
+		@sentences_per_word = Integer(cgi['sentences_per_word'])
 		text = cgi['words']
 		text.gsub!("　", " ") # Handle full-width spaces.
 		text.gsub!("\n", " ") # Handle line breaks.
 		words = text.split.uniq
 		@words = words.uniq
-		puts @words
 	end
 
 	# Creates a Finder.
@@ -38,42 +37,57 @@ class Text_Finder
 		corpus_information = @finder.get_corpus_information
 		unique = corpus_information['unique_pairs']
 		short = corpus_information['short_pairs']
-		puts 'Unique corpus pairs: ' + unique.to_s + '.'
-		puts 'Short corpus pairs: ' + short.to_s + '.'
+		puts "<p>\n"
+		puts '<div>Unique corpus pairs: ' + unique.to_s + ".</div>\n"
+		puts '<div>Short corpus pairs: ' + short.to_s + ".</div>\n"
 	end
 
 	# Looks up the words in the corpus.
 	def find_sentences
-		puts 'Maximum sentence length: ' + @max_sentence_length.to_s + '.'
-		puts 'Desired sentences per word: ' + @sentences_per_word.to_s + '.'
-		puts 'Words sought: ' + @words.length.to_s + '.'
+		puts '<div>Maximum sentence length: ' + @max_sentence_length.to_s + ".</div>\n"
+		puts '<div>Desired sentences per word: ' + @sentences_per_word.to_s + ".</div>\n"
+		puts '<div>Words sought: ' + @words.length.to_s + ".</div>\n"
 		sought = @sentences_per_word * @words.length
-		puts 'Sentences sought: ' + sought.to_s + '.'
-		puts 'Finding words in the corpus ...'
-		puts '-------------------------------'
+		puts '<div>Sentences sought: ' + sought.to_s + ".</div>\n"
 		
 		totals = @finder.find_sentences @words, @sentences_per_word
-		
+		puts '<div>Non-unique sentences found: ' + totals['non-unique'].to_s + ".</div>\n"
+		puts '<div>Unique sentences found: ' + totals['unique'].to_s + ".</div>\n"
+		puts "</p>\n"
+
+		information = ''
+
 		@finder.get_search_information.each do |result|
-			puts result['found'].to_s + "\t" + result['word']
+			information += result['found'].to_s + "\t" + result['word'] + "\n"
 		end
 
-		puts '-------------------------------'
-		puts 'Non-unique sentences found: ' + totals['non-unique'].to_s + '.'
-		puts 'Unique sentences found: ' + totals['unique'].to_s + '.'
+		information = @finder.get_search_information.map { |result|
+			result['found'].to_s + "\t" + result['word']
+		}.join "\n"
+
+		puts "<p>\n"
+		puts "<textarea readonly cols=\"20\" rows=\"10\">\n"
+		puts information + "</textarea>\n"
+		puts "</p>\n"
 	end
 
 	# Writes the sentences to the output file.
 	def write_sentences
 		target_sentences = 'target_sentences.txt'
-		puts 'Writing ' + target_sentences + ' ...'
 		sentences = @finder.get_sentences
 
 		output = ''
 
 		sentences.each do |sentence|
-			output += sentence + "\n"
+			output += sentence
 		end
+
+		output.chomp!("\n")
+
+		puts "<p>\n"
+		puts "<textarea readonly cols=\"200\" rows=\"20\">\n"
+		puts output + "</textarea>\n"
+		puts "</p>\n"
 	end
 end
 
@@ -84,13 +98,14 @@ puts "<html>\n"
 puts "<head>\n"
 puts "<meta charset=\"utf-8\" />\n"
 puts "</head>\n"
-puts "<body>\n"
-puts "Yay."
+puts "<body style=\"text-align: center;\">\n"
+puts "<h1>Details</h1>\n"
 
 $text_finder = Text_Finder.new cgi
-#$text_finder.find_sentences
-#$text_finder.write_sentences
+$text_finder.find_sentences
 
-puts "Yay again."
+puts "<h1>Results</h1>\n"
+$text_finder.write_sentences
+
 puts "</body>\n"
 puts "</html>\n"
