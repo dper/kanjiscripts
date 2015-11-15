@@ -27,7 +27,7 @@ class Corpus
 	def initialize max_sentence_length
 		@max_sentence_length = max_sentence_length
 
-		path = Script_dir + '/' + 'pairs.txt'
+		path = './pairs.txt'
 		text = IO.readlines path
 		pairs = []
 

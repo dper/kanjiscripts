@@ -20,7 +20,6 @@
 # == AUTHOR
 # Douglas Perkins - https://dperkins.org - https://microca.st/dper
 
-Script_dir = File.dirname(__FILE__)
 require './finder.rb'
 
 # Finds words in sentences and makes lists of those sentences.
@@ -32,7 +31,7 @@ class Text_Finder
 	def initialize
 		target_words = 'target_words.txt'
 		puts 'Reading ' + target_words + ' ...'
-		path = Script_dir + '/' + target_words
+		path = './' + target_words
 		text = IO.readlines path
 
 		words = []
