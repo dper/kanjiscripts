@@ -2,10 +2,10 @@
 # coding: utf-8
 #
 # == NAME
-# find_words_from_file.rb
+# find_words_in_file.rb
 #
 # == USAGE
-# ./find_words_from_file.rb
+# ./find_words_in_file.rb
 #
 # == DESCRIPTION
 # A script that takes a list of words and makes a list of sentences.

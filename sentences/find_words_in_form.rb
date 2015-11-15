@@ -5,13 +5,11 @@
 # find_words_in_form.rb
 #
 # == USAGE
-# ./find_words_in_form.rb
+# Call this from an HTML form.
 #
 # == DESCRIPTION
 # A script that takes a list of words and makes a list of sentences.
 # Each sentence is in Japanese and English.
-#
-# This script should be called from the paired HTML input page.
 #
 # == AUTHOR
 # Douglas Perkins - https://dperkins.org - https://microca.st/dper
