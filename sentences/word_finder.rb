@@ -16,7 +16,11 @@
 # https://dperkins.org
 # https://microca.st/dper
 
+<<<<<<< HEAD
 require '..kana'
+=======
+require '../kana'
+>>>>>>> origin/master
 
 Pairs = 'pairs.txt'
 
