@@ -14,7 +14,6 @@
 # == AUTHOR
 # Douglas Perkins - https://dperkins.org - https://microca.st/dper
 
-Script_dir = File.dirname(__FILE__)
 require "cgi"
 require './finder.rb'
 
