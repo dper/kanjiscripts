@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<title>Kanjiscripts: Sentences</title>
+<style>
+body {
+	text-align: center;
+}
+
+table {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+input[type=number] {
+	text-align: center;
+	max-width: 40px;
+}
+
+input[type=submit] {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	font-variant: small-caps;
+}
+
+input[type=textarea] {
+	max-width: 800px;
+}
+
+p {
+	max-width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+p.description {
+	text-align: left;
+}
+</style>
+</head>
+
+<body>
+<h1>Kanjiscripts: Sentences</h1>
+
+<p class="description">This script looks for Japanese words (or characters) in the <a href="https://tatoeba.org/eng/">Tatoeba</a> sentence corpus.  It returns a list of sentences containing the target words where each line of text contains the Japanese sentence, the phonetic reading of the sentence, and the English equivalent.  This information is designed to be saved as a text file and imported into Anki.</p>
+
+<p class="description">The user can choose the maximum sentence length, in Japanese characters, and the desired sentences per word.  Tatoeba has a limited number of sentences, and particularly restrictive searches might yield limited results.</p>
+
+<p class="description">The <a href="https://github.com/dper/kanjiscripts">script</a> is GPLv3 licensed.  You can set up your own instance if you prefer.  The sentences data from <a href="https://tatoeba.org/eng/terms_of_use">Tatoeba</a> is <a href="https://creativecommons.org/licenses/by/2.0/fr/deed.en">Creative Commons Attribution 2.0</a> licensed.  See the websites for details.</p>
+</div>
+
+<form action="find_words_in_form.rb" method="post">
+<table>
+<tr>
+<td>Maximum sentence length:</td>
+<td><input type="number" name="maximum_sentence_length" value="25" min="1" max="100" /></td>
+</tr>
+<tr>
+<td>Sentences per word:</td>
+<td><input type="number" name="sentences_per_word" value="3" min="1" max="20" /></td>
+</tr>
+</table>
+<p><textarea name="words" rows="20" cols="80"></textarea></p>
+<p><input type="submit" value="Find sentences" /></p>
+</form>
+
+</html>
