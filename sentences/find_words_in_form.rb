@@ -20,14 +20,48 @@ require './finder.rb'
 # Finds words in sentences and makes lists of those sentences.
 class Text_Finder
 	# Stores information from forms.
+	# Ridiculous search parameters are adjusted.
 	def get_parameters cgi
 		@max_sentence_length = Integer(cgi['max_sentence_length'])
+
+		if @max_sentence_length < 1
+			@max_sentence_length = 1
+		elsif @max_sentence_length > 1000
+			@max_sentence_length = 1000
+		end
+
 		@sentences_per_word = Integer(cgi['sentences_per_word'])
+
+		if @sentences_per_word < 1
+			@sentences_per_word = 1
+		elsif @sentences_per_word > 1000
+			@sentences_per_word = 1000
+		end
+
 		text = cgi['words']
+
+		if text.size > 10000
+			puts "<p style=\"color: red;\">Error: Input too long.</p>\n"
+			raise "Input too long."
+		end
+
 		text.gsub!("　", " ") # Handle full-width spaces.
 		text.gsub!("\n", " ") # Handle line breaks.
 		words = text.split.uniq
-		@words = words.uniq
+
+		words.select! {|word| word.size < 100}
+		words.reject! {|word| word.ascii_only?}
+		words.reject! {|word| /[[:cntrl:]]/.match word}
+		words.reject! {|word| /[[:ascii:]]/.match word}
+
+		words.uniq!
+
+		if words.size > 5000
+			puts "<p style=\"color: red;\">Error: Too many words.</p>\n"
+			raise "Too many words."
+		end
+
+		@words = words
 	end
 
 	# Creates a Finder.
