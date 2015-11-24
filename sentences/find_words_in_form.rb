@@ -66,12 +66,15 @@ class Text_Finder
 
 	# Creates a Finder.
 	def initialize cgi
+
 		get_parameters cgi
 		@finder = Finder.new @max_sentence_length
 		corpus_information = @finder.get_corpus_information
 		unique = corpus_information['unique_pairs']
 		short = corpus_information['short_pairs']
 		puts "<p>\n"
+		mtime = (File.mtime 'pairs.txt').strftime "%Y-%m-%d"
+		puts '<div>Pairs file updated: ' + mtime + ".</div>\n"
 		puts '<div>Unique corpus pairs: ' + unique.to_s + ".</div>\n"
 		puts '<div>Short corpus pairs: ' + short.to_s + ".</div>\n"
 	end
