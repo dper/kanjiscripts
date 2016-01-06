@@ -181,11 +181,8 @@ class Corpus
 
 		# Examine each tag.  If it's dangerous, return false.
 		@tags[id].each do |tag|
-			dangerous.each do |prefix|
-				# Checks to see if the tag matches the prefix.
-				if tag == prefix
-					return false
-				end
+			if dangerous.include? tag
+				return false
 			end
 		end
 
