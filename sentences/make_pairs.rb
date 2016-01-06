@@ -176,6 +176,11 @@ class Corpus
 			return true
 		end
 
+		# Only keep sentences with the 'OK' tag.
+		unless @tags[id].include? 'OK'
+			return false
+		end
+
 		# This list of prefixes of tags can be modified as desired.
 		dangerous = ['@Check!', '@change', '@check', '@delete', '@duplicate', '@fragment', '@need native', '@needs', '@not a sentences', '@wrong', 'ambigous', 'ambiguos', 'ambiguous', 'baby talk', 'check eng']
 
