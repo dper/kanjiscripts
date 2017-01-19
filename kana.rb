@@ -14,7 +14,7 @@
 # == AUTHOR
 # Douglas Perkins - https://dperkins.org - https://microca.st/dper
 
-ENV['MECAB_PATH']='/usr/lib/libmecab.so.2'
+ENV['MECAB_PATH']='/usr/lib/x86_64-linux-gnu/libmecab.so.2'
 require 'natto'
 require 'nkf'
 
