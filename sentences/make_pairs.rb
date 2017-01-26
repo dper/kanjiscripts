@@ -19,7 +19,7 @@
 # == AUTHOR
 # Douglas Perkins - https://dperkins.org - https://microca.st/dper
 
-Pairs = "pairs.txt"
+Pairs = 'pairs.txt'
 Tags = 'tags.csv'
 Links = 'links.csv'
 Sentences_detailed = 'sentences_detailed.csv'
@@ -177,9 +177,9 @@ class Corpus
 		end
 
 		# Only keep sentences with the 'OK' tag.
-		unless @tags[id].include? 'OK'
-			return false
-		end
+		#unless @tags[id].include? 'OK'
+		#	return false
+		#end
 
 		# This list of prefixes of tags can be modified as desired.
 		dangerous = ['@Check!', '@change', '@check', '@delete', '@duplicate', '@fragment', '@need native', '@needs', '@not a sentences', '@wrong', 'ambigous', 'ambiguos', 'ambiguous', 'baby talk', 'check eng']
