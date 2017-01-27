@@ -76,7 +76,7 @@ irb(main):005:0>
 
 If you can't find `libmecab.so.2`, the following command should help do so.
 
-    # sudo find / -name libmecab.so*
+    # find / -name libmecab.so*
 
 If you get an error at any step, something is wrong.  Look at the error message, review the above steps and try to figure it out.  Also make sure you see `charset="UTF-8"` and not `charset="EUC-JP"`.  It is probably a good idea to try a natto test script as well; e.g., <http://tinyurl.com/ptag5wn>.  The way in which kana is generated depends on MeCab.  If you're interested in tweaking the output, see the [Japanese documentation](http://mecab.googlecode.com/svn/trunk/mecab/doc/index.html#parse).
 
