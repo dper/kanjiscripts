@@ -12,7 +12,7 @@
 # Each sentence is in Japanese and English.
 #
 # == AUTHOR
-# Douglas Perkins - https://dperkins.org - https://microca.st/dper
+# Douglas Perkins
 
 require "cgi"
 require './finder.rb'

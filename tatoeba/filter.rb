@@ -2,19 +2,16 @@
 # coding: utf-8
 #
 # == NAME
-# make_pairs.rb
+# filter.rb
 #
 # == USAGE
-# ./make_pairs.rb
+# ./filter.rb
 #
 # == DESCRIPTION
-# A script that creates a list of English/Japanese sentence pairs.
-# The base data should be downloaded from Tatoeba.
-# Only sentences with safe-looking tags are included.
+# A script that filters out sentences, leaving only English and Japanese.
 #
-# This script depends on the files tags.csv and links.csv being in
-# the tatoeba subdirectory.  Download them before use.  See the README
-# for more information.
+# This script depends on the file sentences_detailed.csv.
+# See the README for more information.
 #
 # == AUTHOR
 # Douglas Perkins

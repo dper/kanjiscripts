@@ -18,7 +18,7 @@
 # The output is written to the file target_sentences.txt.
 #
 # == AUTHOR
-# Douglas Perkins - https://dperkins.org - https://microca.st/dper
+# Douglas Perkins
 
 require './finder.rb'
 

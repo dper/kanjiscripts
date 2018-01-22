@@ -13,8 +13,6 @@
 #
 # == AUTHOR
 # Douglas Perkins
-# https://dperkins.org
-# https://microca.st/dper
 
 require '../kana.rb'
 
