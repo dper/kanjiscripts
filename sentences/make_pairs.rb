@@ -127,6 +127,7 @@ class Corpus
 		# The username is the user who has adopted the sentence.
 
 		text.each do |line|
+			line.encode!('UTF-8', 'UTF-8', :invalid => :replace)
 			id = line.split("\t")[0].to_i
 			lang = line.split("\t")[1]
 			text = line.split("\t")[2]

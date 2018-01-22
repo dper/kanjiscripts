@@ -38,9 +38,6 @@ class SentencesFilter
 
 			if lang == 'eng' or lang == 'jpn'
 				sentences << line
-
-				#TODO Remove.
-				print(line)
 			end
 		end
 
