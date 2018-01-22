@@ -38,6 +38,7 @@ class SentencesFilter
 
 			if lang == 'eng' or lang == 'jpn'
 				#TODO Write it.
+				print(line)
 			end
 		end
 
