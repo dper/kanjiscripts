@@ -5,9 +5,9 @@
 # Call this script once a week or less frequently.
 # Server bandwidth is limited.  Downloading takes a few minutes.
 
-wget http://downloads.tatoeba.org/exports/sentences_detailed.tar.bz2
-wget http://downloads.tatoeba.org/exports/links.tar.bz2
-wget http://downloads.tatoeba.org/exports/tags.tar.bz2
+wget https://downloads.tatoeba.org/exports/sentences_detailed.tar.bz2
+wget https://downloads.tatoeba.org/exports/links.tar.bz2
+wget https://downloads.tatoeba.org/exports/tags.tar.bz2
 
 rm sentences_detailed.csv
 rm links.csv
