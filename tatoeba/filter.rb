@@ -44,8 +44,8 @@ class SentencesFilter
 			end
 		end
 
-		open(Sentences_filtered, 'w') do |file|
-			file << sentences
+		File.open(Sentences_filtered, 'w') do |file|
+			sentences.each { |sentence| file.puts(sentence) }
 		end
 	end
 
