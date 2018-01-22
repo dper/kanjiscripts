@@ -8,15 +8,19 @@
 wget https://downloads.tatoeba.org/exports/sentences_detailed.tar.bz2
 wget https://downloads.tatoeba.org/exports/links.tar.bz2
 wget https://downloads.tatoeba.org/exports/tags.tar.bz2
+wget https://downloads.tatoeba.org/exports/jpn_indices.tar.bz2
 
 rm sentences_detailed.csv
 rm links.csv
 rm tags.csv
+rm jpn_indices.csv
 
 tar xjvf sentences_detailed.tar.bz2
 tar xjvf links.tar.bz2
 tar xjvf tags.tar.bz2
+tar xjvf jpn_indices.tar.bz2
 
 rm sentences_detailed.tar.bz2
 rm links.tar.bz2
 rm tags.tar.bz2
+rm jpn_indices.tar.bz2
