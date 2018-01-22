@@ -6,6 +6,8 @@ tags.csv
 tags.tar.bz2
 links.csv
 links.tar.bz2
+jpn_indices.csv
+jpn_indices.tar.bz2
 pairs.txt
 target_words.txt
 target_sentences.txt
