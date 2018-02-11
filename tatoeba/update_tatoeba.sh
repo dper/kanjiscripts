@@ -20,3 +20,5 @@ tar xjvf tags.tar.bz2
 rm sentences_detailed.tar.bz2
 rm links.tar.bz2
 rm tags.tar.bz2
+
+ruby filter.rb
