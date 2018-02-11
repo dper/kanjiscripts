@@ -69,7 +69,7 @@ class Corpus
 
 	# Parses tags file.
 	def parse_tags
-		puts "\n" + 'Parsing ' + Tags + ' ...'
+		puts 'Parsing ' + Tags + ' ...'
 		path = '../tatoeba/' + Tags
 		text = IO.readlines path
 		
