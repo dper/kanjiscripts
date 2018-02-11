@@ -69,7 +69,7 @@ class Corpus
 
 	# Parses tags file.
 	def parse_tags
-		puts 'Parsing ' + Tags + ' ...'
+		puts "\n" + 'Parsing ' + Tags + ' ...'
 		path = '../tatoeba/' + Tags
 		text = IO.readlines path
 		
@@ -90,35 +90,43 @@ class Corpus
 			end
 		end
 
-		puts 'Total tags: ' + @tags.size.to_s + '.'
+		puts 'Tags: ' + @tags.size.to_s
 	end
 
 	# Parses the links file.
 	def parse_links
-		puts 'Parsing ' + Links + ' ...'
+		puts "\n" + 'Parsing ' + Links + ' ...'
 		path = '../tatoeba/' + Links
 		text = IO.readlines path
 		@links = []
 
 		# The links file has lines like this: sentence_id [tab] translation_id.
+
+		puts 'Lines: ' + text.length.to_s
 		
-		text.each do |line|
+		text.each_with_index do |line, i|
+			if (i % 10000) == 0
+				printf("\rLine:  " + i.to_s)
+			end
+
 			sentence_id = line.split("\t")[0].to_i
 			meaning_id = line.split("\t")[1].to_i
 			@links << [sentence_id, meaning_id]
 		end
 
-		puts 'Unfiltered links: ' + @links.size.to_s + '.'
+		puts "\r" + 'Line:  ' + text.length.to_s
 	end
 
 	# Parses the corpus sentence file.	
 	def parse_sentences
-		puts 'Parsing ' + Sentences_detailed + ' ...'
+		puts "\n" + 'Parsing ' + Sentences_detailed + ' ...'
 		path = '../tatoeba/' + Sentences_detailed
 		text = IO.readlines path
 		@english = {}
 		@japanese = {}
 		@usernames = {}
+
+		puts 'Total: ' + text.length.to_s
 
 		# The sentences file has lines like this:
 		# 	id [tab] lang [tab] text [tab] username [tab] date_added [tab] date_last_modified.
@@ -126,7 +134,11 @@ class Corpus
 		# The text is the sentence.
 		# The username is the user who has adopted the sentence.
 
-		text.each do |line|
+		text.each_with_index do |line, i|
+			if (i % 10000) == 0
+				printf("\rLine:  " + i.to_s)
+			end
+
 			line.encode!('UTF-8', 'UTF-8', :invalid => :replace)
 			id = line.split("\t")[0].to_i
 			lang = line.split("\t")[1]
@@ -142,13 +154,14 @@ class Corpus
 			end
 		end
 
-		puts 'Unfiltered English sentences: ' + @english.size.to_s + '.'
+		puts "\r" + 'Line:  ' + text.length.to_s
+		puts 'Unfiltered English sentences:  ' + @english.size.to_s + '.'
 		puts 'Unfiltered Japanese sentences: ' + @japanese.size.to_s + '.'
 	end
 
 	# Makes pairs of Japanese/English sentences.
 	def find_pairs
-		puts 'Finding Japanese/English pairs ...'
+		puts "\n" + 'Finding Japanese/English pairs ...'
 		@pairs = []
 
 		# For each pair, see if it's English to Japanese.
