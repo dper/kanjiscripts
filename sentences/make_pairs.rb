@@ -52,7 +52,7 @@ class PairMaker
 
 	# Prints a list of notes.
 	def write_pairs
-		puts 'Writing output to ' + Pairs + ' ...'
+		puts 'Writing to ' + Pairs + ' ...'
 
 		open(Pairs, 'w') do |file|
 			@notes.each do |note|
@@ -90,19 +90,19 @@ class Corpus
 			end
 		end
 
-		puts 'Tags: ' + @tags.size.to_s
+		puts 'Total: ' + @tags.size.to_s
 	end
 
 	# Parses the links file.
 	def parse_links
-		puts "\n" + 'Parsing ' + Links + ' ...'
+		puts 'Parsing ' + Links + ' ...'
 		path = '../tatoeba/' + Links
 		text = IO.readlines path
 		@links = []
 
 		# The links file has lines like this: sentence_id [tab] translation_id.
 
-		puts 'Lines: ' + text.length.to_s
+		puts 'Total: ' + text.length.to_s
 		
 		text.each_with_index do |line, i|
 			if (i % 10000) == 0
@@ -119,7 +119,7 @@ class Corpus
 
 	# Parses the corpus sentence file.	
 	def parse_sentences
-		puts "\n" + 'Parsing ' + Sentences_detailed + ' ...'
+		puts 'Parsing ' + Sentences_detailed + ' ...'
 		path = '../tatoeba/' + Sentences_detailed
 		text = IO.readlines path
 		@english = {}
@@ -161,7 +161,7 @@ class Corpus
 
 	# Makes pairs of Japanese/English sentences.
 	def find_pairs
-		puts "\n" + 'Finding Japanese/English pairs ...'
+		puts 'Finding Japanese/English pairs ...'
 		@pairs = []
 
 		# For each pair, see if it's English to Japanese.
