@@ -60,27 +60,6 @@ Install the [natto](https://bitbucket.org/buruzaemon/natto/wiki/Installation-and
 
     # gem install natto
 
-The natto gem depends on a `libmecab.so.2` library, but it doesn't look for the library intelligently.  I check the Debian Sid [documentation](https://packages.debian.org/sid/amd64/libmecab2/filelist) and see that the library is installed in `/usr/lib/x86_64-linux-gnu/libmecab.so.2`.  To test that everything is working, I do the following.
-
-```Ruby
-irb(main):001:0> ENV['MECAB_PATH']='/usr/lib/x86_64-linux-gnu/libmecab.so.2'
-=> "/usr/lib/libmecab.so.2"
-irb(main):002:0> require 'natto'
-=> true
-irb(main):003:0> require 'nkf'
-=> true
-irb(main):004:0> nm = Natto::MeCab.new
-=> #<Natto::MeCab:0x0000000149e638 @tagger=#<FFI::Pointer address=0x000000017aae40>, @options={}, @dicts=[#<Natto::DictionaryInfo:0x0000000149e408 type="0", filename="/var/lib/mecab/dic/debian/sys.dic", charset="UTF-8">], @version="0.996">
-irb(main):005:0> 
-```
-
-If you can't find `libmecab.so.2`, the following command should help do so.
-
-    # find / -name libmecab.so*
-
-If you get an error at any step, something is wrong.  Look at the error message, review the above steps and try to figure it out.  Also make sure you see `charset="UTF-8"` and not `charset="EUC-JP"`.  It is probably a good idea to try a natto test script as well; e.g., <http://tinyurl.com/ptag5wn>.  The way in which kana is generated depends on MeCab.  If you're interested in tweaking the output, see the [Japanese documentation](http://mecab.googlecode.com/svn/trunk/mecab/doc/index.html#parse).
-
-
 Single Characters
 =================
 
@@ -89,17 +68,6 @@ Suppose you're trying to learn some kanji, as opposed to words.  A good way to l
     fold -b3 list.txt > list.2.txt
 
 The above command will output the same kanji, with one per line.  Rename `list.2.txt` to `target_words.txt`, run `find_words_in_file.rb`, and you're done.
-
-
-Natto Documentation
-===================
-
-There is limited MeCab documentation.  However, the fine people who bring us Natto have worked to fill in the gaps.  Relevant Natto documentation can be found at the following sites.
-
-* <https://bitbucket.org/buruzaemon/natto/src/4972d86c17b67b43ebede3bd83ee3b4937e7c9c1/lib/natto/struct.rb?at=default>
-* <https://bitbucket.org/buruzaemon/natto/wiki/Node-Parsing-stat>
-* <https://mecab.googlecode.com/svn/trunk/mecab/doc/posid.html>
-
 
 Source
 ======
