@@ -13,3 +13,4 @@ pairs.txt
 target_words.txt
 target_sentences.txt
 term_aggregates.zip
+*.swp
