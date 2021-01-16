@@ -25,7 +25,7 @@ require './finder.rb'
 # Finds words in sentences and makes lists of those sentences.
 class Text_Finder
 	TARGET_SENTENCE_COUNT = 3
-	MAX_SENTENCE_LENGTH = 25
+	MAX_SENTENCE_LENGTH = 20
 
 	# Creates a Finder.
 	def initialize

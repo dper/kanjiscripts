@@ -54,7 +54,7 @@ To generate phonetic (kana) readings of sentences written in standard Japanese (
 
 First, install the necessary packages.  Make sure you install `mecab-ipadic-utf8` and not just the regular `mecab-ipadic`.
 
-    # apt-get install mecab mecab-ipadic-utf8 ruby-ffi ruby-dev ruby-mecab
+    # apt install mecab mecab-ipadic-utf8 ruby-ffi ruby-dev ruby-mecab
 
 Install the [natto](https://bitbucket.org/buruzaemon/natto/wiki/Installation-and-Configuration) gem.
 
